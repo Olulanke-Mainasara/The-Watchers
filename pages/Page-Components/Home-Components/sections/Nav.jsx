@@ -14,7 +14,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function Nav() {
-  const { navMenu, visible, openMenu, closeMenu } = useNavigationBar();
+  const [navMenu, visible, openMenu, closeMenu] = useNavigationBar();
   const { toggleSearch, dark, toggleDark } = useStore();
 
   return (
