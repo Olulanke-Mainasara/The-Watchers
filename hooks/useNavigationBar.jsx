@@ -44,15 +44,17 @@ function useNavigationBar() {
     setMenu("allIL:-right-full");
   }
 
-  if (dark) {
-    document.documentElement.classList.remove("light");
-    document.documentElement.classList.add("dark");
-  } else {
-    document.documentElement.classList.remove("dark");
-    document.documentElement.classList.add("light");
-  }
+  useEffect(() => {
+    if (dark) {
+      document.documentElement.classList.remove("light");
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.add("light");
+    }
+  }, [dark]);
 
-  return { navMenu, visible, openMenu, closeMenu };
+  return [navMenu, visible, openMenu, closeMenu];
 }
 
 export default useNavigationBar;

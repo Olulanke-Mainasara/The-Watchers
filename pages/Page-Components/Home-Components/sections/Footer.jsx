@@ -8,7 +8,7 @@ import {
   faTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import { footerlinks } from "../data/Arrays";
+import { footerlinks } from "../../../../data/Arrays";
 import Image from "next/image";
 
 function Footer() {
@@ -21,8 +21,15 @@ function Footer() {
       <section className="flex gap-10 allIL:gap-0 basis-4/5 allIL:flex-col">
         <section className="flex flex-col h-full justify-center basis-1/2 allLM:flex-row allLM:items-center allLM:border-white allIL:border-b allLM:py-8 allLM:gap-8">
           <div className="flex h-full flex-col justify-center gap-6 allIL:basis-1/2 border-slate-100 border-b allLM:border-b-0 allEMT:py-8">
-            <a href="#hero" className="relative w-10 h-10 rounded-full mx-auto overflow-hidden">
-              <Image fill alt="The Watchers. Logo" src={"/The Universe 2.jpg"} />
+            <a
+              href="#hero"
+              className="relative w-10 h-10 rounded-full mx-auto overflow-hidden"
+            >
+              <Image
+                fill
+                alt="The Watchers. Logo"
+                src={"/The Universe 2.jpg"}
+              />
             </a>
             <p className="text-base 2xl:text-xl">
               The Watchers - Exploring the wonders of the universe, one story at

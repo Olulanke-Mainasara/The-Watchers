@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { config, dom } from "@fortawesome/fontawesome-svg-core";
-import useStore from "./Components/providers/navStore";
+import useStore from "../providers/navStore";
 import Head from "next/head";
-import Splash from "./Components/features/Splash-Screen/Splash";
-import Search from "./Components/features/Search/Search";
-import Nav from "./Components/sections/Nav";
-import Hero from "./Components/sections/Hero";
-import MainBody from "./Components/sections/MainBody/MainBody";
-import Footer from "./Components/sections/Footer";
+import Splash from "./Page-Components/Home-Components/features/Splash-Screen/Splash";
+import Search from "./Page-Components/Home-Components/features/Search/Search";
+import Nav from "./Page-Components/Home-Components/sections/Nav";
+import Hero from "./Page-Components/Home-Components/sections/Hero";
+import MainBody from "./Page-Components/Home-Components/sections/MainBody/MainBody";
+import Footer from "./Page-Components/Home-Components/sections/Footer";
 
 config.autoAddCss = false;
 

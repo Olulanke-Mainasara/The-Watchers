@@ -53,7 +53,7 @@ function useCustomWidthCarousel(array) {
       x: -currentSlide * width,
       transition: { duration: 0.7 },
     });
-  }, [currentSlide]);
+  }, [controls, currentSlide, width]);
 
   function nextItem() {
     setCurrentSlide((prevSlide) => {
@@ -73,7 +73,7 @@ function useCustomWidthCarousel(array) {
     });
   }
 
-  return { controls, recoil, prevItem, nextItem };
+  return [controls, recoil, prevItem, nextItem];
 }
 
 export default useCustomWidthCarousel;

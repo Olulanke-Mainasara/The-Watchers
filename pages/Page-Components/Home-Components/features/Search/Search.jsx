@@ -1,6 +1,6 @@
 import React from "react";
 import SearchForm from "./SearchForm";
-import useStore from "../../providers/navStore";
+import useStore from "../../../../../providers/navStore";
 
 function Search() {
   const { search } = useStore();

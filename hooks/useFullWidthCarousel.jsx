@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -23,7 +24,7 @@ function useFullWidthCarousel(array) {
       x: -currentSlide * width,
       transition: { duration: 2 },
     });
-  }, [currentSlide]);
+  }, [controls, currentSlide, width]);
 
   function nextNews() {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % array.length);
@@ -35,7 +36,7 @@ function useFullWidthCarousel(array) {
     );
   }
 
-  return { controls, prevNews, nextNews };
+  return [controls, prevNews, nextNews];
 }
 
 export default useFullWidthCarousel;

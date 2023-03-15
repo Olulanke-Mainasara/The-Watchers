@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { categories } from "../../data/Arrays";
+import { categories } from "../../../../../data/Arrays";
 import CardButton from "../../UI/CardButton";
 
 function Categories({ controls }) {

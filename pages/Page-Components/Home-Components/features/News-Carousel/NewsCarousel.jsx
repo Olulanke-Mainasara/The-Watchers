@@ -1,15 +1,19 @@
 import React, { useMemo } from "react";
 import News from "./News";
-import useFullWidthCarousel from "../../hooks/useFullWidthCarousel";
-import { news } from "../../data/Arrays";
-import { LeftArrow, RightArrow } from "../../UI/Arrows";
+import useFullWidthCarousel from "../../../../../hooks/useFullWidthCarousel";
+import { news } from "../../../../../data/Arrays";
+import LeftArrow from "../../UI/Carousel/LeftArrow";
+import RightArrow from "../../UI/Carousel/RightArrow";
 import H1C from "../../UI/Carousel/H1C";
 import ContainerC from "../../UI/Carousel/ContainerC";
 
 function NewsCarousel() {
-  const { controls, prevNews, nextNews } = useFullWidthCarousel(news);
+  const [controls, prevNews, nextNews] = useFullWidthCarousel(news);
 
-  const newsWithControls = useMemo(() => <News controls={controls} />, [controls]);
+  const newsWithControls = useMemo(
+    () => <News controls={controls} />,
+    [controls]
+  );
 
   return (
     <ContainerC id={"news"}>
