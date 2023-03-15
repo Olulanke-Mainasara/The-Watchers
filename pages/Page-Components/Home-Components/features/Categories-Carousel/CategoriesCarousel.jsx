@@ -8,7 +8,7 @@ import H1C from "../../UI/Carousel/H1C";
 import ContainerC from "../../UI/Carousel/ContainerC";
 
 function CategoriesCarousel() {
-  const [controls, nextItem, prevItem] = useCustomWidthCarousel(categories);
+  const { controls, nextItem, prevItem } = useCustomWidthCarousel(categories);
 
   const categoriesWithControls = useMemo(
     () => <Categories controls={controls} />,

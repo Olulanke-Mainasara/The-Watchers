@@ -8,7 +8,7 @@ import H1C from "../../UI/Carousel/H1C";
 import ContainerC from "../../UI/Carousel/ContainerC";
 
 function ReviewsCarousel() {
-  const [controls, recoil, nextItem, prevItem] =
+  const { controls, recoil, nextItem, prevItem } =
     useCustomWidthCarousel(reviews);
 
   useEffect(() => {

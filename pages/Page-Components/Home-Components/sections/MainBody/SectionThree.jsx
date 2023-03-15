@@ -7,7 +7,7 @@ import Text from "../../UI/Section/Text";
 
 function SectionThree() {
   return (
-    <section className="w-full h-screen flex allEMT:flex-col allIL:h-auto allLM:mt-40">
+    <section className="w-full h-screen flex allEMT:flex-col allEMT:gap-14 allIL:h-auto allLM:mt-40">
       <Text position={"justify-end"} height={"allLM:h-[705px]"}>
         <H1>We inspire, no matter the reader</H1>
 

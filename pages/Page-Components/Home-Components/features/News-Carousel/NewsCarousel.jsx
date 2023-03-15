@@ -8,7 +8,7 @@ import H1C from "../../UI/Carousel/H1C";
 import ContainerC from "../../UI/Carousel/ContainerC";
 
 function NewsCarousel() {
-  const [controls, prevNews, nextNews] = useFullWidthCarousel(news);
+  const { controls, prevNews, nextNews } = useFullWidthCarousel(news);
 
   const newsWithControls = useMemo(
     () => <News controls={controls} />,
@@ -16,8 +16,8 @@ function NewsCarousel() {
   );
 
   return (
-    <ContainerC id={"news"}>
-      <H1C>Today&apos;s Featured Articles</H1C>
+    <ContainerC>
+      <H1C id={"news"}>Today&apos;s Featured Articles</H1C>
 
       <div className="relative w-screen h-[500px] 2xl:h-[650px] lg:h-[350px] md:h-[800px] allT:h-[420px] flex items-center overflow-x-hidden">
         <LeftArrow onclick={prevNews} />

@@ -73,7 +73,7 @@ function useCustomWidthCarousel(array) {
     });
   }
 
-  return [controls, recoil, prevItem, nextItem];
+  return { controls, recoil, prevItem, nextItem };
 }
 
 export default useCustomWidthCarousel;

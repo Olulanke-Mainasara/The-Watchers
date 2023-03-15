@@ -17,7 +17,7 @@ function Hero() {
           Inspiring Minds, Everywhere, Unveiling Knowledge and Inspiration.
         </h2>
 
-        <div className="mt-4 allEMT:mt-0 allEMT:flex allEMT:flex-col allEMT:items-center allEMT:gap-8">
+        <div className="mt-4 allEMT:mt-0 allEMT:flex allEMT:flex-col allEMT:items-center allEMT:gap-5">
           <Link
             href="#"
             title="Categories"

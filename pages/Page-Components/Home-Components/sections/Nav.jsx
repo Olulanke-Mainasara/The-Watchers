@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import useNavigationBar from "../../../../hooks/useNavigationBar";
-import useStore from "../../../../providers/navStore";
+import useNavigationBar from "./useNavigationBar";
+import useStore from "@/providers/navStore";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSun,

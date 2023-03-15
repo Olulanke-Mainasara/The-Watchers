@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
-import useStore from "../providers/navStore";
+import useStore from "@/providers/navStore";
 
 function useNavigationBar() {
   const [navMenu, setMenu] = useState("allIL:-right-full");

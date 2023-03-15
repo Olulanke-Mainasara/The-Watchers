@@ -8,7 +8,7 @@ import SImage from "../../UI/Section/SImage";
 
 function SectionFive() {
   return (
-    <section className="w-full h-screen flex allEMT:flex-col allIL:h-auto">
+    <section className="w-full h-screen flex allEMT:flex-col allEMT:gap-14 allIL:h-auto">
       <SImage>
         <Image
           src="/Section3.JPG"
