@@ -3,7 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
-import { reviews } from "../../../../../data/Arrays";
+import { reviews } from "../../../../data/Arrays";
 
 function Reviews({ controls }) {
   return (

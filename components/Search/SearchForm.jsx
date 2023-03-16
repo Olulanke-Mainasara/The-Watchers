@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose, faSearch } from "@fortawesome/free-solid-svg-icons";
-import useStore from "../../../../../providers/navStore";
+import useStore from "../../providers/navStore";
 
 function SearchForm() {
   const { toggleSearch } = useStore();

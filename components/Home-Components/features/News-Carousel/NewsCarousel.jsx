@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import News from "./News";
-import useFullWidthCarousel from "../../../../../hooks/useFullWidthCarousel";
-import { news } from "../../../../../data/Arrays";
+import useFullWidthCarousel from "../../hooks/useFullWidthCarousel";
+import { news } from "../../../../data/Arrays";
 import LeftArrow from "../../UI/Carousel/LeftArrow";
 import RightArrow from "../../UI/Carousel/RightArrow";
 import H1C from "../../UI/Carousel/H1C";

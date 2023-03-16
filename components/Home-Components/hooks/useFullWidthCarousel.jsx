@@ -36,7 +36,7 @@ function useFullWidthCarousel(array) {
     );
   }
 
-  return [controls, prevNews, nextNews];
+  return { controls, prevNews, nextNews };
 }
 
 export default useFullWidthCarousel;

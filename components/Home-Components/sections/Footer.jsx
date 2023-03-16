@@ -8,7 +8,7 @@ import {
   faTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import { footerlinks } from "../../../../data/Arrays";
+import { footerlinks } from "../../../data/Arrays";
 import Image from "next/image";
 
 function Footer() {

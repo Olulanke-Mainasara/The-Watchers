@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import useNavigationBar from "./useNavigationBar";
+import useNavigationBar from "./Home-Components/hooks/useNavigationBar";
 import useStore from "@/providers/navStore";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -20,7 +20,7 @@ function Nav() {
   return (
     <nav
       className={`fixed top-0 left-0 z-30 ${
-        visible ? "" : "allIL:opacity-0"
+        visible ? "" : "allIL:opacity-0 allIL:h-0 allIL:overflow-hidden"
       } allIL:duration-300 h-16 w-screen bg-black dark:bg-gray-800/0 backdrop-blur-lg`}
     >
       <div className="h-full mx-auto flex items-center justify-between px-10 sm:px-5 xs:px-3 iphone5:px-3 xtraSmall:px-2">
@@ -52,7 +52,7 @@ function Nav() {
           </li>
           <li>
             <Link
-              href="#"
+              href="/categories"
               className="relative allLM:text-2xl after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-full after:scale-x-0 after:bg-white after:duration-500 after:content-[''] hover:transition-transform hover:after:scale-x-110"
             >
               Our categories
@@ -60,7 +60,7 @@ function Nav() {
           </li>
           <li>
             <Link
-              href="#"
+              href="/aboutus"
               className="relative allLM:text-2xl after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-full after:scale-x-0 after:bg-white after:duration-500 after:content-[''] hover:transition-transform hover:after:scale-x-110"
             >
               About us
@@ -68,7 +68,7 @@ function Nav() {
           </li>
           <li>
             <Link
-              href="#"
+              href="/contact"
               className="relative allLM:text-2xl after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-full after:scale-x-0 after:bg-white after:duration-500 after:content-[''] hover:transition-transform hover:after:scale-x-110"
             >
               Contact
