@@ -20,7 +20,7 @@ function Nav() {
   return (
     <nav
       className={`fixed top-0 left-0 z-30 ${
-        visible ? "" : "allIL:opacity-0 allIL:h-0 allIL:overflow-hidden"
+        visible ? "" : "allIL:opacity-0"
       } allIL:duration-300 h-16 w-screen bg-black dark:bg-gray-800/0 backdrop-blur-lg`}
     >
       <div className="h-full mx-auto flex items-center justify-between px-10 sm:px-5 xs:px-3 iphone5:px-3 xtraSmall:px-2">

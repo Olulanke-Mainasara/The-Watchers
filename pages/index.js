@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
 import { config, dom } from "@fortawesome/fontawesome-svg-core";
 import useStore from "../providers/navStore";
@@ -12,14 +13,19 @@ import Footer from "../components/Home-Components/sections/Footer";
 config.autoAddCss = false;
 
 export default function Home() {
-  const { splash, toggleSplash } = useStore();
+  const { splash, toggleSplash, visited, increaseVisited } = useStore();
 
   useEffect(() => {
-    const timeOut = setTimeout(() => {
+    if (visited == 1) {
       toggleSplash();
-    }, 2500);
-    return () => clearTimeout(timeOut);
-  }, [toggleSplash]);
+    } else {
+      const timeOut = setTimeout(() => {
+        toggleSplash();
+        increaseVisited();
+      }, 2500);
+      return () => clearTimeout(timeOut);
+    }
+  }, []);
 
   return (
     <>
@@ -35,7 +41,7 @@ export default function Home() {
           splash ? "h-screen overflow-hidden" : "h-auto overflow-scroll"
         }`}
       >
-        <Splash />
+        {visited == 0 ? <Splash /> : ""}
         <Search />
         <Nav />
         <Hero />
