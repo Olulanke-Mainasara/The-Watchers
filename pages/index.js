@@ -16,9 +16,7 @@ export default function Home() {
   const { splash, toggleSplash, visited, increaseVisited } = useStore();
 
   useEffect(() => {
-    if (visited == 1) {
-      toggleSplash();
-    } else {
+    if (visited === 0) {
       const timeOut = setTimeout(() => {
         toggleSplash();
         increaseVisited();
@@ -41,7 +39,7 @@ export default function Home() {
           splash ? "h-screen overflow-hidden" : "h-auto overflow-scroll"
         }`}
       >
-        {visited == 0 ? <Splash /> : ""}
+        {visited === 0 ? <Splash /> : ""}
         <Search />
         <Nav />
         <Hero />
