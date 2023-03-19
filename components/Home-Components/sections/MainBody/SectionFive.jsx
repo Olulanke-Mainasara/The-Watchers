@@ -8,7 +8,7 @@ import SImage from "../../UI/Section/SImage";
 
 function SectionFive() {
   return (
-    <section className="w-full h-screen flex allEMT:flex-col allEMT:gap-14 allIL:h-auto">
+    <section className="w-full max-w-[1920px] mx-auto h-screen laptop:max-h-[900px] flex allEMT:flex-col allEMT:gap-14 allIL:h-auto">
       <SImage>
         <Image
           src="/Section3.JPG"
@@ -20,7 +20,7 @@ function SectionFive() {
       </SImage>
 
       <Text position={"start"}>
-        <H1>Feed your curiosity, no matter where you are</H1>
+        <H1>Feed your mind, no matter where you are</H1>
 
         <P>
           At The Watchers, we understand the importance of accessibility and

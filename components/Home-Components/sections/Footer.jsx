@@ -17,32 +17,30 @@ function Footer() {
   };
 
   return (
-    <footer className="w-full h-[70vh] flex flex-col px-10 bg-gray-800 text-white allIL:h-fit allEM:px-8 allT:px-6">
+    <footer className="w-full h-[70vh] flex flex-col px-10 bg-black text-white allIL:h-fit allEM:px-8 allT:px-6">
       <section className="flex gap-10 allIL:gap-0 basis-4/5 allIL:flex-col">
         <section className="flex flex-col h-full justify-center basis-1/2 allLM:flex-row allLM:items-center allLM:border-white allIL:border-b allLM:py-8 allLM:gap-8">
           <div className="flex h-full flex-col justify-center gap-6 allIL:basis-1/2 border-slate-100 border-b allLM:border-b-0 allEMT:py-8">
             <a
               href="#hero"
-              className="relative w-10 h-10 rounded-full mx-auto overflow-hidden"
+              className="w-fit flex items-center text-2xl dark:text-white dark:hover:text-gray-600 transition-colors duration-700 allT:text-lg"
             >
-              <Image
-                fill
-                alt="The Watchers. Logo"
-                src={"/The Universe 2.jpg"}
-              />
+              <div className="relative w-10 h-10 rounded-full overflow-hidden">
+                <Image src="/The Universe 2.jpg" fill alt="The Watchers Logo" />
+              </div>
+              <span>The Watchers.</span>
             </a>
-            <p className="text-base 2xl:text-xl">
-              The Watchers - Exploring the wonders of the universe, one story at
-              a time. Join our community and stay up-to-date with the latest
-              discoveries, breakthroughs, and insights across a variety of
-              topics, from space exploration to world history, science, art, and
-              more.
+            <p className="text-base 2xl:text-xl allT:text-sm">
+              Exploring the wonders of the universe, one story at a time. Join
+              our community and stay up-to-date with the latest discoveries,
+              breakthroughs, and insights across a variety of topics, from space
+              exploration to world history, science, art, and more.
             </p>
           </div>
 
           <div className="h-full flex flex-col gap-5 justify-center allEMT:py-8">
-            <p className="text-xl 2xl:text-2xl">Subscribe to our newsletter</p>
-            <p className="">
+            <p className="text-xl 2xl:text-2xl allT:text-lg">Subscribe to our newsletter</p>
+            <p className="allT:text-sm">
               The latest news, articles, and resources, sent to your inbox
               weekly.
             </p>
@@ -57,7 +55,7 @@ function Footer() {
               />
               <button
                 type="submit"
-                className="py-2 px-3 bg-white text-gray-800 hover:bg-gray-800 hover:text-white border duration-500 rounded-lg allEMT:w-fit allEMT:mx-auto"
+                className="py-2 px-3 bg-white text-black hover:bg-black hover:text-white border duration-500 rounded-lg allEMT:w-fit allEMT:mx-auto"
               >
                 Subscribe
               </button>
@@ -72,19 +70,31 @@ function Footer() {
                 key={footerlink.id}
                 className="flex flex-col gap-4 justify-center"
               >
-                <p className="text-xl">{footerlink.title}</p>
+                <p className="text-xl allT:text-lg">{footerlink.title}</p>
 
-                <div className="flex flex-col gap-3 text-slate-300">
-                  <Link href={"#"}>
+                <div className="flex flex-col gap-3 text-white">
+                  <Link
+                    href={"#"}
+                    className="opacity-50 hover:opacity-100 duration-500"
+                  >
                     <p>{footerlink.linkOne}</p>
                   </Link>
-                  <Link href={"#"}>
+                  <Link
+                    href={"#"}
+                    className="opacity-50 hover:opacity-100 duration-500"
+                  >
                     <p>{footerlink.linkTwo}</p>
                   </Link>
-                  <Link href={"#"}>
+                  <Link
+                    href={"#"}
+                    className="opacity-50 hover:opacity-100 duration-500"
+                  >
                     <p>{footerlink.linkThree}</p>
                   </Link>
-                  <Link href={"#"}>
+                  <Link
+                    href={"#"}
+                    className="opacity-50 hover:opacity-100 duration-500"
+                  >
                     <p>{footerlink.linkFour}</p>
                   </Link>
                 </div>
@@ -97,7 +107,7 @@ function Footer() {
       <section className="basis-1/5 flex justify-between items-center border-slate-100 border-t allEMT:flex-col-reverse text-sm text-center allIL:py-8 allEMT:gap-6">
         <p>© 2023 The Watchers Inc. All rights reserved.</p>
 
-        <div className="flex gap-7 text-2xl text-white">
+        <div className="flex gap-7 text-2xl text-white allT:text-xl">
           <Link href={"#"}>
             <FontAwesomeIcon icon={faFacebook} />
           </Link>

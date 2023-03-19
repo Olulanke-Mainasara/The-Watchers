@@ -19,7 +19,7 @@ function CategoriesCarousel() {
     <ContainerC>
       <H1C>Our Categories</H1C>
 
-      <div className="relative w-screen h-[550px] allT:h-[420px] flex items-center overflow-x-hidden">
+      <div className="relative w-full max-w-[1920px] h-[550px] allT:h-[420px] flex items-center overflow-x-hidden">
         <LeftArrow onclick={prevItem} />
         {categoriesWithControls}
         <RightArrow onclick={nextItem} />

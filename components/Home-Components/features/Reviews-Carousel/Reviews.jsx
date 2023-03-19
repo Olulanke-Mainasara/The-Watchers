@@ -30,7 +30,7 @@ function Reviews({ controls }) {
 
               <FontAwesomeIcon className="text-4xl" icon={faQuoteLeft} />
 
-              <p className="text-lg allT:text-base">{reviewsItem.text}</p>
+              <p className="text-lg allT:text-sm">{reviewsItem.text}</p>
 
               <FontAwesomeIcon className="text-4xl" icon={faQuoteRight} />
             </div>

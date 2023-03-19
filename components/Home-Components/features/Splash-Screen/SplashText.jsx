@@ -13,7 +13,7 @@ function SplashText() {
       className="flex items-center justify-center"
     >
       <div className="relative w-60 2xl:w-64 allEMT:w-28 aspect-square">
-        <Image src={"/The Universe 2.jpg"} fill priority alt="" />
+        <Image src={"/The Universe 2.jpg"} fill priority alt="Brand logo" />
       </div>
       <h1>The Watchers.</h1>
     </motion.div>

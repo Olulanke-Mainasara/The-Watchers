@@ -25,7 +25,7 @@ function ReviewsCarousel() {
     <ContainerC>
       <H1C>Reviews</H1C>
 
-      <div className="relative w-screen h-[360px] flex items-center overflow-x-hidden">
+      <div className="relative w-full max-w-[1920px] h-[360px] flex items-center overflow-x-hidden">
         <LeftArrow onclick={prevItem} />
         {reviewsWithControls}
         <RightArrow onclick={nextItem} />
