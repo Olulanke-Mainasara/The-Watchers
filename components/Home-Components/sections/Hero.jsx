@@ -37,8 +37,8 @@ function Hero() {
         </div>
       </div>
 
-      <div className="relative w-[85%] h-[90vh] max-h-[700px] allT:max-h-[500px] mx-auto border border-gray-500 rounded-xl overflow-hidden allLM:hidden laptop:hidden">
-        <Image src={"/Header.jpeg"} fill priority alt={"Hero Image"} />
+      <div className="relative w-[85%] h-[90vh] max-w-[350px] min-h-[660px] max-h-[700px] allT:max-h-[500px] mx-auto border border-gray-500 rounded-xl overflow-hidden allLM:hidden laptop:hidden">
+        <Image src={"/headerM.jpg"} fill priority alt={"Hero Image"} />
       </div>
 
       <div className="relative w-[85%] max-w-[1200px] h-[90vh] max-h-[755px] allLM:h-[45vh] allEMT:max-h-[720px] mx-auto border border-gray-500 rounded-xl overflow-hidden allEMT:hidden">

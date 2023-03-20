@@ -14,7 +14,7 @@ function Categories({ controls }) {
             animate={controls}
             key={categoriesItem.id}
           >
-            <div className="w-full allEMT:w-[90%] allEMT:max-w-[420px] allEMT:mx-auto h-full rounded-2xl bg-black dark:bg-white flex flex-col items-center justify-center overflow-hidden">
+            <div className="w-full allEMT:w-[90%] allEMT:max-w-[420px] allEMT:mx-auto h-full rounded-2xl bg-black dark:bg-slate-800 flex flex-col items-center justify-center overflow-hidden">
               <div className="relative basis-[40%] w-full h-full">
                 <Image
                   src={categoriesItem.imgsrc}
@@ -24,7 +24,7 @@ function Categories({ controls }) {
                 />
               </div>
 
-              <div className="dark:text-black text-white flex flex-col items-center justify-evenly basis-[60%] px-[5%]">
+              <div className="dark:text-white text-white flex flex-col items-center justify-evenly basis-[60%] px-[5%]">
                 <h5 className="text-3xl allT:text-2xl">
                   {categoriesItem.title}
                 </h5>

@@ -15,7 +15,7 @@ function Reviews({ controls }) {
             animate={controls}
             key={reviewsItem.id}
           >
-            <div className="w-full allEMT:w-[90%] allEMT:mx-auto h-full rounded-2xl bg-black text-white dark:bg-white dark:text-black flex flex-col items-center justify-evenly px-[5%]">
+            <div className="w-full allEMT:w-[90%] allEMT:mx-auto h-full rounded-2xl bg-black text-white dark:bg-slate-800 dark:text-white flex flex-col items-center justify-evenly px-[5%]">
               <div className="w-full flex gap-2 justify-center items-center">
                 <div className="w-14 h-14 rounded-full relative border overflow-hidden">
                   <Image

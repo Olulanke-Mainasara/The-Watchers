@@ -14,7 +14,7 @@ function News({ controls }) {
             animate={controls}
             key={newsItem.id}
           >
-            <div className="w-[90%] max-w-[1920px] allEMT:max-w-[420px] h-full overflow-hidden rounded-2xl mx-auto bg-black dark:bg-white flex items-center justify-center allM:flex-col">
+            <div className="w-[90%] max-w-[1920px] allEMT:max-w-[420px] h-full overflow-hidden rounded-2xl mx-auto bg-black dark:bg-slate-800 flex items-center justify-center allM:flex-col">
               <div className="relative basis-3/4 md:basis-1/2 allEMT:basis-2/5 w-full h-full">
                 <Image
                   src={newsItem.imgsrc}
@@ -24,7 +24,7 @@ function News({ controls }) {
                 />
               </div>
 
-              <div className="dark:text-black text-white flex flex-col items-center justify-center gap-6 basis-2/5 md:basis-1/2 allEMT:basis-3/5 allM:justify-evenly allM:gap-0 px-6">
+              <div className="dark:text-white text-white flex flex-col items-center justify-center gap-6 basis-2/5 md:basis-1/2 allEMT:basis-3/5 allM:justify-evenly allM:gap-0 px-6">
                 <h5 className="text-xl allT:text-lg">{newsItem.sn}</h5>
                 <p className="text-5xl leading-[60px] lg:text-3xl allEM:text-3xl allEM:leading-[45px] allT:text-2xl">
                   {newsItem.text}

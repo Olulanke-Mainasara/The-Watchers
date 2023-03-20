@@ -17,13 +17,13 @@ function Footer() {
   };
 
   return (
-    <footer className="w-full h-[70vh] flex flex-col px-10 bg-black text-white allIL:h-fit allEM:px-8 allT:px-6">
+    <footer className="w-full h-[70vh] flex flex-col px-10 bg-black dark:bg-slate-800 text-white dark:text-white allIL:h-fit allEM:px-8 allT:px-6">
       <section className="flex gap-10 allIL:gap-0 basis-4/5 allIL:flex-col">
         <section className="flex flex-col h-full justify-center basis-1/2 allLM:flex-row allLM:items-center allLM:border-white allIL:border-b allLM:py-8 allLM:gap-8">
           <div className="flex h-full flex-col justify-center gap-6 allIL:basis-1/2 border-slate-100 border-b allLM:border-b-0 allEMT:py-8">
             <a
               href="#hero"
-              className="w-fit flex items-center text-2xl dark:text-white dark:hover:text-gray-600 transition-colors duration-700 allT:text-lg"
+              className="w-fit flex items-center text-2xl dark:text-white hover:text-gray-600 dark:hover:text-gray-600 transition-colors duration-300 allT:text-lg"
             >
               <div className="relative w-10 h-10 rounded-full overflow-hidden">
                 <Image src="/The Universe 2.jpg" fill alt="The Watchers Logo" />
@@ -39,7 +39,9 @@ function Footer() {
           </div>
 
           <div className="h-full flex flex-col gap-5 justify-center allEMT:py-8">
-            <p className="text-xl 2xl:text-2xl allT:text-lg">Subscribe to our newsletter</p>
+            <p className="text-xl 2xl:text-2xl allT:text-lg">
+              Subscribe to our newsletter
+            </p>
             <p className="allT:text-sm">
               The latest news, articles, and resources, sent to your inbox
               weekly.
@@ -55,7 +57,7 @@ function Footer() {
               />
               <button
                 type="submit"
-                className="py-2 px-3 bg-white text-black hover:bg-black hover:text-white border duration-500 rounded-lg allEMT:w-fit allEMT:mx-auto"
+                className="py-2 px-3 bg-white text-black hover:bg-black hover:text-white border duration-300 rounded-lg allEMT:w-fit allEMT:mx-auto"
               >
                 Subscribe
               </button>
@@ -72,28 +74,28 @@ function Footer() {
               >
                 <p className="text-xl allT:text-lg">{footerlink.title}</p>
 
-                <div className="flex flex-col gap-3 text-white">
+                <div className="flex flex-col gap-3 dark:text-white">
                   <Link
                     href={"#"}
-                    className="opacity-50 hover:opacity-100 duration-500"
+                    className="opacity-70 hover:opacity-100 duration-500"
                   >
                     <p>{footerlink.linkOne}</p>
                   </Link>
                   <Link
                     href={"#"}
-                    className="opacity-50 hover:opacity-100 duration-500"
+                    className="opacity-70 hover:opacity-100 duration-500"
                   >
                     <p>{footerlink.linkTwo}</p>
                   </Link>
                   <Link
                     href={"#"}
-                    className="opacity-50 hover:opacity-100 duration-500"
+                    className="opacity-70 hover:opacity-100 duration-500"
                   >
                     <p>{footerlink.linkThree}</p>
                   </Link>
                   <Link
                     href={"#"}
-                    className="opacity-50 hover:opacity-100 duration-500"
+                    className="opacity-70 hover:opacity-100 duration-500"
                   >
                     <p>{footerlink.linkFour}</p>
                   </Link>
@@ -107,7 +109,7 @@ function Footer() {
       <section className="basis-1/5 flex justify-between items-center border-slate-100 border-t allEMT:flex-col-reverse text-sm text-center allIL:py-8 allEMT:gap-6">
         <p>© 2023 The Watchers Inc. All rights reserved.</p>
 
-        <div className="flex gap-7 text-2xl text-white allT:text-xl">
+        <div className="flex gap-7 text-2xl dark:text-white allT:text-xl">
           <Link href={"#"}>
             <FontAwesomeIcon icon={faFacebook} />
           </Link>
