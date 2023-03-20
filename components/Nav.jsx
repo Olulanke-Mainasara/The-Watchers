@@ -120,7 +120,7 @@ function Nav() {
 
               <button
                 type="Log in"
-                className="py-2 px-3 allLM:text-2xl dark:text-white text-black allEMT:text-lg"
+                className="py-2 pl-3 allLM:text-2xl dark:text-white text-black allEMT:text-lg"
               >
                 Log in <FontAwesomeIcon icon={faChevronRight} />
               </button>
