@@ -26,7 +26,7 @@ function Nav() {
       <div className="h-full mx-auto flex items-center justify-between px-10 sm:px-5 xs:px-3 iphone5:px-3 xtraSmall:px-2">
         <Link
           href="/"
-          className="flex items-center text-2xl dark:text-white transition-colors duration-700 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:scale-x-0 after:bg-black dark:after:bg-white after:transition-transform after:duration-700 after:content-[''] hover:after:scale-x-100 allT:text-lg allIL:hover:after:w-0"
+          className="flex items-center text-2xl text-black dark:text-white transition-colors duration-700 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:scale-x-0 after:bg-black dark:after:bg-white after:transition-transform after:duration-700 after:content-[''] hover:after:scale-x-100 allT:text-lg allIL:hover:after:w-0"
         >
           <div className="relative w-10 h-10 rounded-full overflow-hidden">
             <Image
@@ -40,9 +40,9 @@ function Nav() {
         </Link>
 
         <ul
-          className={`flex allEMT:text-base text-black dark:text-white allIL:text-black allIL:absolute allIL:top-0 allIL:h-screen allIL:w-full allIL:justify-end allIL:bg-gray-800/0 backdrop-blur-lg duration-500 ${navMenu}`}
+          className={`flex allEMT:text-base allIL:text-black allIL:absolute allIL:top-0 allIL:h-screen allIL:w-full allIL:justify-end allIL:bg-gray-800/0 backdrop-blur-lg duration-500 ${navMenu}`}
         >
-          <div className="relative bg-white dark:bg-black duration-500 allIL:px-8 allIL:w-4/5 allIL:min-w-[240px] allIL:max-w-[320px] flex justify-center items-center allIL:items-start gap-14 allIL:flex-col allEM:gap-10 allT:gap-8">
+          <div className="relative text-black dark:text-white bg-white dark:bg-black allIL:px-8 allIL:w-4/5 allIL:min-w-[240px] allIL:max-w-[320px] flex justify-center items-center allIL:items-start gap-14 allIL:flex-col allEM:gap-10 allT:gap-8 duration-300">
             <li>
               <Link
                 href="/"
@@ -111,26 +111,26 @@ function Nav() {
             </button>
 
             <div className="flex allT:flex-col allT:w-full gap-2 allT:gap-5 items-center laptop:hidden allLM:hidden">
-              <button
-                title="Start reading"
+              <Link
+                href={"/categories"}
                 className="rounded-3xl dark:bg-white bg-black px-5 py-3 dark:text-black text-white text-3xl transition-colors duration-300 allEMT:text-lg allT:w-full"
               >
                 Start reading
-              </button>
+              </Link>
 
-              <button
-                type="Log in"
+              <Link
+                href={"/sign-in"}
                 className="py-2 pl-3 allLM:text-2xl dark:text-white text-black allEMT:text-lg"
               >
                 Log in <FontAwesomeIcon icon={faChevronRight} />
-              </button>
+              </Link>
             </div>
           </div>
         </ul>
 
         <button
           title="Search"
-          className="laptop:hidden allLM:hidden w-10 h-10 flex items-center justify-center text-xl dark:text-white allT:text-lg"
+          className="laptop:hidden allLM:hidden w-10 h-10 flex items-center justify-center text-xl text-black dark:text-white allT:text-lg"
           onClick={() => {
             toggleSearch();
           }}
@@ -144,14 +144,14 @@ function Nav() {
             onClick={() => {
               toggleDark();
             }}
-            className="w-10 h-10 rounded-full flex items-center justify-center text-xl dark:text-white"
+            className="w-10 h-10 rounded-full flex items-center justify-center text-xl text-black dark:text-white"
           >
             <FontAwesomeIcon icon={dark ? faSun : faMoon} />
           </button>
 
           <button
             title="Search"
-            className="w-10 h-10 rounded-full flex items-center justify-center text-xl dark:text-white"
+            className="w-10 h-10 rounded-full flex items-center justify-center text-xl text-black dark:text-white"
             onClick={() => {
               toggleSearch();
             }}
@@ -159,18 +159,18 @@ function Nav() {
             <FontAwesomeIcon icon={faSearch} />
           </button>
 
-          <button
-            type="Log in"
+          <Link
+            href={"/sign-in"}
             className="py-2 px-6 text-white bg-black border-black dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black border dark:hover:border-white duration-500 rounded-full"
           >
             Log in <FontAwesomeIcon icon={faChevronRight} />
-          </button>
+          </Link>
         </div>
 
         <button
           title="Open navigation menu"
           onClick={openMenu}
-          className="laptop:hidden dark:text-white text-2xl allT:text-lg"
+          className="laptop:hidden text-black dark:text-white text-2xl allT:text-lg"
         >
           <FontAwesomeIcon icon={faBars} />
         </button>
