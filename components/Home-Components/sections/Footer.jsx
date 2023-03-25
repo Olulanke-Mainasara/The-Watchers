@@ -23,10 +23,17 @@ function Footer() {
           <div className="flex h-full flex-col justify-center gap-6 allIL:basis-1/2 border-slate-100 border-b allLM:border-b-0 allEMT:py-8">
             <a
               href="#hero"
-              className="w-fit flex items-center text-2xl dark:text-white hover:text-gray-600 dark:hover:text-gray-600 transition-colors duration-300 allT:text-lg"
+              className="w-fit flex items-center text-2xl mx-auto dark:text-white hover:text-gray-600 dark:hover:text-gray-600 transition-colors duration-300 allT:text-lg"
             >
               <div className="relative w-10 h-10 rounded-full overflow-hidden">
-                <Image src="/The Universe 2.jpg" fill alt="The Watchers Logo" />
+                <Image
+                  src="/The Universe 2.jpg"
+                  fill
+                  sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+                  alt="The Watchers Logo"
+                />
               </div>
               <span>The Watchers.</span>
             </a>

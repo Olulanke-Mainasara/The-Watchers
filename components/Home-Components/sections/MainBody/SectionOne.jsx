@@ -13,7 +13,9 @@ function SectionOne() {
         <Image
           src="/Section1.JPG"
           fill
-          blur="true"
+          sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
           priority
           className="absolute border border-black dark:border-white rounded-2xl top-0 left-0"
           alt=""

@@ -38,7 +38,6 @@ function SectionFour() {
             src="/Section2a.JPG"
             width={500}
             height={800}
-            blur="true"
             className="absolute w-3/5 md:w-4/5 h-3/5 border border-black dark:border-white rounded-2xl top-0 left-0 allEMT:min-h-[250px]"
             alt=""
           />
@@ -46,7 +45,6 @@ function SectionFour() {
             src="/Section2b.JPG"
             width={500}
             height={800}
-            blur="true"
             className="absolute w-3/5 md:w-4/5 h-3/5 border rounded-2xl bottom-0 right-0 allEMT:min-h-[250px]"
             alt=""
           />
