@@ -26,7 +26,7 @@ function News({ controls }) {
 
               <div className="dark:text-white text-white flex flex-col items-center justify-center gap-6 basis-2/5 md:basis-1/2 allEMT:basis-3/5 allM:justify-evenly allM:gap-0 px-6">
                 <h5 className="text-xl allT:text-lg">{newsItem.sn}</h5>
-                <p className="text-5xl leading-[60px] lg:text-3xl allEM:text-3xl allEM:leading-[45px] allT:text-2xl">
+                <p className="text-5xl text-center leading-[60px] lg:text-3xl allEM:text-3xl allEM:leading-[45px] allT:text-2xl">
                   {newsItem.text}
                 </p>
                 <CardButton text={"Read more"} />

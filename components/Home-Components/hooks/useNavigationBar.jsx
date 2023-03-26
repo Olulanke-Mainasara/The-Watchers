@@ -11,7 +11,7 @@ function useNavigationBar() {
   const { dark } = useStore();
 
   useEffect(() => {
-    if (prevScrollCounter == 0) {
+    if (prevScrollCounter === 0) {
       setPrevScrollPos(window.scrollY);
       setPrevScrollCounter((prevValue) => prevValue + 1);
     }
@@ -23,9 +23,12 @@ function useNavigationBar() {
     // Get the current scroll position
     const currentScrollPos = window.scrollY;
 
+    // Check if the user has reached the top of the page
+    const atTopOfPage = currentScrollPos === 0;
+
     // Check if the user is scrolling up or down
-    if (currentScrollPos < prevScrollPos && !visible) {
-      // The user is scrolling up
+    if ((currentScrollPos < prevScrollPos || atTopOfPage) && !visible) {
+      // The user is scrolling up or at the top of the page
       setVisible(true);
     } else if (currentScrollPos > prevScrollPos && visible) {
       // The user is scrolling down

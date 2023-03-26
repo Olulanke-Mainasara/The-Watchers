@@ -8,6 +8,7 @@ import Nav from "@/components/Nav";
 import { categories } from "@/data/Arrays";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import Footer from "@/components/Home-Components/sections/Footer";
 
 config.autoAddCss = false;
 
@@ -36,7 +37,7 @@ function Categories() {
               return (
                 <div
                   key={category.id}
-                  className="w-full allEMT:max-w-[420px] h-[550px] allT:h-[420px] mx-auto rounded-2xl bg-black dark:bg-white flex flex-col items-center justify-center overflow-hidden duration-500"
+                  className="w-full allEMT:max-w-[420px] h-[550px] allT:h-[420px] mx-auto rounded-2xl bg-black dark:bg-slate-800 flex flex-col items-center justify-center overflow-hidden duration-500"
                 >
                   <div className="relative basis-[40%] w-full h-full">
                     <Image
@@ -44,17 +45,19 @@ function Categories() {
                       fill
                       priority
                       sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+                        (max-width: 1200px) 50vw,
+                        33vw"
                       alt="Category Image"
                     />
                   </div>
 
-                  <div className="dark:text-black text-white flex flex-col items-center justify-evenly basis-[60%] px-[5%] duration-500">
-                    <h5 className="text-3xl allT:text-2xl">{category.title}</h5>
+                  <div className="dark:text-white text-white flex flex-col justify-evenly basis-[60%] px-[5%] duration-500">
+                    <h5 className="text-3xl text-center allT:text-2xl">
+                      {category.title}
+                    </h5>
                     <p className="text-base allT:text-xs">{category.text}</p>
                     <Link
-                      className="text-xl rounded-2xl px-4 py-3 allIL:px-5 allEM:text-lg allT:text-base text-white dark:text-black hover:text-black hover:bg-white dark:hover:bg-black dark:hover:text-white transition-colors duration-500"
+                      className="text-xl text-center rounded-2xl px-4 py-3 allIL:px-5 allEM:text-lg allT:text-base text-white hover:text-black hover:bg-white transition-colors duration-500"
                       href="#"
                     >
                       View <FontAwesomeIcon icon={faChevronRight} />
@@ -65,6 +68,7 @@ function Categories() {
             })}
           </div>
         </section>
+        <Footer />
       </div>
     </>
   );
