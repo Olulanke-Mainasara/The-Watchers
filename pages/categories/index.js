@@ -31,7 +31,7 @@ function Categories() {
           </h1>
         </header>
 
-        <section className="py-10 px-14 allIL:px-5 h-full">
+        <section className="pt-10 pb-14 px-14 allIL:px-5 h-full">
           <div className="grid grid-cols-3 allLM:grid-cols-2 allEMT:grid-cols-1 allLM:gap-8 gap-14 h-full">
             {categories.map((category) => {
               return (
@@ -39,7 +39,7 @@ function Categories() {
                   key={category.id}
                   className="w-full allEMT:max-w-[420px] h-[550px] allT:h-[420px] mx-auto rounded-2xl bg-black dark:bg-slate-800 flex flex-col items-center justify-center overflow-hidden duration-500"
                 >
-                  <div className="relative basis-[40%] w-full h-full">
+                  <div className="relative basis-[40%] lg:basis-[45%] w-full h-full">
                     <Image
                       src={category.imgsrc}
                       fill
@@ -51,7 +51,7 @@ function Categories() {
                     />
                   </div>
 
-                  <div className="dark:text-white text-white flex flex-col justify-evenly basis-[60%] px-[5%] duration-500">
+                  <div className="dark:text-white text-white flex flex-col justify-evenly basis-[60%] lg:basis-[55%] px-[5%] duration-500">
                     <h5 className="text-3xl text-center allT:text-2xl">
                       {category.title}
                     </h5>
