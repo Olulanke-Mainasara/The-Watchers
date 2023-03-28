@@ -37,7 +37,7 @@ function Footer() {
               </div>
               <span>The Watchers.</span>
             </a>
-            <p className="text-base 2xl:text-xl allT:text-sm">
+            <p className="text-base opacity-70 2xl:text-xl allT:text-sm">
               Exploring the wonders of the universe, one story at a time. Join
               our community and stay up-to-date with the latest discoveries,
               breakthroughs, and insights across a variety of topics, from space
@@ -49,7 +49,7 @@ function Footer() {
             <p className="text-xl 2xl:text-2xl allT:text-lg">
               Subscribe to our newsletter
             </p>
-            <p className="allT:text-sm">
+            <p className="allT:text-sm opacity-70">
               The latest news, articles, and resources, sent to your inbox
               weekly.
             </p>

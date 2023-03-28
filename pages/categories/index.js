@@ -55,7 +55,9 @@ function Categories() {
                     <h5 className="text-3xl text-center allT:text-2xl">
                       {category.title}
                     </h5>
-                    <p className="text-base allT:text-xs">{category.text}</p>
+                    <p className="text-base opacity-70 allT:text-xs">
+                      {category.text}
+                    </p>
                     <Link
                       className="text-xl text-center rounded-2xl px-4 py-3 allIL:px-5 allEM:text-lg allT:text-base text-white hover:text-black hover:bg-white transition-colors duration-500"
                       href="#"

@@ -30,7 +30,9 @@ function Categories({ controls }) {
                 <h5 className="text-3xl text-center allT:text-2xl">
                   {categoriesItem.title}
                 </h5>
-                <p className="text-base allT:text-xs">{categoriesItem.text}</p>
+                <p className="text-base opacity-70 allT:text-xs">
+                  {categoriesItem.text}
+                </p>
                 <CardButton text={"View"} />
               </div>
             </div>

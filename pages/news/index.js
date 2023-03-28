@@ -29,11 +29,10 @@ function News() {
         </header>
 
         <section className="py-10 px-14 allIL:px-5 h-full">
-          <div className="max-w-[1280px] grid grid-cols-3 allLM:grid-cols-2 allEMT:grid-cols-1 allLM:gap-8 gap-14 h-full mx-auto">
-            <div className="w-full h-64 border border-black dark:border-white col-span-2 allEMT:col-span-1 rounded-2xl"></div>
-            <div className="w-full h-64 border border-black dark:border-white rounded-2xl"></div>
-            <div className="w-full h-64 border border-black dark:border-white rounded-2xl"></div>
-            <div className="w-full h-64 border border-black dark:border-white col-span-2 allEMT:col-span-1 rounded-2xl"></div>
+          <div className="max-w-[1280px] grid grid-cols-4 allLM:grid-cols-2 allEMT:grid-cols-1 allLM:gap-8 gap-14 h-full mx-auto">
+            <div className="w-full allIL:h-[300px] border border-black dark:border-white col-span-2 row-span-2 allEMT:col-span-1 rounded-2xl"></div>
+            <div className="w-full h-[300px] border border-black dark:border-white col-span-2 allEMT:col-span-1 rounded-2xl"></div>
+            <div className="w-full h-[300px] border border-black dark:border-white col-span-2 allEMT:col-span-1 rounded-2xl"></div>
           </div>
 
           <div className="grid grid-cols-3 allLM:grid-cols-2 allEMT:grid-cols-1 allLM:gap-8 gap-14 h-full mt-20">
@@ -49,8 +48,8 @@ function News() {
                       fill
                       priority
                       sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+                        (max-width: 1200px) 50vw,
+                        33vw"
                       alt="Category Image"
                     />
                   </div>

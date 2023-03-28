@@ -3,6 +3,12 @@ import Head from "next/head";
 import { config, dom } from "@fortawesome/fontawesome-svg-core";
 import Search from "@/components/Search/Search";
 import Nav from "@/components/Nav";
+import ASection1 from "@/components/About-Components/ASection1";
+import ASection2 from "@/components/About-Components/ASection2";
+import ASection3 from "@/components/About-Components/ASection3";
+import ASection4 from "@/components/About-Components/ASection4";
+import Footer from "@/components/Home-Components/sections/Footer";
+import ALastSection from "@/components/About-Components/ALastSection";
 
 config.autoAddCss = false;
 
@@ -16,10 +22,20 @@ function About() {
         <link rel="icon" href="/favicon.ico" />
         <style>{dom.css()}</style>
       </Head>
-      <div className="dark:text-white h-screen flex items-center justify-center">
+      <div className="w-screen flex flex-col">
         <Search />
         <Nav />
-        <h1 className="text-5xl allEMT:text-2xl">Still in Development</h1>
+        <header className="w-full dark:text-white pt-32 pb-16 allIL:pb-32 flex items-center justify-center">
+          <h1 className="text-9xl allLM:text-8xl allEM:text-6xl allT:text-5xl">
+            About us
+          </h1>
+        </header>
+        <ASection1 />
+        <ASection2 />
+        <ASection3 />
+        <ALastSection />
+        <ASection4 />
+        <Footer />
       </div>
     </>
   );
