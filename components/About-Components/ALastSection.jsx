@@ -3,18 +3,22 @@ import H1 from "../Home-Components/UI/Section/H1";
 
 const team = [
   {
+    id: 1,
     name: "1M+",
     position: "Users",
   },
   {
+    id: 2,
     name: "50K+",
     position: "Articles / Blogs",
   },
   {
+    id: 3,
     name: "1.2K+",
     position: "Daily reads",
   },
   {
+    id: 4,
     name: "5+",
     position: "Global awards",
   },
