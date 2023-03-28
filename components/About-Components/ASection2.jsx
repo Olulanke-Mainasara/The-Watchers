@@ -7,7 +7,7 @@ import SImage from "../Home-Components/UI/Section/SImage";
 
 function ASection2() {
   return (
-    <section className="w-full max-w-[1920px] mx-auto h-screen laptop:max-h-[900px] flex allEMT:flex-col allEMT:gap-14 allIL:h-auto allIL:pb-56">
+    <section className="w-full max-w-[1920px] mx-auto h-screen laptop:max-h-[900px] flex allEMT:flex-col allEMT:gap-14 allIL:h-auto pb-44 allIL:pb-56">
       <SImage>
         <Image
           src="/Section1.JPG"

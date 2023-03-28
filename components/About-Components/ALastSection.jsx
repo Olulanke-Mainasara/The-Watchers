@@ -22,7 +22,7 @@ const team = [
 
 function ALastSection() {
   return (
-    <section className="w-full dark:text-white max-w-[1920px] mx-auto h-screen laptop:max-h-[900px] flex flex-col gap-14 items-center justify-center allIL:h-auto allIL:pb-56">
+    <section className="w-full dark:text-white max-w-[1920px] mx-auto h-auto laptop:max-h-[900px] flex flex-col gap-14 items-center justify-center pt-56 pb-24 allIL:pb-56">
       <div className="flex flex-col text-center gap-6 px-2">
         <H1>We aspire to inspire, one mind at a time</H1>
         <p className="mx-auto opacity-70 text-2xl 2xl:text-3xl md:text-xl allEMT:text-base 2xl:max-w-[900px] laptop:max-w-[700px] lg:max-w-[700px] md:max-w-[600px] allEMT:w-[75%] allEMT:max-w-[500px]">
