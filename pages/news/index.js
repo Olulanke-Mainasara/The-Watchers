@@ -40,7 +40,7 @@ function News() {
               return (
                 <div
                   key={category.id}
-                  className="w-full allEMT:max-w-[420px] flex flex-col items-center justify-center duration-500"
+                  className="w-full allEMT:max-w-[420px] flex flex-col items-center justify-center duration-500 mx-auto"
                 >
                   <div className="relative w-full aspect-video rounded-xl overflow-hidden">
                     <Image

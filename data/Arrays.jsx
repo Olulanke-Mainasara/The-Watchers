@@ -73,52 +73,52 @@ export const categories = [
 export const reviews = [
   {
     id: 1,
-    title: "Emma Johnson ",
+    name: "Emma Johnson ",
     text: "I'm constantly amazed by the depth and breadth of content available on The Watchers. From space exploration to art and entertainment, I always find something new and interesting to read.",
   },
   {
     id: 2,
-    title: "James Lee",
+    name: "James Lee",
     text: "As a science enthusiast, I appreciate the well-researched and informative articles on The Watchers. It's a great resource for staying up-to-date on the latest developments in the world of science.",
   },
   {
     id: 3,
-    title: "Olivia Chen",
+    name: "Olivia Chen",
     text: "I love that The Watchers encourages user-generated content. It's a great platform for sharing ideas and opinions on a wide range of topics.",
   },
   {
     id: 4,
-    title: "Ryan Davis ",
+    name: "Ryan Davis ",
     text: "The Watchers' interactive maps are incredibly useful. I recently used them to plan a road trip and was able to easily find weather information for each stop along the way.",
   },
   {
     id: 5,
-    title: "Emily Rodriguez",
+    name: "Emily Rodriguez",
     text: "The Watchers' historical articles are both fascinating and educational. I've learned so much about different periods and events throughout history.",
   },
   {
     id: 6,
-    title: "Alex Kim",
+    name: "Alex Kim",
     text: "I'm always on the lookout for new art and entertainment recommendations, and The Watchers doesn't disappoint. Their reviews and features are insightful and well-written.",
   },
   {
     id: 7,
-    title: "Lily Wong",
+    name: "Lily Wong",
     text: "I appreciate the diversity of perspectives represented on The Watchers. It's a great way to stay informed on current events and political issues from a range of viewpoints.",
   },
   {
     id: 8,
-    title: "Ethan Baker",
+    name: "Ethan Baker",
     text: "Feats in engineering are often overlooked, but The Watchers does a great job of highlighting the incredible work being done in this field.",
   },
   {
     id: 9,
-    title: "Sophia Nguyen",
+    name: "Sophia Nguyen",
     text: "I've always been interested in transportation and infrastructure, and The Watchers provides a great platform for learning more about these topics.",
   },
   {
     id: 10,
-    title: "Michael Patel",
+    name: "Michael Patel",
     text: "I'm constantly amazed by the depth and detail of the articles on The Watchers. Whether I'm reading about space exploration or historical events, I always come away with a new understanding of the topic.",
   },
 ];

@@ -14,7 +14,7 @@ function Hero() {
         <h1 className="dark:text-white text-[115px] 2xl:text-[140px] laptop:leading-[1.1] lg:leading-[1.1] md:text-8xl allEM:text-7xl allT:text-6xl">
           All Things Curious
         </h1>
-        <p className="dark:text-white opacity-70 mx-auto text-2xl 2xl:text-3xl md:text-xl allEMT:text-base 2xl:max-w-[900px] laptop:max-w-[700px] lg:max-w-[700px] md:max-w-[600px] allEMT:w-[75%] allEMT:max-w-[500px]">
+        <p className="dark:text-white mx-auto text-2xl 2xl:text-3xl md:text-xl allEMT:text-base 2xl:max-w-[900px] laptop:max-w-[700px] lg:max-w-[700px] md:max-w-[600px] allEMT:w-[75%] allEMT:max-w-[500px]">
           The Watchers offers a seamless experience for exploring the world
           around us. Discover new knowledge and share your own ideas.
         </p>

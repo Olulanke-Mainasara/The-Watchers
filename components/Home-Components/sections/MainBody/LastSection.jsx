@@ -9,7 +9,7 @@ function LastSection() {
           All Things Curious
         </h1>
 
-        <p className="dark:text-white mx-auto text-2xl opacity-70 2xl:text-3xl md:text-xl allEM:text-base allT:text-sm 2xl:max-w-[900px] laptop:max-w-[700px] lg:max-w-[700px] md:max-w-[600px] allEMT:max-w-[300px]">
+        <p className="dark:text-white mx-auto text-2xl dark:opacity-70 2xl:text-3xl md:text-xl allEM:text-base allT:text-sm 2xl:max-w-[900px] laptop:max-w-[700px] lg:max-w-[700px] md:max-w-[600px] allEMT:max-w-[300px]">
           The Watchers offers a seamless experience for exploring the world
           around us. Discover new knowledge and share your own ideas.
         </p>

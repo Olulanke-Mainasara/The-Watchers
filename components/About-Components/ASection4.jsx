@@ -34,7 +34,7 @@ function ASection4() {
     <section className="w-full dark:text-white max-w-[1920px] mx-auto h-screen laptop:max-h-[900px] flex flex-col gap-14 items-center justify-center allIL:h-auto allIL:pb-28">
       <div className="flex flex-col text-center gap-6">
         <H1>Meet the Team</H1>
-        <p className="mx-auto opacity-70 text-2xl 2xl:text-3xl md:text-xl allEMT:text-base 2xl:max-w-[900px] laptop:max-w-[700px] lg:max-w-[700px] md:max-w-[600px] allEMT:w-[75%] allEMT:max-w-[500px]">
+        <p className="mx-auto dark:opacity-70 text-2xl 2xl:text-3xl md:text-xl allEMT:text-base 2xl:max-w-[900px] laptop:max-w-[700px] lg:max-w-[700px] md:max-w-[600px] allEMT:w-[75%] allEMT:max-w-[500px]">
           The Watchers offers a seamless experience for exploring the world
           around us. Discover new knowledge and share your own ideas.
         </p>
@@ -61,7 +61,9 @@ function ASection4() {
 
               <div className="w-full dark:text-white flex flex-col gap-1 pt-4 duration-500">
                 <h5 className="text-xl">{member.name}</h5>
-                <p className="text-lg opacity-70">{member.position}</p>
+                <p className="text-lg opacity-80 dark:opacity-70">
+                  {member.position}
+                </p>
               </div>
             </div>
           );
