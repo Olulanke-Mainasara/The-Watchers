@@ -87,10 +87,10 @@ function Nav() {
             </li>
             <li>
               <Link
-                href="/contact"
+                href="/contactus"
                 className="relative allLM:text-2xl hover:opacity-50 duration-300"
               >
-                Contact
+                Contact us
               </Link>
             </li>
 

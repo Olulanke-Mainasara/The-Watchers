@@ -21,14 +21,14 @@ function Reviews({ controls }) {
                 icon={faQuoteLeft}
               />
 
-              <p className="text-lg allT:text-sm">{reviewsItem.text}</p>
+              <p className="text-lg text-center allT:text-sm">{reviewsItem.text}</p>
 
               <FontAwesomeIcon
                 className="text-4xl text-right opacity-70"
                 icon={faQuoteRight}
               />
 
-              <div className="w-full flex gap-2 items-center">
+              <div className="w-full flex gap-2 items-center justify-center">
                 <div className="w-14 h-14 rounded-full relative border overflow-hidden">
                   <Image
                     src="/My Logo 1.jpg"

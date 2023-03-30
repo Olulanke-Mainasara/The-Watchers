@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { categories } from "../../../../data/Arrays";
-import CardButton from "../../UI/CardButton";
+import CardButton from "../../UI/Carousel/CardButton";
 
 function Categories({ controls }) {
   return (

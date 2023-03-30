@@ -12,7 +12,7 @@ function SearchForm() {
         <FontAwesomeIcon className="text-lg" icon={faSearch} />
         <input
           type="search"
-          className="w-full bg-black dark:bg-white py-3 outline-none"
+          className="w-full bg-black dark:bg-white placeholder:text-white dark:placeholder:text-black py-3 outline-none"
           placeholder="Search encyclopedia"
         />
         <button

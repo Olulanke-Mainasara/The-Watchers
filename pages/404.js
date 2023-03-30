@@ -38,7 +38,7 @@ function Custom404() {
             >
               Home
             </Link>
-            <Link href="/contact" className="text-xl allEMT:text-base">
+            <Link href="/contactus" className="text-xl allEMT:text-base">
               Contact us <FontAwesomeIcon icon={faArrowRight} />
             </Link>
           </div>

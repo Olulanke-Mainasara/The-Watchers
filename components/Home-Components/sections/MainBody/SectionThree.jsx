@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Button from "../../UI/Button";
+import Button from "../../UI/Section/Button";
 import P from "../../UI/Section/P";
 import H1 from "../../UI/Section/H1";
 import Text from "../../UI/Section/Text";

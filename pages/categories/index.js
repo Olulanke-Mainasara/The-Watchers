@@ -9,6 +9,7 @@ import { categories } from "@/data/Arrays";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import Footer from "@/components/Home-Components/sections/Footer";
+import CardButton from "@/components/Home-Components/UI/Carousel/CardButton";
 
 config.autoAddCss = false;
 
@@ -31,8 +32,8 @@ function Categories() {
           </h1>
         </header>
 
-        <section className="pt-10 pb-14 px-14 allIL:px-5 h-full">
-          <div className="grid grid-cols-3 allLM:grid-cols-2 allEMT:grid-cols-1 allLM:gap-8 gap-14 h-full">
+        <section className="pt-10 pb-14 px-14 allM:px-5 h-full">
+          <div className="grid grid-cols-3 allLM:grid-cols-2 allEMT:grid-cols-1 md:gap-8 gap-14 h-full">
             {categories.map((category) => {
               return (
                 <div
@@ -58,12 +59,7 @@ function Categories() {
                     <p className="text-base opacity-70 allT:text-xs">
                       {category.text}
                     </p>
-                    <Link
-                      className="text-xl text-center rounded-2xl px-4 py-3 allIL:px-5 allEM:text-lg allT:text-base text-white hover:text-black hover:bg-white transition-colors duration-500"
-                      href="#"
-                    >
-                      View <FontAwesomeIcon icon={faChevronRight} />
-                    </Link>
+                    <CardButton text={"View"} />
                   </div>
                 </div>
               );
