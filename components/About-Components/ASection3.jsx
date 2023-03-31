@@ -54,7 +54,7 @@ function ASection3() {
         </p>
       </div>
 
-      <div className="w-full grid grid-cols-3 md:grid-cols-2 allEMT:grid-cols-1 px-10 gap-10 allEMT:gap-14">
+      <div className="w-full px-10 grid grid-cols-3 md:grid-cols-2 allEMT:grid-cols-1 gap-10 allEMT:gap-14">
         {offers.map((offer) => {
           return (
             <div key={offer.id} className="w-full mx-auto space-y-6">

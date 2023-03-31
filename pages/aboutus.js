@@ -22,10 +22,10 @@ function About() {
         <link rel="icon" href="/favicon.ico" />
         <style>{dom.css()}</style>
       </Head>
-      <div className="w-screen flex flex-col">
+      <div className="flex flex-col w-screen">
         <Search />
         <Nav />
-        <header className="w-full dark:text-white pt-32 pb-16 allLM:pb-32 flex items-center justify-center">
+        <header className="flex items-center justify-center w-full pt-32 pb-16 dark:text-white allLM:pb-32">
           <h1 className="text-9xl allLM:text-8xl allEM:text-6xl allT:text-5xl">
             About us
           </h1>

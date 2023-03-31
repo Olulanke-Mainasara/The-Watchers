@@ -6,7 +6,7 @@ function Button() {
     <Link
       href="/categories"
       title="Categories"
-      className="rounded-xl bg-black px-6 py-3 text-white dark:bg-white dark:text-black dark:hover:bg-black dark:hover:text-white border duration-500 w-fit text-xl allEMT:mx-auto"
+      className="px-6 py-3 text-xl text-white bg-black border rounded-xl dark:bg-white dark:text-black dark:hover:bg-black dark:hover:text-white duration-500 w-fit allEMT:mx-auto"
     >
       Start reading
     </Link>

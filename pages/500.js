@@ -32,10 +32,10 @@ function Custom404() {
             page and if the issue persists, feel free to contact us or try again
             later.
           </p>
-          <div className="flex gap-10 allEMT:gap-6 allT:gap-4 items-center">
+          <div className="flex items-center gap-10 allEMT:gap-6 allT:gap-4">
             <Link
               href="/"
-              className="py-3 px-12 allT:px-10 text-xl allEMT:text-base border-black text-black bg-white hover:text-white hover:bg-black border hover:border-white duration-500 rounded-full"
+              className="px-12 py-3 text-xl text-black bg-white border border-black rounded-full allT:px-10 allEMT:text-base hover:text-white hover:bg-black hover:border-white duration-500"
             >
               Home
             </Link>

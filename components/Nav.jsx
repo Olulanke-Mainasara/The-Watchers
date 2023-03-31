@@ -23,12 +23,12 @@ function Nav() {
         visible ? "" : "allIL:opacity-0"
       } duration-300 h-16 w-screen bg-white dark:bg-black`}
     >
-      <div className="h-full mx-auto flex items-center justify-between px-10 sm:px-5 xs:px-3 iphone5:px-3 xtraSmall:px-2">
+      <div className="flex items-center justify-between h-full px-10 mx-auto sm:px-5 xs:px-3 iphone5:px-3 xtraSmall:px-2">
         <Link
           href="/"
           className="flex items-center text-2xl text-black dark:text-white transition-colors duration-700 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:scale-x-0 after:bg-black dark:after:bg-white after:transition-transform after:duration-700 after:content-[''] hover:after:scale-x-100 allT:text-lg allIL:hover:after:w-0"
         >
-          <div className="relative w-10 h-10 rounded-full overflow-hidden">
+          <div className="relative w-10 h-10 overflow-hidden rounded-full">
             <Image
               src="/The Universe 2.jpg"
               fill
@@ -97,7 +97,7 @@ function Nav() {
             <button
               title="Close navigation menu"
               onClick={closeMenu}
-              className="dark:text-white text-black text-3xl absolute top-7 iphone5:top-7 right-5 laptop:hidden"
+              className="absolute text-3xl text-black dark:text-white top-7 iphone5:top-7 right-5 laptop:hidden"
             >
               <FontAwesomeIcon icon={faClose} />
             </button>
@@ -107,22 +107,22 @@ function Nav() {
               onClick={() => {
                 toggleDark();
               }}
-              className="w-10 h-10 absolute top-7 left-8 rounded-full flex items-center justify-center text-xl dark:text-black text-white dark:bg-white bg-black laptop:hidden allLM:hidden"
+              className="absolute flex items-center justify-center w-10 h-10 text-xl text-white bg-black rounded-full top-7 left-8 dark:text-black dark:bg-white laptop:hidden allLM:hidden"
             >
               <FontAwesomeIcon icon={dark ? faSun : faMoon} />
             </button>
 
-            <div className="flex allT:flex-col allT:w-full gap-2 allT:gap-5 items-center laptop:hidden allLM:hidden">
+            <div className="flex items-center allT:flex-col allT:w-full gap-2 allT:gap-5 laptop:hidden allLM:hidden">
               <Link
                 href={"/categories"}
-                className="rounded-3xl dark:bg-white bg-black px-5 py-3 dark:text-black text-white text-3xl transition-colors duration-300 allEMT:text-lg allT:w-full"
+                className="px-5 py-3 text-3xl text-white bg-black rounded-3xl dark:bg-white dark:text-black transition-colors duration-300 allEMT:text-lg allT:w-full"
               >
                 Start reading
               </Link>
 
               <Link
                 href={"/sign-in"}
-                className="py-2 pl-3 allLM:text-2xl dark:text-white text-black allEMT:text-lg"
+                className="py-2 pl-3 text-black allLM:text-2xl dark:text-white allEMT:text-lg"
               >
                 Log in <FontAwesomeIcon icon={faChevronRight} />
               </Link>
@@ -132,7 +132,7 @@ function Nav() {
 
         <button
           title="Search"
-          className="laptop:hidden allLM:hidden w-10 h-10 flex items-center justify-center text-xl text-black dark:text-white allT:text-lg"
+          className="flex items-center justify-center w-10 h-10 text-xl text-black laptop:hidden allLM:hidden dark:text-white allT:text-lg"
           onClick={() => {
             toggleSearch();
           }}
@@ -140,20 +140,20 @@ function Nav() {
           <FontAwesomeIcon icon={faSearch} />
         </button>
 
-        <div className="flex gap-6 items-center allEMT:hidden">
+        <div className="flex items-center gap-6 allEMT:hidden">
           <button
             title="Theme"
             onClick={() => {
               toggleDark();
             }}
-            className="w-10 h-10 rounded-full flex items-center justify-center text-xl text-black dark:text-white"
+            className="flex items-center justify-center w-10 h-10 text-xl text-black rounded-full dark:text-white"
           >
             <FontAwesomeIcon icon={dark ? faSun : faMoon} />
           </button>
 
           <button
             title="Search"
-            className="w-10 h-10 rounded-full flex items-center justify-center text-xl text-black dark:text-white"
+            className="flex items-center justify-center w-10 h-10 text-xl text-black rounded-full dark:text-white"
             onClick={() => {
               toggleSearch();
             }}
@@ -163,7 +163,7 @@ function Nav() {
 
           <Link
             href={"/sign-in"}
-            className="py-2 px-6 text-white bg-black border-black dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black border dark:hover:border-white duration-500 rounded-full"
+            className="px-6 py-2 text-white bg-black border border-black rounded-full dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black dark:hover:border-white duration-500"
           >
             Log in <FontAwesomeIcon icon={faChevronRight} />
           </Link>
@@ -172,7 +172,7 @@ function Nav() {
         <button
           title="Open navigation menu"
           onClick={openMenu}
-          className="laptop:hidden text-black dark:text-white text-2xl allT:text-lg"
+          className="text-2xl text-black laptop:hidden dark:text-white allT:text-lg"
         >
           <FontAwesomeIcon icon={faBars} />
         </button>

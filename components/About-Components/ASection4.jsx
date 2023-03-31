@@ -40,14 +40,14 @@ function ASection4() {
         </p>
       </div>
 
-      <div className="w-full grid grid-cols-4 md:grid-cols-2 allEMT:grid-cols-1 px-10 gap-10 allEMT:gap-14">
+      <div className="w-full px-10 grid grid-cols-4 md:grid-cols-2 allEMT:grid-cols-1 gap-10 allEMT:gap-14">
         {team.map((member) => {
           return (
             <div
               key={member.id}
               className="w-full allEMT:max-w-[420px] flex flex-col items-center justify-center duration-500"
             >
-              <div className="relative w-full aspect-square rounded-xl overflow-hidden">
+              <div className="relative w-full overflow-hidden aspect-square rounded-xl">
                 <Image
                   src={member.imgsrc}
                   fill
@@ -59,7 +59,7 @@ function ASection4() {
                 />
               </div>
 
-              <div className="w-full dark:text-white flex flex-col gap-1 pt-4 duration-500">
+              <div className="flex flex-col w-full pt-4 dark:text-white gap-1 duration-500">
                 <h5 className="text-xl">{member.name}</h5>
                 <p className="text-lg opacity-80 dark:opacity-70">
                   {member.position}

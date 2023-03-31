@@ -19,30 +19,30 @@ function News() {
         <link rel="icon" href="/favicon.ico" />
         <style>{dom.css()}</style>
       </Head>
-      <div className="w-screen flex flex-col">
+      <div className="flex flex-col w-screen">
         <Search />
         <Nav />
-        <header className="w-full dark:text-white pt-32 pb-16 flex items-center justify-center">
+        <header className="flex items-center justify-center w-full pt-32 pb-16 dark:text-white">
           <h1 className="text-9xl allLM:text-8xl allEM:text-6xl allT:text-5xl">
             News
           </h1>
         </header>
 
-        <section className="py-10 px-14 allIL:px-5 h-full">
+        <section className="h-full py-10 px-14 allIL:px-5">
           <div className="max-w-[1280px] grid grid-cols-4 allLM:grid-cols-2 allEMT:grid-cols-1 allLM:gap-8 gap-14 h-full mx-auto">
             <div className="w-full allIL:h-[300px] border border-black dark:border-white col-span-2 row-span-2 allEMT:col-span-1 rounded-2xl"></div>
             <div className="w-full h-[300px] border border-black dark:border-white col-span-2 allEMT:col-span-1 rounded-2xl"></div>
             <div className="w-full h-[300px] border border-black dark:border-white col-span-2 allEMT:col-span-1 rounded-2xl"></div>
           </div>
 
-          <div className="grid grid-cols-3 allLM:grid-cols-2 allEMT:grid-cols-1 allLM:gap-8 gap-14 h-full mt-20">
+          <div className="h-full mt-20 grid grid-cols-3 allLM:grid-cols-2 allEMT:grid-cols-1 allLM:gap-8 gap-14">
             {categories.map((category) => {
               return (
                 <div
                   key={category.id}
                   className="w-full allEMT:max-w-[420px] flex flex-col items-center justify-center duration-500 mx-auto"
                 >
-                  <div className="relative w-full aspect-video rounded-xl overflow-hidden">
+                  <div className="relative w-full overflow-hidden aspect-video rounded-xl">
                     <Image
                       src={category.imgsrc}
                       fill
@@ -54,8 +54,8 @@ function News() {
                     />
                   </div>
 
-                  <div className="w-full dark:text-white flex items-center py-10 duration-500">
-                    <Link href="#" className="hover:opacity-50 duration-300">
+                  <div className="flex items-center w-full py-10 duration-500 dark:text-white">
+                    <Link href="#" className="duration-300 hover:opacity-50">
                       <h5 className="text-3xl allT:text-2xl">
                         {category.title}
                       </h5>

@@ -6,7 +6,7 @@ import CardButton from "../../UI/Carousel/CardButton";
 
 function News({ controls }) {
   return (
-    <div className="h-full flex">
+    <div className="flex h-full">
       {news.map((newsItem) => {
         return (
           <motion.div
@@ -15,7 +15,7 @@ function News({ controls }) {
             key={newsItem.id}
           >
             <div className="w-[90%] max-w-[1920px] allEMT:max-w-[420px] h-full overflow-hidden rounded-2xl mx-auto bg-black dark:bg-slate-800 flex items-center justify-center allM:flex-col">
-              <div className="relative basis-3/4 md:basis-1/2 allEMT:basis-2/5 w-full h-full">
+              <div className="relative w-full h-full basis-3/4 md:basis-1/2 allEMT:basis-2/5">
                 <Image
                   src={newsItem.imgsrc}
                   fill
@@ -24,7 +24,7 @@ function News({ controls }) {
                 />
               </div>
 
-              <div className="dark:text-white text-white flex flex-col justify-center gap-6 basis-2/5 md:basis-1/2 allEMT:basis-3/5 allM:justify-evenly allM:gap-0 px-6">
+              <div className="flex flex-col justify-center px-6 text-white dark:text-white gap-6 basis-2/5 md:basis-1/2 allEMT:basis-3/5 allM:justify-evenly allM:gap-0">
                 <h5 className="text-xl text-center allT:text-lg">
                   {newsItem.sn}
                 </h5>

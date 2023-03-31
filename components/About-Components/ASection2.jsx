@@ -16,7 +16,7 @@ function ASection2() {
               (max-width: 1200px) 50vw,
               33vw"
           priority
-          className="absolute border border-black dark:border-white rounded-2xl top-0 left-0"
+          className="absolute top-0 left-0 border border-black dark:border-white rounded-2xl"
           alt=""
         />
       </SImage>

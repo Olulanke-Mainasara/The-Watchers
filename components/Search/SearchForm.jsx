@@ -8,11 +8,11 @@ function SearchForm() {
 
   return (
     <div className="flex flex-col w-[90%] max-w-3xl bg-black dark:bg-white text-white dark:text-black rounded-lg overflow-hidden">
-      <form className="w-full flex gap-6 allT:gap-3 px-3 items-center border-none border-b-black">
+      <form className="flex items-center w-full px-3 border-none gap-6 allT:gap-3 border-b-black">
         <FontAwesomeIcon className="text-lg" icon={faSearch} />
         <input
           type="search"
-          className="w-full bg-black dark:bg-white placeholder:text-white dark:placeholder:text-black py-3 outline-none"
+          className="w-full py-3 bg-black outline-none dark:bg-white placeholder:text-white dark:placeholder:text-black"
           placeholder="Search encyclopedia"
         />
         <button

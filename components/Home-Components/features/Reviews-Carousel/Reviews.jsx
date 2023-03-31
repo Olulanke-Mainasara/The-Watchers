@@ -28,8 +28,8 @@ function Reviews({ controls }) {
                 icon={faQuoteRight}
               />
 
-              <div className="w-full flex gap-2 items-center justify-center">
-                <div className="w-14 h-14 rounded-full relative border overflow-hidden">
+              <div className="flex items-center justify-center w-full gap-2">
+                <div className="relative overflow-hidden border rounded-full w-14 h-14">
                   <Image
                     src="/My Logo 1.jpg"
                     fill
@@ -39,7 +39,7 @@ function Reviews({ controls }) {
                     alt="User Image"
                   />
                 </div>
-                <div className="dark:text-white flex flex-col gap-1 duration-500">
+                <div className="flex flex-col dark:text-white gap-1 duration-500">
                   <h5 className="text-2xl allT:text-xl">{reviewsItem.name}</h5>
                 </div>
               </div>

@@ -19,24 +19,24 @@ function Articles() {
         <link rel="icon" href="/favicon.ico" />
         <style>{dom.css()}</style>
       </Head>
-      <div className="w-screen flex flex-col">
+      <div className="flex flex-col w-screen">
         <Search />
         <Nav />
-        <header className="w-full dark:text-white pt-32 pb-16 flex items-center justify-center">
+        <header className="flex items-center justify-center w-full pt-32 pb-16 dark:text-white">
           <h1 className="text-9xl allLM:text-8xl allEM:text-6xl allT:text-5xl">
             Articles
           </h1>
         </header>
 
-        <section className="py-10 px-14 allIL:px-5 h-full">
-          <div className="grid grid-cols-3 allLM:grid-cols-2 allEMT:grid-cols-1 allLM:gap-8 gap-14 h-full">
+        <section className="h-full py-10 px-14 allIL:px-5">
+          <div className="h-full grid grid-cols-3 allLM:grid-cols-2 allEMT:grid-cols-1 allLM:gap-8 gap-14">
             {categories.map((category) => {
               return (
                 <div
                   key={category.id}
                   className="w-full allEMT:max-w-[420px] flex flex-col items-center justify-center duration-500 mx-auto"
                 >
-                  <div className="relative w-full aspect-video rounded-xl overflow-hidden">
+                  <div className="relative w-full overflow-hidden aspect-video rounded-xl">
                     <Image
                       src={category.imgsrc}
                       fill
@@ -48,8 +48,8 @@ function Articles() {
                     />
                   </div>
 
-                  <div className="w-full dark:text-white flex items-center gap-4 py-10 duration-500">
-                    <div className="relative w-10 h-10 rounded-full overflow-hidden">
+                  <div className="flex items-center w-full py-10 dark:text-white gap-4 duration-500">
+                    <div className="relative w-10 h-10 overflow-hidden rounded-full">
                       <Image
                         src={category.imgsrc}
                         fill

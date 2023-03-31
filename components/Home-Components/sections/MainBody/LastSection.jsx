@@ -18,7 +18,7 @@ function LastSection() {
           <Link
             href="/categories"
             title="Categories"
-            className="rounded-full w-fit border border-black bg-black dark:bg-white px-10 py-4 2xl:text-2xl allEMT:py-3 text-white dark:text-black text-xl transition-colors duration-300 dark:hover:bg-black dark:hover:text-white dark:hover:border-white"
+            className="px-10 py-4 text-xl text-white bg-black border border-black rounded-full w-fit dark:bg-white 2xl:text-2xl allEMT:py-3 dark:text-black transition-colors duration-300 dark:hover:bg-black dark:hover:text-white dark:hover:border-white"
           >
             Start reading
           </Link>

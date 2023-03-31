@@ -23,17 +23,17 @@ function Categories() {
         <link rel="icon" href="/favicon.ico" />
         <style>{dom.css()}</style>
       </Head>
-      <div className="w-screen flex flex-col">
+      <div className="flex flex-col w-screen">
         <Search />
         <Nav />
-        <header className="w-full dark:text-white pt-32 pb-16 flex items-center justify-center">
+        <header className="flex items-center justify-center w-full pt-32 pb-16 dark:text-white">
           <h1 className="text-9xl allLM:text-8xl allEM:text-6xl allT:text-5xl">
             Categories
           </h1>
         </header>
 
-        <section className="pt-10 pb-14 px-14 allM:px-5 h-full">
-          <div className="grid grid-cols-3 allLM:grid-cols-2 allEMT:grid-cols-1 md:gap-8 gap-14 h-full">
+        <section className="h-full pt-10 pb-14 px-14 allM:px-5">
+          <div className="h-full grid grid-cols-3 allLM:grid-cols-2 allEMT:grid-cols-1 md:gap-8 gap-14">
             {categories.map((category) => {
               return (
                 <div
