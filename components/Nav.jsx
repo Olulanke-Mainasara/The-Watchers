@@ -20,13 +20,15 @@ function Nav() {
   return (
     <nav
       className={`fixed top-0 left-0 z-30 ${
-        visible ? "" : "allIL:opacity-0"
+        visible ? "" : "allIL:opacity-0 allIL:pointer-events-none"
       } duration-300 h-16 w-screen bg-white dark:bg-black`}
     >
       <div className="flex items-center justify-between h-full px-10 mx-auto sm:px-5 xs:px-3 iphone5:px-3 xtraSmall:px-2">
         <Link
           href="/"
-          className="flex items-center text-2xl text-black dark:text-white transition-colors duration-700 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:scale-x-0 after:bg-black dark:after:bg-white after:transition-transform after:duration-700 after:content-[''] hover:after:scale-x-100 allT:text-lg allIL:hover:after:w-0"
+          className={`flex items-center text-2xl text-black dark:text-white transition-colors duration-700 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:scale-x-0 after:bg-black dark:after:bg-white after:transition-transform after:duration-700 after:content-[''] hover:after:scale-x-100 allT:text-lg allIL:hover:after:w-0 ${
+            visible ? "" : "allIL:pointer-events-none"
+          }`}
         >
           <div className="relative w-10 h-10 overflow-hidden rounded-full">
             <Image
@@ -48,7 +50,7 @@ function Nav() {
             <li>
               <Link
                 href="/"
-                className="relative allLM:text-2xl hover:opacity-50 duration-300"
+                className="relative duration-300 allLM:text-2xl hover:opacity-50"
               >
                 Home
               </Link>
@@ -56,7 +58,7 @@ function Nav() {
             <li>
               <Link
                 href="/categories"
-                className="relative allLM:text-2xl hover:opacity-50 duration-300"
+                className="relative duration-300 allLM:text-2xl hover:opacity-50"
               >
                 Categories
               </Link>
@@ -64,7 +66,7 @@ function Nav() {
             <li>
               <Link
                 href="/news"
-                className="relative allLM:text-2xl hover:opacity-50 duration-300"
+                className="relative duration-300 allLM:text-2xl hover:opacity-50"
               >
                 News
               </Link>
@@ -72,7 +74,7 @@ function Nav() {
             <li>
               <Link
                 href="/articles"
-                className="relative allLM:text-2xl hover:opacity-50 duration-300"
+                className="relative duration-300 allLM:text-2xl hover:opacity-50"
               >
                 Articles
               </Link>
@@ -80,7 +82,7 @@ function Nav() {
             <li>
               <Link
                 href="/aboutus"
-                className="relative allLM:text-2xl hover:opacity-50 duration-300"
+                className="relative duration-300 allLM:text-2xl hover:opacity-50"
               >
                 About us
               </Link>
@@ -88,7 +90,7 @@ function Nav() {
             <li>
               <Link
                 href="/contactus"
-                className="relative allLM:text-2xl hover:opacity-50 duration-300"
+                className="relative duration-300 allLM:text-2xl hover:opacity-50"
               >
                 Contact us
               </Link>
@@ -112,10 +114,10 @@ function Nav() {
               <FontAwesomeIcon icon={dark ? faSun : faMoon} />
             </button>
 
-            <div className="flex items-center allT:flex-col allT:w-full gap-2 allT:gap-5 laptop:hidden allLM:hidden">
+            <div className="flex items-center gap-2 allT:flex-col allT:w-full allT:gap-5 laptop:hidden allLM:hidden">
               <Link
                 href={"/categories"}
-                className="px-5 py-3 text-3xl text-white bg-black rounded-3xl dark:bg-white dark:text-black transition-colors duration-300 allEMT:text-lg allT:w-full"
+                className="px-5 py-3 text-3xl text-white transition-colors duration-300 bg-black rounded-3xl dark:bg-white dark:text-black allEMT:text-lg allT:w-full"
               >
                 Start reading
               </Link>
@@ -163,7 +165,7 @@ function Nav() {
 
           <Link
             href={"/sign-in"}
-            className="px-6 py-2 text-white bg-black border border-black rounded-full dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black dark:hover:border-white duration-500"
+            className="px-6 py-2 text-white duration-500 bg-black border border-black rounded-full dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black dark:hover:border-white"
           >
             Log in <FontAwesomeIcon icon={faChevronRight} />
           </Link>

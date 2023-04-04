@@ -10,16 +10,7 @@ function useNavigationBar() {
 
   const { dark } = useStore();
 
-  useEffect(() => {
-    if (prevScrollCounter === 0) {
-      setPrevScrollPos(window.scrollY);
-      setPrevScrollCounter((prevValue) => prevValue + 1);
-    }
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos]);
-
-  const handleScroll = () => {
+  function handleScroll() {
     // Get the current scroll position
     const currentScrollPos = window.scrollY;
 
@@ -37,7 +28,16 @@ function useNavigationBar() {
 
     // Update the previous scroll position
     setPrevScrollPos(currentScrollPos);
-  };
+  }
+
+  useEffect(() => {
+    if (prevScrollCounter === 0) {
+      setPrevScrollPos(window.scrollY);
+      setPrevScrollCounter((prevValue) => prevValue + 1);
+    }
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
 
   function openMenu() {
     setMenu("allIL:right-0");
