@@ -1,14 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
-import useStore from "@/providers/navStore";
 
 function useNavigationBar() {
   const [navMenu, setMenu] = useState("allIL:-right-full");
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [prevScrollCounter, setPrevScrollCounter] = useState(0);
   const [visible, setVisible] = useState(true);
-
-  const { dark } = useStore();
 
   function handleScroll() {
     // Get the current scroll position
@@ -46,16 +43,6 @@ function useNavigationBar() {
   function closeMenu() {
     setMenu("allIL:-right-full");
   }
-
-  useEffect(() => {
-    if (dark) {
-      document.documentElement.classList.remove("light");
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      document.documentElement.classList.add("light");
-    }
-  }, [dark]);
 
   return [navMenu, visible, openMenu, closeMenu];
 }

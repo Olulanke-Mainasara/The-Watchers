@@ -1,29 +1,27 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
 import { config, dom } from "@fortawesome/fontawesome-svg-core";
-import useStore from "../providers/navStore";
 import Head from "next/head";
 import Splash from "../components/Home-Components/features/Splash-Screen/Splash";
-import Search from "../components/Search/Search";
 import Nav from "../components/Nav";
 import Hero from "../components/Home-Components/sections/Hero";
 import MainBody from "../components/Home-Components/sections/MainBody/MainBody";
 import Footer from "../components/Home-Components/sections/Footer";
+import { useSessionStorage } from "react-use";
 
 config.autoAddCss = false;
 
 export default function Home() {
-  const { splash, toggleSplash, visited, increaseVisited } = useStore();
+  const [splashed, setSplashed] = useSessionStorage("splashed");
 
   useEffect(() => {
-    if (visited === 0) {
-      const timeOut = setTimeout(() => {
-        toggleSplash();
-        increaseVisited();
-      }, 2500);
-      return () => clearTimeout(timeOut);
-    }
-  }, []);
+    const timeOut = setTimeout(() => setSplashed("true"), 2500);
+    window.addEventListener("beforeunload", () => setSplashed(""));
+
+    return () => {
+      clearTimeout(timeOut);
+      window.removeEventListener("beforeunload", () => setSplashed(""));
+    };
+  }, [setSplashed]);
 
   return (
     <>
@@ -36,11 +34,12 @@ export default function Home() {
       </Head>
       <div
         className={`${
-          splash ? "h-screen overflow-hidden" : "h-auto overflow-scroll"
+          splashed !== "true"
+            ? "h-screen overflow-hidden"
+            : "h-auto overflow-scroll"
         }`}
       >
-        {visited === 0 ? <Splash /> : ""}
-        <Search />
+        {splashed !== "true" ? <Splash /> : ""}
         <Nav />
         <Hero />
         <MainBody />

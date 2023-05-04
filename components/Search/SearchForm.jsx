@@ -1,26 +1,23 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose, faSearch } from "@fortawesome/free-solid-svg-icons";
-import useStore from "../../providers/navStore";
 
-function SearchForm() {
-  const { toggleSearch } = useStore();
+function SearchForm({ handleSearch }) {
+  const toggleSearch = (e) => {
+    e.preventDefault();
+    handleSearch();
+  };
 
   return (
     <div className="flex flex-col w-[90%] max-w-3xl bg-black dark:bg-white text-white dark:text-black rounded-lg overflow-hidden">
-      <form className="flex items-center w-full px-3 border-none gap-6 allT:gap-3 border-b-black">
+      <form className="flex items-center w-full gap-6 px-3 border-none allT:gap-3 border-b-black">
         <FontAwesomeIcon className="text-lg" icon={faSearch} />
         <input
           type="search"
           className="w-full py-3 bg-black outline-none dark:bg-white placeholder:text-white dark:placeholder:text-black"
           placeholder="Search encyclopedia"
         />
-        <button
-          onClick={(e) => {
-            e.preventDefault();
-            toggleSearch();
-          }}
-        >
+        <button onClick={(e) => toggleSearch(e)}>
           <FontAwesomeIcon className="text-xl" icon={faClose} />
         </button>
       </form>
