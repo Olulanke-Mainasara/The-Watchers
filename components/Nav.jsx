@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
-import Link from "next/link";
 import Image from "next/image";
-import useNavigationBar from "./Home-Components/hooks/useNavigationBar";
-import Search from "./Search/Search";
-import { useLocalStorage, useSessionStorage } from "react-use";
+import Link from "next/link";
+
+import React, { useEffect } from "react";
 import {
   FaBars,
   FaChevronRight,
@@ -11,6 +9,10 @@ import {
   FaSearch,
   FaSun,
 } from "react-icons/fa";
+import { useLocalStorage, useSessionStorage } from "react-use";
+
+import useNavigationBar from "./Home-Components/hooks/useNavigationBar";
+import Search from "./Search/Search";
 
 function Nav() {
   const [navMenu, visible, openMenu, closeMenu] = useNavigationBar();

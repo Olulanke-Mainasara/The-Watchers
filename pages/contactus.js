@@ -1,8 +1,9 @@
-import React from "react";
 import Head from "next/head";
-import Search from "@/components/Search/Search";
-import Nav from "@/components/Nav";
+
 import Footer from "@/components/Home-Components/sections/Footer";
+import Nav from "@/components/Nav";
+import Search from "@/components/Search/Search";
+import React from "react";
 import { FaBuilding, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 function Contact() {

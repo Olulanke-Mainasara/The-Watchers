@@ -1,10 +1,11 @@
-import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import Search from "@/components/Search/Search";
+
 import Nav from "@/components/Nav";
+import Search from "@/components/Search/Search";
 import { categories } from "@/data/Arrays";
+import React from "react";
 
 function Articles() {
   return (

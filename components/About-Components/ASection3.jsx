@@ -1,6 +1,7 @@
 import React from "react";
-import H1 from "../Home-Components/UI/Section/H1";
 import { FaClock } from "react-icons/fa";
+
+import H1 from "../Home-Components/UI/Section/H1";
 
 const offers = [
   {

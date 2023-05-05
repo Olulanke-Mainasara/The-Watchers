@@ -1,5 +1,6 @@
-import React from 'react'
-import Link from 'next/link'
+import Link from "next/link";
+
+import React from "react";
 
 function Button() {
   return (
@@ -13,4 +14,4 @@ function Button() {
   );
 }
 
-export default Button
+export default Button;

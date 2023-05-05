@@ -1,9 +1,11 @@
-import React from "react";
 import Image from "next/image";
-import Text from "../Home-Components/UI/Section/Text";
+
+import React from "react";
+
 import H1 from "../Home-Components/UI/Section/H1";
 import P from "../Home-Components/UI/Section/P";
 import SImage from "../Home-Components/UI/Section/SImage";
+import Text from "../Home-Components/UI/Section/Text";
 
 function ASection1() {
   return (

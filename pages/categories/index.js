@@ -1,11 +1,12 @@
-import React from "react";
 import Head from "next/head";
 import Image from "next/image";
-import Search from "@/components/Search/Search";
-import Nav from "@/components/Nav";
-import Footer from "@/components/Home-Components/sections/Footer";
+
 import CardButton from "@/components/Home-Components/UI/Carousel/CardButton";
+import Footer from "@/components/Home-Components/sections/Footer";
+import Nav from "@/components/Nav";
+import Search from "@/components/Search/Search";
 import { categories } from "@/data/Arrays";
+import React from "react";
 
 function Categories() {
   return (

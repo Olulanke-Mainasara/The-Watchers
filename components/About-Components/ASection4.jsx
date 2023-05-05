@@ -1,6 +1,8 @@
-import React from "react";
-import H1 from "../Home-Components/UI/Section/H1";
 import Image from "next/image";
+
+import React from "react";
+
+import H1 from "../Home-Components/UI/Section/H1";
 
 const team = [
   {

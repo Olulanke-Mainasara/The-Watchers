@@ -1,11 +1,12 @@
 import React, { useMemo } from "react";
-import Categories from "./Categories";
-import useCustomWidthCarousel from "../../hooks/useCustomWidthCarousel";
+
+import { categories } from "../../../../data/Arrays";
+import ContainerC from "../../UI/Carousel/ContainerC";
+import H1C from "../../UI/Carousel/H1C";
 import LeftArrow from "../../UI/Carousel/LeftArrow";
 import RightArrow from "../../UI/Carousel/RightArrow";
-import H1C from "../../UI/Carousel/H1C";
-import ContainerC from "../../UI/Carousel/ContainerC";
-import { categories } from "../../../../data/Arrays";
+import useCustomWidthCarousel from "../../hooks/useCustomWidthCarousel";
+import Categories from "./Categories";
 
 function CategoriesCarousel() {
   const { controls, nextItem, prevItem } = useCustomWidthCarousel(categories);

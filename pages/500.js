@@ -1,8 +1,9 @@
-import React from "react";
-import Link from "next/link";
 import Head from "next/head";
-import Search from "@/components/Search/Search";
+import Link from "next/link";
+
 import Nav from "@/components/Nav";
+import Search from "@/components/Search/Search";
+import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 
 function Custom404() {

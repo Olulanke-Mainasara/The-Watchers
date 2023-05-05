@@ -1,8 +1,10 @@
-import React from "react";
 import Image from "next/image";
-import CardButton from "../../UI/Carousel/CardButton";
+
 import { motion } from "framer-motion";
+import React from "react";
+
 import { news } from "../../../../data/Arrays";
+import CardButton from "../../UI/Carousel/CardButton";
 
 function News({ controls }) {
   return (

@@ -1,8 +1,10 @@
-import React from "react";
 import Image from "next/image";
+
 import { motion } from "framer-motion";
-import { reviews } from "../../../../data/Arrays";
+import React from "react";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+
+import { reviews } from "../../../../data/Arrays";
 
 function Reviews({ controls }) {
   return (

@@ -1,4 +1,5 @@
 import React from "react";
+
 import SearchForm from "./SearchForm";
 
 function Search({ search, handleSearch }) {

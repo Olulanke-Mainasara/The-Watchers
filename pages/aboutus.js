@@ -1,13 +1,14 @@
-import React from "react";
 import Head from "next/head";
-import Search from "@/components/Search/Search";
-import Nav from "@/components/Nav";
+
+import ALastSection from "@/components/About-Components/ALastSection";
 import ASection1 from "@/components/About-Components/ASection1";
 import ASection2 from "@/components/About-Components/ASection2";
 import ASection3 from "@/components/About-Components/ASection3";
 import ASection4 from "@/components/About-Components/ASection4";
 import Footer from "@/components/Home-Components/sections/Footer";
-import ALastSection from "@/components/About-Components/ALastSection";
+import Nav from "@/components/Nav";
+import Search from "@/components/Search/Search";
+import React from "react";
 
 function About() {
   return (

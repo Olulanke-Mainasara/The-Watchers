@@ -1,10 +1,12 @@
-import React from "react";
 import Image from "next/image";
+
+import React from "react";
+
 import Button from "../../UI/Section/Button";
-import P from "../../UI/Section/P";
 import H1 from "../../UI/Section/H1";
-import Text from "../../UI/Section/Text";
+import P from "../../UI/Section/P";
 import SImage from "../../UI/Section/SImage";
+import Text from "../../UI/Section/Text";
 
 function SectionTwo() {
   return (

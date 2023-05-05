@@ -1,7 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+
 import React from "react";
-import { FaFacebook, FaGithub, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
+
 import { footerlinks } from "../../../data/Arrays";
 
 function Footer() {
