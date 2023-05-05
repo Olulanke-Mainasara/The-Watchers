@@ -1,23 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import useNavigationBar from "./Home-Components/hooks/useNavigationBar";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faSun,
-  faMoon,
-  faBars,
-  faChevronRight,
-  faClose,
-  faSearch,
-} from "@fortawesome/free-solid-svg-icons";
-import { useLocalStorage, useSessionStorage } from "react-use";
 import Search from "./Search/Search";
+import { useLocalStorage, useSessionStorage } from "react-use";
+import {
+  FaBars,
+  FaChevronRight,
+  FaMoon,
+  FaSearch,
+  FaSun,
+} from "react-icons/fa";
 
 function Nav() {
   const [navMenu, visible, openMenu, closeMenu] = useNavigationBar();
   const [theme, setTheme] = useLocalStorage("theme");
-  const [themeIcon, setThemeIcon] = useState(faSun);
   const [search, setSearch] = useSessionStorage("search", false);
 
   const handleTheme = () => {
@@ -38,11 +35,9 @@ function Nav() {
 
   useEffect(() => {
     if (theme === "dark") {
-      setThemeIcon(faSun);
       document.documentElement.classList.remove("light");
       document.documentElement.classList.add("dark");
     } else {
-      setThemeIcon(faMoon);
       document.documentElement.classList.remove("dark");
       document.documentElement.classList.add("light");
     }
@@ -131,9 +126,9 @@ function Nav() {
               <button
                 title="Close navigation menu"
                 onClick={closeMenu}
-                className="absolute text-3xl text-black dark:text-white top-7 iphone5:top-7 right-5 laptop:hidden"
+                className="absolute text-5xl text-black rotate-45 dark:text-white top-5 iphone5:top-5 right-5 laptop:hidden"
               >
-                <FontAwesomeIcon icon={faClose} />
+                +
               </button>
 
               <button
@@ -141,7 +136,7 @@ function Nav() {
                 onClick={handleTheme}
                 className="absolute flex items-center justify-center w-10 h-10 text-xl text-white bg-black rounded-full top-7 left-8 dark:text-black dark:bg-white laptop:hidden allLM:hidden"
               >
-                <FontAwesomeIcon icon={themeIcon} />
+                {theme === "dark" ? <FaSun /> : <FaMoon />}
               </button>
 
               <div className="flex items-center gap-2 allT:flex-col allT:w-full allT:gap-5 laptop:hidden allLM:hidden">
@@ -154,9 +149,9 @@ function Nav() {
 
                 <Link
                   href={"/sign-in"}
-                  className="py-2 pl-3 text-black allLM:text-2xl dark:text-white allEMT:text-lg"
+                  className="flex items-center justify-center gap-1 py-2 pl-3 text-black allLM:text-2xl dark:text-white allEMT:text-lg"
                 >
-                  Log in <FontAwesomeIcon icon={faChevronRight} />
+                  Log in <FaChevronRight />
                 </Link>
               </div>
             </div>
@@ -167,7 +162,7 @@ function Nav() {
             className="flex items-center justify-center w-10 h-10 text-xl text-black laptop:hidden allLM:hidden dark:text-white allT:text-lg"
             onClick={handleSearch}
           >
-            <FontAwesomeIcon icon={faSearch} />
+            <FaSearch />
           </button>
 
           <div className="flex items-center gap-6 allEMT:hidden">
@@ -176,7 +171,7 @@ function Nav() {
               onClick={handleTheme}
               className="flex items-center justify-center w-10 h-10 text-xl text-black rounded-full dark:text-white"
             >
-              <FontAwesomeIcon icon={themeIcon} />
+              {theme === "dark" ? <FaSun /> : <FaMoon />}
             </button>
 
             <button
@@ -184,14 +179,14 @@ function Nav() {
               className="flex items-center justify-center w-10 h-10 text-xl text-black rounded-full dark:text-white"
               onClick={handleSearch}
             >
-              <FontAwesomeIcon icon={faSearch} />
+              <FaSearch />
             </button>
 
             <Link
               href={"/sign-in"}
-              className="px-6 py-2 text-white duration-500 bg-black border border-black rounded-full dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black dark:hover:border-white"
+              className="flex items-center justify-center gap-1 px-6 py-2 text-white duration-500 bg-black border border-black rounded-full dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black dark:hover:border-white"
             >
-              Log in <FontAwesomeIcon icon={faChevronRight} />
+              Log in <FaChevronRight />
             </Link>
           </div>
 
@@ -200,7 +195,7 @@ function Nav() {
             onClick={openMenu}
             className="text-2xl text-black laptop:hidden dark:text-white allT:text-lg"
           >
-            <FontAwesomeIcon icon={faBars} />
+            <FaBars />
           </button>
         </div>
       </nav>

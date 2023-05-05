@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
+import CardButton from "../../UI/Carousel/CardButton";
 import { motion } from "framer-motion";
 import { news } from "../../../../data/Arrays";
-import CardButton from "../../UI/Carousel/CardButton";
 
 function News({ controls }) {
   return (
@@ -24,7 +24,7 @@ function News({ controls }) {
                 />
               </div>
 
-              <div className="flex flex-col justify-center px-6 text-white dark:text-white gap-6 basis-2/5 md:basis-1/2 allEMT:basis-3/5 allM:justify-evenly allM:gap-0">
+              <div className="flex flex-col justify-center gap-6 px-6 text-white dark:text-white basis-2/5 md:basis-1/2 allEMT:basis-3/5 allM:justify-evenly allM:gap-0">
                 <h5 className="text-xl text-center allT:text-lg">
                   {newsItem.sn}
                 </h5>

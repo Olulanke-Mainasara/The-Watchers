@@ -3,9 +3,9 @@ import Categories from "./Categories";
 import useCustomWidthCarousel from "../../hooks/useCustomWidthCarousel";
 import LeftArrow from "../../UI/Carousel/LeftArrow";
 import RightArrow from "../../UI/Carousel/RightArrow";
-import { categories } from "../../../../data/Arrays";
 import H1C from "../../UI/Carousel/H1C";
 import ContainerC from "../../UI/Carousel/ContainerC";
+import { categories } from "../../../../data/Arrays";
 
 function CategoriesCarousel() {
   const { controls, nextItem, prevItem } = useCustomWidthCarousel(categories);

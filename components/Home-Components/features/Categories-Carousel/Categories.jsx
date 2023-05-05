@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
+import CardButton from "../../UI/Carousel/CardButton";
 import { motion } from "framer-motion";
 import { categories } from "../../../../data/Arrays";
-import CardButton from "../../UI/Carousel/CardButton";
 
 function Categories({ controls }) {
   return (

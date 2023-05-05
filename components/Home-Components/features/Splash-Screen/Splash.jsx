@@ -1,6 +1,6 @@
 import React from "react";
-import { motion } from "framer-motion";
 import SplashText from "./SplashText";
+import { motion } from "framer-motion";
 
 function Splash() {
   return (

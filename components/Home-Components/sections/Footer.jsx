@@ -1,15 +1,8 @@
-import React from "react";
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faGithub,
-  faInstagram,
-  faTwitter,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
-import { footerlinks } from "../../../data/Arrays";
 import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { FaFacebook, FaGithub, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { footerlinks } from "../../../data/Arrays";
 
 function Footer() {
   const handleSubmit = (e) => {
@@ -20,10 +13,10 @@ function Footer() {
     <footer className="w-full h-[70vh] flex flex-col px-10 bg-black dark:bg-slate-800 text-white dark:text-white allIL:h-fit allEM:px-8 allT:px-6">
       <section className="flex gap-10 allIL:gap-0 basis-4/5 allIL:flex-col">
         <section className="flex flex-col justify-center h-full basis-1/2 allLM:flex-row allLM:items-center allLM:border-white allIL:border-b allLM:py-8 allLM:gap-8">
-          <div className="flex flex-col justify-center h-full border-b gap-6 allIL:basis-1/2 border-slate-100 allLM:border-b-0 allEMT:py-8">
+          <div className="flex flex-col justify-center h-full gap-6 border-b allIL:basis-1/2 border-slate-100 allLM:border-b-0 allEMT:py-8">
             <a
               href="#hero"
-              className="flex items-center mx-auto text-2xl w-fit dark:text-white hover:text-gray-600 dark:hover:text-gray-600 transition-colors duration-300 allT:text-lg"
+              className="flex items-center mx-auto text-2xl transition-colors duration-300 w-fit dark:text-white hover:text-gray-600 dark:hover:text-gray-600 allT:text-lg"
             >
               <div className="relative w-10 h-10 overflow-hidden rounded-full">
                 <Image
@@ -64,7 +57,7 @@ function Footer() {
               />
               <button
                 type="submit"
-                className="px-3 py-2 text-black bg-white border rounded-lg hover:bg-black hover:text-white duration-300 allEMT:w-fit allEMT:mx-auto"
+                className="px-3 py-2 text-black duration-300 bg-white border rounded-lg hover:bg-black hover:text-white allEMT:w-fit allEMT:mx-auto"
               >
                 Subscribe
               </button>
@@ -84,25 +77,25 @@ function Footer() {
                 <div className="flex flex-col gap-3 dark:text-white">
                   <Link
                     href={"#"}
-                    className="opacity-70 hover:opacity-100 duration-500"
+                    className="duration-500 opacity-70 hover:opacity-100"
                   >
                     <p>{footerlink.linkOne}</p>
                   </Link>
                   <Link
                     href={"#"}
-                    className="opacity-70 hover:opacity-100 duration-500"
+                    className="duration-500 opacity-70 hover:opacity-100"
                   >
                     <p>{footerlink.linkTwo}</p>
                   </Link>
                   <Link
                     href={"#"}
-                    className="opacity-70 hover:opacity-100 duration-500"
+                    className="duration-500 opacity-70 hover:opacity-100"
                   >
                     <p>{footerlink.linkThree}</p>
                   </Link>
                   <Link
                     href={"#"}
-                    className="opacity-70 hover:opacity-100 duration-500"
+                    className="duration-500 opacity-70 hover:opacity-100"
                   >
                     <p>{footerlink.linkFour}</p>
                   </Link>
@@ -118,19 +111,19 @@ function Footer() {
 
         <div className="flex text-2xl gap-7 dark:text-white allT:text-xl">
           <Link href={"#"}>
-            <FontAwesomeIcon icon={faFacebook} />
+            <FaFacebook />
           </Link>
           <Link href={"#"}>
-            <FontAwesomeIcon icon={faInstagram} />
+            <FaInstagram />
           </Link>
           <Link href={"#"}>
-            <FontAwesomeIcon icon={faTwitter} />
+            <FaTwitter />
           </Link>
           <Link href={"#"}>
-            <FontAwesomeIcon icon={faGithub} />
+            <FaGithub />
           </Link>
           <Link href={"#"}>
-            <FontAwesomeIcon icon={faYoutube} />
+            <FaYoutube />
           </Link>
         </div>
       </section>

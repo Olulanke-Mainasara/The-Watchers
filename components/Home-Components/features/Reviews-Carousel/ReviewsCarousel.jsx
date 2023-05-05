@@ -1,11 +1,11 @@
 import React, { useEffect, useMemo } from "react";
 import Reviews from "./Reviews";
 import useCustomWidthCarousel from "../../hooks/useCustomWidthCarousel";
-import { reviews } from "../../../../data/Arrays";
 import LeftArrow from "../../UI/Carousel/LeftArrow";
 import RightArrow from "../../UI/Carousel/RightArrow";
 import H1C from "../../UI/Carousel/H1C";
 import ContainerC from "../../UI/Carousel/ContainerC";
+import { reviews } from "../../../../data/Arrays";
 
 function ReviewsCarousel() {
   const { controls, recoil, nextItem, prevItem } =

@@ -1,9 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { reviews } from "../../../../data/Arrays";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 function Reviews({ controls }) {
   return (
@@ -15,18 +14,14 @@ function Reviews({ controls }) {
             animate={controls}
             key={reviewsItem.id}
           >
-            <div className="w-full allEMT:w-[90%] allEMT:mx-auto h-full rounded-2xl bg-black text-white dark:bg-slate-800 dark:text-white flex flex-col justify-evenly px-[5%]">
-              <FontAwesomeIcon
-                className="text-4xl opacity-70"
-                icon={faQuoteLeft}
-              />
+            <div className="w-full allEMT:w-[90%] allEMT:mx-auto h-full rounded-2xl bg-black text-white dark:bg-slate-800 dark:text-white flex flex-col justify-evenly px-[5%] items-center">
+              <FaQuoteLeft className="text-3xl opacity-70" />
 
-              <p className="text-lg text-center allT:text-sm">{reviewsItem.text}</p>
+              <p className="text-lg text-center allT:text-sm">
+                {reviewsItem.text}
+              </p>
 
-              <FontAwesomeIcon
-                className="text-4xl text-right opacity-70"
-                icon={faQuoteRight}
-              />
+              <FaQuoteRight className="text-3xl opacity-70" />
 
               <div className="flex items-center justify-center w-full gap-2">
                 <div className="relative overflow-hidden border rounded-full w-14 h-14">
@@ -39,7 +34,7 @@ function Reviews({ controls }) {
                     alt="User Image"
                   />
                 </div>
-                <div className="flex flex-col dark:text-white gap-1 duration-500">
+                <div className="flex flex-col gap-1 duration-500 dark:text-white">
                   <h5 className="text-2xl allT:text-xl">{reviewsItem.name}</h5>
                 </div>
               </div>
