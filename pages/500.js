@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 
-import Nav from "@/components/Nav";
+import Nav from "@/components/Nav/Nav";
 import Search from "@/components/Search/Search";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";

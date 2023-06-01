@@ -2,11 +2,11 @@ import Image from "next/image";
 
 import React from "react";
 
-import Button from "../../UI/Section/Button";
-import H1 from "../../UI/Section/H1";
-import P from "../../UI/Section/P";
-import SImage from "../../UI/Section/SImage";
-import Text from "../../UI/Section/Text";
+import Button from "../UI/Section/Button";
+import H1 from "../UI/Section/H1";
+import P from "../UI/Section/P";
+import SImage from "../UI/Section/SImage";
+import Text from "../UI/Section/Text";
 
 function SectionOne() {
   return (

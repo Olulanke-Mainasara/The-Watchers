@@ -122,30 +122,3 @@ export const reviews = [
     text: "I'm constantly amazed by the depth and detail of the articles on The Watchers. Whether I'm reading about space exploration or historical events, I always come away with a new understanding of the topic.",
   },
 ];
-
-export const footerlinks = [
-  {
-    id: 1,
-    title: "Company",
-    linkOne: "About",
-    linkTwo: "FAQs",
-    linkThree: "Press",
-    linkFour: "Jobs",
-  },
-  {
-    id: 2,
-    title: "Support",
-    linkOne: "Pricing",
-    linkTwo: "Documentation",
-    linkThree: "Partners",
-    linkFour: "API Status",
-  },
-  {
-    id: 3,
-    title: "Legal",
-    linkOne: "Claim",
-    linkTwo: "Privacy",
-    linkThree: "Terms",
-    linkFour: "Guides",
-  },
-];

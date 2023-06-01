@@ -3,11 +3,11 @@ import Head from "next/head";
 import { useEffect } from "react";
 import { useSessionStorage } from "react-use";
 
+import Footer from "../components/Footer";
 import Splash from "../components/Home-Components/features/Splash-Screen/Splash";
-import Footer from "../components/Home-Components/sections/Footer";
 import Hero from "../components/Home-Components/sections/Hero";
-import MainBody from "../components/Home-Components/sections/MainBody/MainBody";
-import Nav from "../components/Nav";
+import MainBody from "../components/Home-Components/sections/MainBody";
+import Nav from "../components/Nav/Nav";
 
 export default function Home() {
   const [splashed, setSplashed] = useSessionStorage("splashed");

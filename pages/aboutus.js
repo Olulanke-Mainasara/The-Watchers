@@ -5,8 +5,8 @@ import ASection1 from "@/components/About-Components/ASection1";
 import ASection2 from "@/components/About-Components/ASection2";
 import ASection3 from "@/components/About-Components/ASection3";
 import ASection4 from "@/components/About-Components/ASection4";
-import Footer from "@/components/Home-Components/sections/Footer";
-import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
+import Nav from "@/components/Nav/Nav";
 import Search from "@/components/Search/Search";
 import React from "react";
 

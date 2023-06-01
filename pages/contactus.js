@@ -1,7 +1,7 @@
 import Head from "next/head";
 
-import Footer from "@/components/Home-Components/sections/Footer";
-import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
+import Nav from "@/components/Nav/Nav";
 import Search from "@/components/Search/Search";
 import React from "react";
 import { FaBuilding, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
@@ -22,7 +22,7 @@ function Contact() {
       <div className="grid h-screen grid-cols-2 bg-black dark:bg-slate-800 allEMT:h-auto allEMT:grid-cols-1">
         <Search />
         <Nav />
-        <div className="grid h-full duration-500 bg-white dark:text-white dark:bg-black rounded-br-3xl place-items-center allEMT:pt-32 allEMT:pb-8">
+        <div className="grid h-full bg-white dark:text-white dark:bg-black rounded-br-3xl place-items-center allEMT:pt-32 allEMT:pb-8">
           <div className="w-[90%] max-w-lg space-y-8">
             <h1 className="text-8xl allLM:text-6xl allEM:text-6xl allT:text-5xl allEMT:text-center allEMT:mb-14">
               Contact us
@@ -35,7 +35,7 @@ function Contact() {
               <div className="flex items-center gap-5">
                 <FaBuilding className="text-xl" />
                 <p className="text-lg allEMT:text-base">
-                  No.2, Rehoboth Crescent, VOERA Est., Arepo, Ogun state
+                  No.2, Jupiter Crescent, Solar Est., Milky way, Universe
                 </p>
               </div>
 
@@ -66,6 +66,7 @@ function Contact() {
                   type="text"
                   name="firstName"
                   required
+                  minLength={3}
                   className="w-full h-12 pl-2 mt-4 bg-transparent border border-white rounded-lg outline-none dark:text-white allEMT:text-base"
                   placeholder="e.g Bruce"
                 />
@@ -76,6 +77,7 @@ function Contact() {
                   type="text"
                   name="lastName"
                   required
+                  minLength={3}
                   className="w-full h-12 pl-2 mt-4 bg-transparent border border-white rounded-lg outline-none dark:text-white allEMT:text-base"
                   placeholder="e.g Wayne"
                 />
@@ -107,6 +109,7 @@ function Contact() {
                 type="text"
                 name="message"
                 required
+                minLength={10}
                 rows={4}
                 cols={40}
                 className="w-full pt-2 pl-2 mt-4 bg-transparent border border-white rounded-lg outline-none dark:text-white allEMT:text-base"
@@ -114,7 +117,7 @@ function Contact() {
             </label>
             <button
               type="submit"
-              className="px-5 py-3 text-base text-black duration-500 bg-white border rounded-lg dark:hover:bg-black dark:hover:text-white w-fit allEMT:mx-auto"
+              className="px-5 py-3 text-base text-black duration-500 bg-white border rounded-lg dark:hover:bg-black dark:hover:text-white w-fit allEMT:w-full allEMT:rounded-full"
             >
               Send message
             </button>

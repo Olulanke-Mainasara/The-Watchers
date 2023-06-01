@@ -1,31 +1,56 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import React, { useEffect } from "react";
-import {
-  FaBars,
-  FaChevronRight,
-  FaMoon,
-  FaSearch,
-  FaSun,
-} from "react-icons/fa";
-import { useLocalStorage, useSessionStorage } from "react-use";
+import React from "react";
+import { FaBars, FaChevronRight, FaSearch } from "react-icons/fa";
+import { useSessionStorage } from "react-use";
 
-import useNavigationBar from "./Home-Components/hooks/useNavigationBar";
-import Search from "./Search/Search";
+import Search from "../Search/Search";
+import useNavigationBar from "./useNavigationBar";
+
+const links = [
+  {
+    id: 1,
+    title: "Home",
+    href: "/",
+  },
+  {
+    id: 2,
+    title: "Categories",
+    href: "/categories",
+  },
+  {
+    id: 3,
+    title: "News",
+    href: "/news",
+  },
+  {
+    id: 4,
+    title: "Articles",
+    href: "/articles",
+  },
+  {
+    id: 5,
+    title: "About us",
+    href: "/aboutus",
+  },
+  {
+    id: 6,
+    title: "Contact us",
+    href: "/contactus",
+  },
+];
 
 function Nav() {
-  const [navMenu, visible, openMenu, closeMenu] = useNavigationBar();
-  const [theme, setTheme] = useLocalStorage("theme");
+  const [
+    navMenu,
+    visible,
+    openMenu,
+    closeMenu,
+    renderThemeToggler,
+    renderMobileThemeToggler,
+  ] = useNavigationBar();
   const [search, setSearch] = useSessionStorage("search", false);
-
-  const handleTheme = () => {
-    if (theme === "dark") {
-      setTheme("light");
-    } else {
-      setTheme("dark");
-    }
-  };
 
   const handleSearch = () => {
     if (search === false) {
@@ -35,22 +60,12 @@ function Nav() {
     }
   };
 
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.remove("light");
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      document.documentElement.classList.add("light");
-    }
-  }, [theme]);
-
   return (
     <>
       <nav
         className={`fixed top-0 left-0 z-30 ${
           visible ? "" : "allIL:opacity-0 allIL:pointer-events-none"
-        } duration-500 h-16 w-screen bg-white dark:bg-black`}
+        } allIL:duration-500 h-16 w-screen bg-white dark:bg-black`}
       >
         <div className="flex items-center justify-between h-full px-10 mx-auto sm:px-5 xs:px-3 iphone5:px-3 xtraSmall:px-2">
           <Link
@@ -75,55 +90,17 @@ function Nav() {
           <ul
             className={`flex allEMT:text-base allIL:text-black allIL:absolute allIL:top-0 allIL:h-screen allIL:w-full allIL:justify-end allIL:bg-gray-800/0 backdrop-blur-lg allIL:duration-500 ${navMenu}`}
           >
-            <div className="relative text-black dark:text-white bg-white dark:bg-black allIL:px-8 allIL:w-4/5 allIL:min-w-[240px] allIL:max-w-[320px] flex justify-center items-center allIL:items-start gap-14 allIL:flex-col allEM:gap-10 allT:gap-8 duration-500">
-              <li>
-                <Link
-                  href="/"
-                  className="relative duration-300 allLM:text-2xl hover:opacity-50"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/categories"
-                  className="relative duration-300 allLM:text-2xl hover:opacity-50"
-                >
-                  Categories
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/news"
-                  className="relative duration-300 allLM:text-2xl hover:opacity-50"
-                >
-                  News
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/articles"
-                  className="relative duration-300 allLM:text-2xl hover:opacity-50"
-                >
-                  Articles
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/aboutus"
-                  className="relative duration-300 allLM:text-2xl hover:opacity-50"
-                >
-                  About us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contactus"
-                  className="relative duration-300 allLM:text-2xl hover:opacity-50"
-                >
-                  Contact us
-                </Link>
-              </li>
+            <div className="relative text-black dark:text-white bg-white dark:bg-black allIL:px-6 allIL:w-4/5 allIL:min-w-[240px] allIL:max-w-[320px] flex justify-center items-center allIL:items-start gap-14 allIL:flex-col allEM:gap-10 allT:gap-8">
+              {links.map((link) => (
+                <li key={link.id}>
+                  <Link
+                    href={link.href}
+                    className="duration-500 allLM:text-2xl hover:opacity-50"
+                  >
+                    {link.title}
+                  </Link>
+                </li>
+              ))}
 
               <button
                 title="Close navigation menu"
@@ -133,13 +110,7 @@ function Nav() {
                 +
               </button>
 
-              <button
-                title="Theme"
-                onClick={handleTheme}
-                className="absolute flex items-center justify-center w-10 h-10 text-xl text-white bg-black rounded-full top-7 left-8 dark:text-black dark:bg-white laptop:hidden allLM:hidden"
-              >
-                {theme === "dark" ? <FaMoon /> : <FaSun />}
-              </button>
+              {renderMobileThemeToggler()}
 
               <div className="flex items-center gap-2 allT:flex-col allT:w-full allT:gap-5 laptop:hidden allLM:hidden">
                 <Link
@@ -150,7 +121,7 @@ function Nav() {
                 </Link>
 
                 <Link
-                  href={"/sign-in"}
+                  href={"/login"}
                   className="flex items-center justify-center gap-1 py-2 pl-3 text-black allLM:text-2xl dark:text-white allEMT:text-lg"
                 >
                   Log in <FaChevronRight />
@@ -168,13 +139,7 @@ function Nav() {
           </button>
 
           <div className="flex items-center gap-6 allEMT:hidden">
-            <button
-              title="Theme"
-              onClick={handleTheme}
-              className="flex items-center justify-center w-10 h-10 text-xl text-black rounded-full dark:text-white"
-            >
-              {theme === "dark" ? <FaMoon /> : <FaSun />}
-            </button>
+            {renderThemeToggler()}
 
             <button
               title="Search"
@@ -185,7 +150,7 @@ function Nav() {
             </button>
 
             <Link
-              href={"/sign-in"}
+              href={"/login"}
               className="flex items-center justify-center gap-1 px-6 py-2 text-white duration-500 bg-black border border-black rounded-full dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black dark:hover:border-white"
             >
               Log in <FaChevronRight />

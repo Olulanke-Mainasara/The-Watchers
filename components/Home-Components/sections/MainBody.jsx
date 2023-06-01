@@ -1,8 +1,8 @@
 import React from "react";
 
-import CategoriesCarousel from "../../features/Categories-Carousel/CategoriesCarousel";
-import NewsCarousel from "../../features/News-Carousel/NewsCarousel";
-import ReviewsCarousel from "../../features/Reviews-Carousel/ReviewsCarousel";
+import CategoriesCarousel from "../features/Categories-Carousel/CategoriesCarousel";
+import NewsCarousel from "../features/News-Carousel/NewsCarousel";
+import ReviewsCarousel from "../features/Reviews-Carousel/ReviewsCarousel";
 import LastSection from "./LastSection";
 import SectionFive from "./SectionFive";
 import SectionFour from "./SectionFour";

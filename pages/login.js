@@ -10,9 +10,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { FaArrowLeft, FaMoon, FaSun } from "react-icons/fa";
 
-const SignUp = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState(null);
@@ -88,14 +86,17 @@ const SignUp = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="w-screen min-h-[100dvh] flex relative">
+      <div className="flex min-h-[100dvh] w-screen relative">
+        <section className="relative basis-1/2 allIL:basis-full">
+          <Image src={"/Auth/Login.jpg"} fill alt="Login pic" />
+        </section>
         <form
           className="overflow-scroll basis-1/2 allIL:w-full allIL:h-full allIL:backdrop-blur-xl allIL:z-10 allIL:absolute allIL:top-0"
           onSubmit={handleSignIn}
         >
           <div className="flex items-center justify-center w-full min-h-[100dvh]">
-            <section className="border border-black allIL:border-none bg-white w-[90%] max-w-[450px] flex flex-col gap-5 p-5 pb-6 rounded-xl text-black my-10">
-              <div className="flex justify-between">
+            <section className="border border-black bg-white w-[90%] max-w-[450px] flex flex-col gap-5 p-5 pb-6 rounded-xl text-black my-10">
+              <div className="flex items-center justify-between">
                 <button
                   onClick={(e) => {
                     e.preventDefault();
@@ -117,46 +118,16 @@ const SignUp = () => {
               </div>
 
               <h2 className="text-4xl text-center allT:text-2xl">
-                Join the Rocket!
+                Welcome back!
               </h2>
-
-              <div className="flex gap-5">
-                <label className="w-full text-lg allEMT:text-base">
-                  First name
-                  <input
-                    type="text"
-                    name="firstName"
-                    required
-                    value={firstName}
-                    minLength={3}
-                    className="w-full h-12 pl-3 mt-2 text-base text-black bg-transparent border border-black rounded"
-                    placeholder="John"
-                    onChange={(event) => setFirstName(event.target.value)}
-                  />
-                </label>
-
-                <label className="w-full text-lg allEMT:text-base">
-                  Last name
-                  <input
-                    type="text"
-                    name="lastName"
-                    required
-                    value={lastName}
-                    minLength={3}
-                    className="w-full h-12 pl-3 mt-2 text-base text-black bg-transparent border border-black rounded"
-                    placeholder="Doe"
-                    onChange={(event) => setLastName(event.target.value)}
-                  />
-                </label>
-              </div>
 
               <label>
                 Email
                 <input
                   type="email"
+                  required
                   placeholder="john.doe@example.com"
                   value={email}
-                  required
                   className="w-full h-12 pl-3 mt-2 text-base text-black bg-transparent border border-black rounded"
                   onChange={(event) => setEmail(event.target.value)}
                 />
@@ -166,10 +137,9 @@ const SignUp = () => {
                 Password
                 <input
                   type="password"
+                  required
                   placeholder="**********"
                   value={password}
-                  required
-                  minLength={8}
                   className="w-full h-12 pl-3 mt-2 text-base text-black bg-transparent border border-black rounded"
                   onChange={(event) => setPassword(event.target.value)}
                 />
@@ -178,9 +148,9 @@ const SignUp = () => {
               {errorMessage && <p className="text-red-600">{errorMessage}</p>}
 
               <p className="text-center allT:text-xs">
-                Already have an account?&nbsp;
-                <Link className="font-bold" href={"/login"}>
-                  Login
+                Don&apos;t have an account?&nbsp;
+                <Link className="font-bold" href={"/sign-up"}>
+                  Sign-up
                 </Link>
               </p>
 
@@ -193,12 +163,9 @@ const SignUp = () => {
             </section>
           </div>
         </form>
-        <section className="relative basis-1/2 allIL:basis-full">
-          <Image src={"/Auth/signup.webp"} fill alt="Sign-up pic" />
-        </section>
       </div>
     </>
   );
 };
 
-export default SignUp;
+export default Login;

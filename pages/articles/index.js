@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
-import Nav from "@/components/Nav";
+import Nav from "@/components/Nav/Nav";
 import Search from "@/components/Search/Search";
 import { categories } from "@/data/Arrays";
 import React from "react";
