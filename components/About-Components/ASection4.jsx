@@ -9,25 +9,25 @@ const team = [
     id: 1,
     imgsrc: "/Categories/Exploration.webp",
     name: "Mainasara Olulanke",
-    position: "Founder/CEO",
+    position: "Founder / C.E.O",
   },
   {
     id: 2,
     imgsrc: "/Categories/Exploration.webp",
-    name: "Mainasara Olulanke",
-    position: "Founder/CEO",
+    name: "Bruce Wayne",
+    position: "Co-Founder / C.T.O",
   },
   {
     id: 3,
     imgsrc: "/Categories/Exploration.webp",
-    name: "Mainasara Olulanke",
-    position: "Founder/CEO",
+    name: "Clark Kent",
+    position: "Co-Founder / C.I.O",
   },
   {
     id: 4,
     imgsrc: "/Categories/Exploration.webp",
-    name: "Mainasara Olulanke",
-    position: "Founder/CEO",
+    name: "Tony Stark",
+    position: "Co-Founder / C.F.O",
   },
 ];
 
@@ -35,7 +35,7 @@ function ASection4() {
   return (
     <section className="w-full dark:text-white max-w-[1920px] mx-auto pt-40 flex flex-col gap-14 items-center justify-center allIL:h-auto pb-28">
       <div className="flex flex-col gap-6 text-center">
-        <H1>Meet the Team</H1>
+        <H1>Meet the Pilots</H1>
         <p className="mx-auto dark:opacity-70 text-2xl 2xl:text-3xl md:text-xl allEMT:text-base 2xl:max-w-[900px] laptop:max-w-[700px] lg:max-w-[700px] md:max-w-[600px] allEMT:w-[75%] allEMT:max-w-[500px]">
           The Watchers offers a seamless experience for exploring the world
           around us. Discover new knowledge and share your own ideas.

@@ -91,7 +91,7 @@ function Contact() {
                 name="email"
                 required
                 className="w-full h-12 pl-2 mt-4 bg-transparent border border-white rounded-lg outline-none dark:text-white allEMT:text-base"
-                placeholder="e.g batTheGoat@gmail.com"
+                placeholder="e.g bat.the.goat@gmail.com"
               />
             </label>
             <label className="text-lg allEMT:text-base">

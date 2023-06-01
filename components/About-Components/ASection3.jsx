@@ -11,12 +11,12 @@ const offers = [
   },
   {
     id: 2,
-    title: "Relevant Information",
+    title: "No Stale Treasures",
     desc: "Here, you will be transported to a world of endless discovery as we delve into a wide range of topics that span across all areas and sectors of the world. From science and technology, to culture and history, our goal is to provide a comprehensive and informative look into the marvels of our world and beyond.",
   },
   {
     id: 3,
-    title: "Relevant Information",
+    title: "24 / 7 Curiosity Scratching",
     desc: "Here, you will be transported to a world of endless discovery as we delve into a wide range of topics that span across all areas and sectors of the world. From science and technology, to culture and history, our goal is to provide a comprehensive and informative look into the marvels of our world and beyond.",
   },
 ];
@@ -25,7 +25,7 @@ function ASection3() {
   return (
     <section className="w-full dark:text-white max-w-[1920px] mx-auto pt-40 allLM:pt-56 flex flex-col gap-10 items-center justify-center allIL:h-auto">
       <div className="flex flex-col gap-6 text-center">
-        <H1>What we value</H1>
+        <H1>Our &quot;Watcher&quot; Way</H1>
         <p className="mx-auto dark:opacity-70 text-2xl 2xl:text-3xl md:text-xl allEMT:text-base 2xl:max-w-[900px] laptop:max-w-[700px] lg:max-w-[700px] md:max-w-[600px] allEMT:w-[75%] allEMT:max-w-[500px]">
           The Watchers offers a seamless experience for exploring the world
           around us. Discover new knowledge and share your own ideas.
