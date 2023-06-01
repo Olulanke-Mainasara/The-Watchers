@@ -27,7 +27,7 @@ function ASection1() {
 
       <SImage>
         <Image
-          src="/Section1.JPG"
+          src="/About/ASection1.jpeg"
           fill
           sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,

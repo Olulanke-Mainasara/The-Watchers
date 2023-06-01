@@ -7,25 +7,25 @@ import H1 from "../Home-Components/UI/Section/H1";
 const team = [
   {
     id: 1,
-    imgsrc: "/Exploration.webp",
+    imgsrc: "/Categories/Exploration.webp",
     name: "Mainasara Olulanke",
     position: "Founder/CEO",
   },
   {
     id: 2,
-    imgsrc: "/Exploration.webp",
+    imgsrc: "/Categories/Exploration.webp",
     name: "Mainasara Olulanke",
     position: "Founder/CEO",
   },
   {
     id: 3,
-    imgsrc: "/Exploration.webp",
+    imgsrc: "/Categories/Exploration.webp",
     name: "Mainasara Olulanke",
     position: "Founder/CEO",
   },
   {
     id: 4,
-    imgsrc: "/Exploration.webp",
+    imgsrc: "/Categories/Exploration.webp",
     name: "Mainasara Olulanke",
     position: "Founder/CEO",
   },
@@ -33,8 +33,8 @@ const team = [
 
 function ASection4() {
   return (
-    <section className="w-full dark:text-white max-w-[1920px] mx-auto h-screen laptop:max-h-[900px] flex flex-col gap-14 items-center justify-center allIL:h-auto allIL:pb-28">
-      <div className="flex flex-col text-center gap-6">
+    <section className="w-full dark:text-white max-w-[1920px] mx-auto pt-40 flex flex-col gap-14 items-center justify-center allIL:h-auto pb-28">
+      <div className="flex flex-col gap-6 text-center">
         <H1>Meet the Team</H1>
         <p className="mx-auto dark:opacity-70 text-2xl 2xl:text-3xl md:text-xl allEMT:text-base 2xl:max-w-[900px] laptop:max-w-[700px] lg:max-w-[700px] md:max-w-[600px] allEMT:w-[75%] allEMT:max-w-[500px]">
           The Watchers offers a seamless experience for exploring the world
@@ -42,7 +42,7 @@ function ASection4() {
         </p>
       </div>
 
-      <div className="w-full px-10 grid grid-cols-4 md:grid-cols-2 allEMT:grid-cols-1 gap-10 allEMT:gap-14">
+      <div className="grid w-full grid-cols-4 gap-10 px-10 md:grid-cols-2 allEMT:grid-cols-1 allEMT:gap-14">
         {team.map((member) => {
           return (
             <div
@@ -61,7 +61,7 @@ function ASection4() {
                 />
               </div>
 
-              <div className="flex flex-col w-full pt-4 dark:text-white gap-1 duration-500">
+              <div className="flex flex-col w-full gap-1 pt-4 duration-500 dark:text-white">
                 <h5 className="text-xl">{member.name}</h5>
                 <p className="text-lg opacity-80 dark:opacity-70">
                   {member.position}

@@ -28,7 +28,7 @@ function Reviews({ controls }) {
               <div className="flex items-center justify-center w-full gap-2">
                 <div className="relative overflow-hidden border rounded-full w-14 h-14">
                   <Image
-                    src="/My Logo 1.jpg"
+                    src="/Hero/My Logo 1.jpg"
                     fill
                     sizes="(max-width: 768px) 100vw,
                       (max-width: 1200px) 50vw,

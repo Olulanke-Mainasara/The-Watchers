@@ -9,10 +9,10 @@ import Text from "../Home-Components/UI/Section/Text";
 
 function ASection2() {
   return (
-    <section className="w-full max-w-[1920px] mx-auto h-screen laptop:max-h-[900px] flex allEMT:flex-col allEMT:gap-14 allIL:h-auto mb-44 allIL:pb-56">
+    <section className="w-full max-w-[1920px] mx-auto h-screen laptop:max-h-[900px] flex allEMT:flex-col allEMT:gap-14 allIL:h-auto">
       <SImage>
         <Image
-          src="/Section1.JPG"
+          src="/About/ASection2.jpeg"
           fill
           sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,

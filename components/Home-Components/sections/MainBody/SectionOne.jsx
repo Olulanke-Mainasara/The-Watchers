@@ -13,7 +13,7 @@ function SectionOne() {
     <section className="w-full max-w-[1920px] mx-auto h-screen laptop:max-h-[900px] flex allEMT:flex-col allEMT:gap-14 allIL:h-auto allEMT:pt-56">
       <SImage>
         <Image
-          src="/Section1.JPG"
+          src="/Home/Section1.JPG"
           fill
           sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,

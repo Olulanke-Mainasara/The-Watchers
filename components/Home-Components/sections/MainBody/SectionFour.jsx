@@ -37,14 +37,14 @@ function SectionFour() {
       <section className="w-1/2 h-full flex items-center justify-center allLM:justify-start allEMT:w-screen allEMT:h-[450px]">
         <div className="relative w-3/5 max-w-[515px] h-3/4 allEMT:h-full allLM:w-[90%] allLM:h-[705px] allEM:w-[310px] allT:w-[252px]">
           <Image
-            src="/Section2a.JPG"
+            src="/Home/Section4a.JPG"
             width={500}
             height={800}
             className="absolute w-3/5 md:w-4/5 h-3/5 border border-black dark:border-white rounded-2xl top-0 left-0 allEMT:min-h-[250px]"
             alt=""
           />
           <Image
-            src="/Section2b.JPG"
+            src="/Home/Section4b.JPG"
             width={500}
             height={800}
             className="absolute w-3/5 md:w-4/5 h-3/5 border rounded-2xl bottom-0 right-0 allEMT:min-h-[250px]"

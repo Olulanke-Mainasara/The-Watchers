@@ -13,7 +13,7 @@ function SectionFive() {
     <section className="w-full max-w-[1920px] mx-auto h-screen laptop:max-h-[900px] flex allEMT:flex-col allEMT:gap-14 allIL:h-auto">
       <SImage>
         <Image
-          src="/Section3.JPG"
+          src="/Home/Section5.JPG"
           fill
           sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,

@@ -50,7 +50,7 @@ function Nav() {
       <nav
         className={`fixed top-0 left-0 z-30 ${
           visible ? "" : "allIL:opacity-0 allIL:pointer-events-none"
-        } duration-300 h-16 w-screen bg-white dark:bg-black`}
+        } duration-500 h-16 w-screen bg-white dark:bg-black`}
       >
         <div className="flex items-center justify-between h-full px-10 mx-auto sm:px-5 xs:px-3 iphone5:px-3 xtraSmall:px-2">
           <Link
@@ -61,7 +61,7 @@ function Nav() {
           >
             <div className="relative w-10 h-10 overflow-hidden rounded-full">
               <Image
-                src="/The Universe 2.jpg"
+                src="/Hero/The Universe 2.jpg"
                 fill
                 sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
@@ -73,9 +73,9 @@ function Nav() {
           </Link>
 
           <ul
-            className={`flex allEMT:text-base allIL:text-black allIL:absolute allIL:top-0 allIL:h-screen allIL:w-full allIL:justify-end allIL:bg-gray-800/0 backdrop-blur-lg duration-500 ${navMenu}`}
+            className={`flex allEMT:text-base allIL:text-black allIL:absolute allIL:top-0 allIL:h-screen allIL:w-full allIL:justify-end allIL:bg-gray-800/0 backdrop-blur-lg allIL:duration-500 ${navMenu}`}
           >
-            <div className="relative text-black dark:text-white bg-white dark:bg-black allIL:px-8 allIL:w-4/5 allIL:min-w-[240px] allIL:max-w-[320px] flex justify-center items-center allIL:items-start gap-14 allIL:flex-col allEM:gap-10 allT:gap-8 duration-300">
+            <div className="relative text-black dark:text-white bg-white dark:bg-black allIL:px-8 allIL:w-4/5 allIL:min-w-[240px] allIL:max-w-[320px] flex justify-center items-center allIL:items-start gap-14 allIL:flex-col allEM:gap-10 allT:gap-8 duration-500">
               <li>
                 <Link
                   href="/"
@@ -138,7 +138,7 @@ function Nav() {
                 onClick={handleTheme}
                 className="absolute flex items-center justify-center w-10 h-10 text-xl text-white bg-black rounded-full top-7 left-8 dark:text-black dark:bg-white laptop:hidden allLM:hidden"
               >
-                {theme === "dark" ? <FaSun /> : <FaMoon />}
+                {theme === "dark" ? <FaMoon /> : <FaSun />}
               </button>
 
               <div className="flex items-center gap-2 allT:flex-col allT:w-full allT:gap-5 laptop:hidden allLM:hidden">
@@ -173,7 +173,7 @@ function Nav() {
               onClick={handleTheme}
               className="flex items-center justify-center w-10 h-10 text-xl text-black rounded-full dark:text-white"
             >
-              {theme === "dark" ? <FaSun /> : <FaMoon />}
+              {theme === "dark" ? <FaMoon /> : <FaSun />}
             </button>
 
             <button

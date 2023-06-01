@@ -15,7 +15,7 @@ function SplashText() {
     >
       <div className="relative w-60 2xl:w-64 allEMT:w-28 aspect-square">
         <Image
-          src={"/The Universe 2.jpg"}
+          src={"/Hero/The Universe 2.jpg"}
           fill
           sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
