@@ -10,6 +10,8 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { FaArrowLeft, FaMoon, FaSun } from "react-icons/fa";
 
+import LoginImg from "../public/Auth/login.jpg";
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -88,7 +90,7 @@ const Login = () => {
       </Head>
       <div className="flex min-h-[100dvh] w-screen relative">
         <section className="relative basis-1/2 allIL:basis-full">
-          <Image src={"/Auth/login.jpg"} fill alt="Login pic" />
+          <Image src={LoginImg} fill priority placeholder="blur" alt="Login img" />
         </section>
         <form
           className="overflow-scroll basis-1/2 allIL:w-full allIL:h-full allIL:backdrop-blur-xl allIL:z-10 allIL:absolute allIL:top-0"

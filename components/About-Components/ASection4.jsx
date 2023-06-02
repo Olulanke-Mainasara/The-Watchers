@@ -2,30 +2,31 @@ import Image from "next/image";
 
 import React from "react";
 
+import ExplorationImg from "../../public/Categories/Exploration.webp";
 import H1 from "../Home-Components/UI/Section/H1";
 
 const team = [
   {
     id: 1,
-    imgsrc: "/Categories/Exploration.webp",
+    imgsrc: ExplorationImg,
     name: "Mainasara Olulanke",
     position: "Founder / C.E.O",
   },
   {
     id: 2,
-    imgsrc: "/Categories/Exploration.webp",
+    imgsrc: ExplorationImg,
     name: "Bruce Wayne",
     position: "Co-Founder / C.T.O",
   },
   {
     id: 3,
-    imgsrc: "/Categories/Exploration.webp",
+    imgsrc: ExplorationImg,
     name: "Clark Kent",
     position: "Co-Founder / C.I.O",
   },
   {
     id: 4,
-    imgsrc: "/Categories/Exploration.webp",
+    imgsrc: ExplorationImg,
     name: "Tony Stark",
     position: "Co-Founder / C.F.O",
   },
@@ -50,15 +51,7 @@ function ASection4() {
               className="w-full allEMT:max-w-[420px] flex flex-col items-center justify-center duration-500"
             >
               <div className="relative w-full overflow-hidden aspect-square rounded-xl">
-                <Image
-                  src={member.imgsrc}
-                  fill
-                  priority
-                  sizes="(max-width: 768px) 100vw,
-                        (max-width: 1200px) 50vw,
-                        33vw"
-                  alt="Category Image"
-                />
+                <Image src={member.imgsrc} fill placeholder="blur" alt="Our Executives" />
               </div>
 
               <div className="flex flex-col w-full gap-1 pt-4 duration-500 dark:text-white">

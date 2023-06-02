@@ -37,11 +37,8 @@ function Articles() {
                     <Image
                       src={category.imgsrc}
                       fill
-                      priority
-                      sizes="(max-width: 768px) 100vw,
-                        (max-width: 1200px) 50vw,
-                        33vw"
-                      alt="Category Image"
+                      placeholder="blur"
+                      alt={category.title}
                     />
                   </div>
 

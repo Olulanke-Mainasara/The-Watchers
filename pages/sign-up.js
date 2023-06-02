@@ -10,6 +10,8 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { FaArrowLeft, FaMoon, FaSun } from "react-icons/fa";
 
+import SignupImg from "../public/Auth/signup.webp";
+
 const SignUp = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -194,7 +196,13 @@ const SignUp = () => {
           </div>
         </form>
         <section className="relative basis-1/2 allIL:basis-full">
-          <Image src={"/Auth/signup.webp"} fill alt="Sign-up pic" />
+          <Image
+            src={SignupImg}
+            fill
+            priority
+            placeholder="blur"
+            alt="Sign-up img"
+          />
         </section>
       </div>
     </>

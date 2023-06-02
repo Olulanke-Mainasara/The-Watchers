@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import React from "react";
 
+import Section2Img from "../../../public/Home/Section2.jpeg";
 import Button from "../UI/Section/Button";
 import H1 from "../UI/Section/H1";
 import P from "../UI/Section/P";
@@ -28,13 +29,11 @@ function SectionTwo() {
 
       <SImage>
         <Image
-          src="/Home/Section2.jpeg"
+          src={Section2Img}
           fill
-          sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+          placeholder="blur"
           className="absolute top-0 left-0 border border-black dark:border-white rounded-2xl"
-          alt=""
+          alt="Section 2"
         />
       </SImage>
     </section>

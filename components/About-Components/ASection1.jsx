@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import React from "react";
 
+import ASection1Img from "../../public/About/ASection1.jpeg";
 import H1 from "../Home-Components/UI/Section/H1";
 import P from "../Home-Components/UI/Section/P";
 import SImage from "../Home-Components/UI/Section/SImage";
@@ -27,13 +28,12 @@ function ASection1() {
 
       <SImage>
         <Image
-          src="/About/ASection1.jpeg"
+          src={ASection1Img}
           fill
-          sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+          priority
+          placeholder="blur"
           className="absolute top-0 left-0 border border-black dark:border-white rounded-2xl"
-          alt=""
+          alt="Who are we?"
         />
       </SImage>
     </section>

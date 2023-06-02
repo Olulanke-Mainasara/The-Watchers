@@ -22,7 +22,7 @@ function About() {
       <div className="flex flex-col w-screen">
         <Search />
         <Nav />
-        <header className="flex items-center justify-center w-full pt-32 dark:text-white allLM:pb-28">
+        <header className="flex items-center justify-center w-full pt-32 dark:text-white allEMT:pb-16 allLM:pb-28">
           <h1 className="text-9xl allLM:text-8xl allEM:text-6xl allT:text-5xl">
             About us
           </h1>

@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import React from "react";
 
+import Section1Img from "../../../public/Home/Section1.jpg";
 import Button from "../UI/Section/Button";
 import H1 from "../UI/Section/H1";
 import P from "../UI/Section/P";
@@ -13,14 +14,12 @@ function SectionOne() {
     <section className="w-full max-w-[1920px] mx-auto h-screen laptop:max-h-[900px] flex allEMT:flex-col allEMT:gap-14 allIL:h-auto allEMT:pt-56">
       <SImage>
         <Image
-          src="/Home/Section1.JPG"
+          src={Section1Img}
           fill
-          sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+          placeholder="blur"
           priority
           className="absolute top-0 left-0 border border-black dark:border-white rounded-2xl"
-          alt=""
+          alt="Section 1"
         />
       </SImage>
 

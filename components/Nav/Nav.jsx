@@ -5,6 +5,7 @@ import React from "react";
 import { FaBars, FaChevronRight, FaSearch } from "react-icons/fa";
 import { useSessionStorage } from "react-use";
 
+import TheUniverseImg from "../../public/Hero/The Universe 2.jpg";
 import Search from "../Search/Search";
 import useNavigationBar from "./useNavigationBar";
 
@@ -76,11 +77,10 @@ function Nav() {
           >
             <div className="relative w-10 h-10 overflow-hidden rounded-full">
               <Image
-                src="/Hero/The Universe 2.jpg"
+                src={TheUniverseImg}
                 fill
-                sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+                priority
+                placeholder="blur"
                 alt="The Watchers Logo"
               />
             </div>

@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import React from "react";
 
+import Section3Img from "../../../public/Home/Section3.jpeg";
 import Button from "../UI/Section/Button";
 import H1 from "../UI/Section/H1";
 import P from "../UI/Section/P";
@@ -13,13 +14,11 @@ function SectionThree() {
     <section className="w-full max-w-[1920px] mx-auto h-screen laptop:max-h-[900px] flex allEMT:flex-col allEMT:gap-14 allIL:h-auto">
       <SImage>
         <Image
-          src="/Home/Section3.jpeg"
+          src={Section3Img}
           fill
-          sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+          placeholder="blur"
           className="absolute top-0 left-0 border border-black dark:border-white rounded-2xl"
-          alt=""
+          alt="Section 3"
         />
       </SImage>
 

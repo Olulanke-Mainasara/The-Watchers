@@ -4,6 +4,8 @@ import Link from "next/link";
 import React from "react";
 import { FaGithub, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
+import TheUniverseImg from "../public/Hero/The Universe 2.jpg";
+
 function Footer() {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,11 +21,9 @@ function Footer() {
           >
             <div className="relative w-10 h-10 overflow-hidden rounded-full">
               <Image
-                src="/Hero/The Universe 2.jpg"
+                src={TheUniverseImg}
                 fill
-                sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+                placeholder="blur"
                 alt="The Watchers Logo"
               />
             </div>

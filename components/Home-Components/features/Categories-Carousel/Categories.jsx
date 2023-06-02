@@ -21,10 +21,8 @@ function Categories({ controls }) {
                 <Image
                   src={categoriesItem.imgsrc}
                   fill
-                  sizes="(max-width: 768px) 100vw,
-                    (max-width: 1200px) 50vw,
-                    33vw"
-                  alt="Category Image"
+                  placeholder="blur"
+                  alt={categoriesItem.title}
                 />
               </div>
 

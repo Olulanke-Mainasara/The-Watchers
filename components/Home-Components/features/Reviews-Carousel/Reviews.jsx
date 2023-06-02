@@ -5,6 +5,7 @@ import React from "react";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 import { reviews } from "../../../../data/Arrays";
+import MyLogo from "../../../../public/Hero/My Logo 1.jpg";
 
 function Reviews({ controls }) {
   return (
@@ -28,12 +29,10 @@ function Reviews({ controls }) {
               <div className="flex items-center justify-center w-full gap-2">
                 <div className="relative overflow-hidden border rounded-full w-14 h-14">
                   <Image
-                    src="/Hero/My Logo 1.jpg"
+                    src={MyLogo}
                     fill
-                    sizes="(max-width: 768px) 100vw,
-                      (max-width: 1200px) 50vw,
-                      33vw"
-                    alt="User Image"
+                    placeholder="blur"
+                    alt={reviewsItem.text}
                   />
                 </div>
                 <div className="flex flex-col gap-1 duration-500 dark:text-white">

@@ -21,9 +21,8 @@ function News({ controls }) {
                 <Image
                   src={newsItem.imgsrc}
                   fill
-                  priority
-                  blur="true"
-                  alt="News Image"
+                  placeholder="blur"
+                  alt={newsItem.text}
                 />
               </div>
 

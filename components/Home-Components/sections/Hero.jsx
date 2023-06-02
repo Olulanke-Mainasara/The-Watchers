@@ -4,6 +4,9 @@ import Link from "next/link";
 import React from "react";
 import { FaChevronRight } from "react-icons/fa";
 
+import HeaderImg from "../../../public/Hero/Header.jpeg";
+import MobileHeaderImg from "../../../public/Hero/headerM.jpg";
+
 function Hero() {
   return (
     <header
@@ -39,18 +42,22 @@ function Hero() {
 
       <div className="relative w-[85%] h-[90vh] max-w-[350px] min-h-[660px] max-h-[700px] allT:max-h-[500px] mx-auto border border-gray-500 rounded-xl overflow-hidden allLM:hidden laptop:hidden">
         <Image
-          src={"/Hero/headerM.jpg"}
+          src={MobileHeaderImg}
           fill
-          sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+          placeholder="blur"
           priority
           alt={"Hero Image"}
         />
       </div>
 
       <div className="relative w-[85%] max-w-[1200px] h-[90vh] min-h-[458px] max-h-[755px] allLM:h-[45vh] allEMT:max-h-[720px] mx-auto border border-gray-500 rounded-xl overflow-hidden allEMT:hidden">
-        <Image src={"/Hero/Header.jpeg"} fill priority alt={"Hero Image"} />
+        <Image
+          src={HeaderImg}
+          fill
+          placeholder="blur"
+          priority
+          alt={"Hero Image"}
+        />
       </div>
     </header>
   );
