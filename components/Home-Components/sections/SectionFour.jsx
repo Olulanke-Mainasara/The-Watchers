@@ -2,8 +2,8 @@ import Image from "next/image";
 
 import React from "react";
 
-import Section4aImg from "../../../public/Home/Section4a.jpg";
-import Section4bImg from "../../../public/Home/Section4b.jpg";
+import Section4aImg from "../../../public/Home/Section4a.jpeg";
+import Section4bImg from "../../../public/Home/Section4b.jpeg";
 import Button from "../UI/Section/Button";
 import H1 from "../UI/Section/H1";
 import P from "../UI/Section/P";

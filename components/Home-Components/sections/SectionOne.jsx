@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import React from "react";
 
-import Section1Img from "../../../public/Home/Section1.jpg";
+import Section1Img from "../../../public/Home/Section1.jpeg";
 import Button from "../UI/Section/Button";
 import H1 from "../UI/Section/H1";
 import P from "../UI/Section/P";
