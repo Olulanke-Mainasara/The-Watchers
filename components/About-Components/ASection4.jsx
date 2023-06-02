@@ -51,7 +51,12 @@ function ASection4() {
               className="w-full allEMT:max-w-[420px] flex flex-col items-center justify-center duration-500"
             >
               <div className="relative w-full overflow-hidden aspect-square rounded-xl">
-                <Image src={member.imgsrc} fill placeholder="blur" alt="Our Executives" />
+                <Image
+                  src={member.imgsrc}
+                  fill
+                  placeholder="blur"
+                  alt="Our Executives"
+                />
               </div>
 
               <div className="flex flex-col w-full gap-1 pt-4 duration-500 dark:text-white">

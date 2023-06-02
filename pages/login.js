@@ -90,7 +90,13 @@ const Login = () => {
       </Head>
       <div className="flex min-h-[100dvh] w-screen relative">
         <section className="relative basis-1/2 allIL:basis-full">
-          <Image src={LoginImg} fill priority placeholder="blur" alt="Login img" />
+          <Image
+            src={LoginImg}
+            fill
+            priority
+            placeholder="blur"
+            alt="Login img"
+          />
         </section>
         <form
           className="overflow-scroll basis-1/2 allIL:w-full allIL:h-full allIL:backdrop-blur-xl allIL:z-10 allIL:absolute allIL:top-0"
