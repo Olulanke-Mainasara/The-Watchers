@@ -4,9 +4,7 @@ import Image from "next/image";
 import Footer from "@/components/Footer";
 import CardButton from "@/components/Home-Components/UI/Carousel/CardButton";
 import Nav from "@/components/Nav/Nav";
-import Search from "@/components/Search/Search";
 import { categories } from "@/data/Arrays";
-import React from "react";
 
 function Categories() {
   return (
@@ -18,9 +16,8 @@ function Categories() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex flex-col w-screen">
-        <Search />
         <Nav />
-        <header className="flex items-center justify-center w-full pt-32 pb-16 dark:text-white">
+        <header className="w-full pt-32 pb-16 text-center dark:text-white">
           <h1 className="text-9xl allLM:text-8xl allEM:text-6xl allT:text-5xl">
             Categories
           </h1>

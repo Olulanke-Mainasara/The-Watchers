@@ -7,8 +7,6 @@ import ASection3 from "@/components/About-Components/ASection3";
 import ASection4 from "@/components/About-Components/ASection4";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav/Nav";
-import Search from "@/components/Search/Search";
-import React from "react";
 
 function About() {
   return (
@@ -20,9 +18,8 @@ function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex flex-col w-screen">
-        <Search />
         <Nav />
-        <header className="flex items-center justify-center w-full pt-32 dark:text-white allEMT:pb-16 allLM:pb-28">
+        <header className="w-full pt-32 text-center dark:text-white allEMT:pb-16 allLM:pb-28">
           <h1 className="text-9xl allLM:text-8xl allEM:text-6xl allT:text-5xl">
             About us
           </h1>

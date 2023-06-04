@@ -2,8 +2,6 @@ import Head from "next/head";
 
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav/Nav";
-import Search from "@/components/Search/Search";
-import React from "react";
 import { FaBuilding, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 function Contact() {
@@ -20,9 +18,8 @@ function Contact() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="grid h-screen grid-cols-2 bg-black dark:bg-slate-800 allEMT:h-auto allEMT:grid-cols-1">
-        <Search />
         <Nav />
-        <div className="grid h-full bg-white dark:text-white dark:bg-black rounded-br-3xl place-items-center allEMT:pt-32 allEMT:pb-8">
+        <div className="grid h-full bg-white dark:text-white dark:bg-[#0e1217] rounded-br-3xl place-items-center allEMT:pt-32 allEMT:pb-8">
           <div className="w-[90%] max-w-lg space-y-8">
             <h1 className="text-8xl allLM:text-6xl allEM:text-6xl allT:text-5xl allEMT:text-center allEMT:mb-14">
               Contact us

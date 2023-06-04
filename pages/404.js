@@ -2,8 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 
 import Nav from "@/components/Nav/Nav";
-import Search from "@/components/Search/Search";
-import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 
 function Custom404() {
@@ -16,8 +14,7 @@ function Custom404() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="text-white bg-[url('/error.webp')] allIL:bg-[url('/errorM.jpg')] bg-cover h-screen">
-        <Search />
-        <Nav />
+         <Nav />
         <div className="h-full flex gap-10 flex-col items-center justify-center backdrop-brightness-[.1]">
           <h1 className="text-9xl allEMT:text-8xl">404</h1>
           <p className="text-4xl allEM:text-2xl allT:text-xl">

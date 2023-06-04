@@ -3,9 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Nav from "@/components/Nav/Nav";
-import Search from "@/components/Search/Search";
 import { categories } from "@/data/Arrays";
-import React from "react";
 
 function Articles() {
   return (
@@ -17,9 +15,8 @@ function Articles() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex flex-col w-screen">
-        <Search />
         <Nav />
-        <header className="flex items-center justify-center w-full pt-32 pb-16 dark:text-white">
+        <header className="w-full pt-32 pb-16 text-center dark:text-white">
           <h1 className="text-9xl allLM:text-8xl allEM:text-6xl allT:text-5xl">
             Articles
           </h1>
@@ -31,7 +28,7 @@ function Articles() {
               return (
                 <div
                   key={category.id}
-                  className="w-full allEMT:max-w-[420px] flex flex-col items-center justify-center duration-500 mx-auto"
+                  className="w-full allEMT:max-w-[420px] flex flex-col items-center justify-center mx-auto"
                 >
                   <div className="relative w-full overflow-hidden aspect-video rounded-xl">
                     <Image
@@ -42,16 +39,13 @@ function Articles() {
                     />
                   </div>
 
-                  <div className="flex items-center w-full gap-4 py-10 duration-500 dark:text-white">
+                  <div className="flex items-center w-full gap-4 py-10 dark:text-white">
                     <div className="relative w-10 h-10 overflow-hidden rounded-full">
                       <Image
                         src={category.imgsrc}
                         fill
-                        priority
-                        sizes="(max-width: 768px) 100vw,
-                          (max-width: 1200px) 50vw,
-                          33vw"
-                        alt="Category Image"
+                        placeholder="blur"
+                        alt={category.title}
                       />
                     </div>
                     <Link href="#" className="duration-300 hover:opacity-50">
