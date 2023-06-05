@@ -12,12 +12,12 @@ function Footer() {
   };
 
   return (
-    <footer className="flex flex-col w-full px-10 text-white bg-black dark:bg-slate-800 dark:text-white allEM:px-8 allT:px-6">
+    <footer className="flex flex-col w-full px-10 text-white bg-black dark:bg-slate-800 dark:text-white allEMT:px-5">
       <section className="flex justify-between gap-8 py-8 border-b allEMT:flex-col h-72 allEMT:h-fit">
         <div className="flex flex-col justify-center h-full gap-6 basis-1/2">
           <a
             href="#hero"
-            className="flex items-center mx-auto text-2xl transition-colors duration-300 w-fit dark:text-white hover:text-gray-600 dark:hover:text-gray-600 allT:text-lg"
+            className="flex items-center text-2xl duration-300 allEMT:mx-auto w-fit dark:text-white hover:text-gray-600 dark:hover:text-gray-600 allT:text-lg"
           >
             <div className="relative w-10 h-10 overflow-hidden rounded-full">
               <Image
@@ -39,8 +39,10 @@ function Footer() {
 
         <div className="w-[2px] h-full bg-white allEMT:rotate-180 allEMT:w-full allEMT:h-[1px]"></div>
 
-        <div className="flex flex-col justify-center h-full gap-5 text-center allLM:text-left basis-1/2">
-          <p className="text-2xl allT:text-lg">Subscribe to our newsletter</p>
+        <div className="flex flex-col justify-center h-full gap-5 basis-1/2">
+          <p className="text-2xl allT:text-lg allEMT:text-center">
+            Subscribe to our newsletter
+          </p>
           <p className="allT:text-sm opacity-70">
             The latest news, articles, and resources, sent to your inbox weekly.
           </p>
@@ -52,7 +54,7 @@ function Footer() {
             />
             <button
               type="submit"
-              className="px-6 py-2 text-black duration-300 bg-white border rounded-lg hover:bg-black hover:text-white allEMT:w-fit allEMT:mx-auto"
+              className="px-6 py-2 text-black duration-300 bg-white border rounded-xl hover:bg-black hover:text-white allEMT:w-fit allEMT:mx-auto"
             >
               Subscribe
             </button>

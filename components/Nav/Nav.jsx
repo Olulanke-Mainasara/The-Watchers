@@ -72,7 +72,7 @@ function Nav() {
             : !visible & (router.pathname == "/profile")
             ? ""
             : "allIL:opacity-0 allIL:pointer-events-none"
-        } allIL:duration-500 h-16 w-screen bg-white dark:bg-[#0e1217]`}
+        } allIL:duration-500 h-16 w-screen bg-white dark:bg-[#010409]`}
       >
         <div className="flex items-center justify-between h-full px-10 mx-auto sm:px-5 xs:px-3 iphone5:px-3 xtraSmall:px-2">
           <Link
@@ -96,7 +96,7 @@ function Nav() {
           <ul
             className={`flex allEMT:text-base allIL:text-black allIL:absolute allIL:top-0 allIL:h-screen allIL:w-full allIL:justify-end allIL:bg-gray-800/0 backdrop-blur-lg allIL:duration-500 ${navMenu}`}
           >
-            <div className="relative text-black dark:text-white bg-white dark:bg-[#0e1217] allIL:px-6 allIL:w-4/5 allIL:min-w-[240px] allIL:max-w-[320px] flex justify-center items-center allIL:items-start gap-14 allIL:flex-col allEM:gap-10 allT:gap-8">
+            <div className="relative text-black dark:text-white bg-white dark:bg-[#010409] allIL:px-6 allIL:w-4/5 allIL:min-w-[240px] allIL:max-w-[320px] flex justify-center items-center allIL:items-start gap-14 allIL:flex-col allEM:gap-10 allT:gap-8">
               {links.map((link) => (
                 <li key={link.id}>
                   <Link
