@@ -19,7 +19,7 @@ function Contact() {
       </Head>
       <div className="grid h-screen grid-cols-2 bg-black dark:bg-slate-800 allEMT:h-auto allEMT:grid-cols-1">
         <Nav />
-        <div className="grid h-full bg-white dark:text-white dark:bg-[#0e1217] rounded-br-3xl place-items-center allEMT:pt-32 allEMT:pb-8">
+        <div className="grid h-full bg-white dark:text-white dark:bg-[#010409] rounded-br-3xl place-items-center allEMT:pt-32 allEMT:pb-8">
           <div className="w-[90%] max-w-lg space-y-8">
             <h1 className="text-8xl allLM:text-6xl allEM:text-6xl allT:text-5xl allEMT:text-center allEMT:mb-14">
               Contact us

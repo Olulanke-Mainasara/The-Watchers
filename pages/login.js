@@ -99,7 +99,7 @@ const Login = () => {
           />
         </section>
         <form
-          className="overflow-scroll basis-1/2 allIL:w-full allIL:h-full allIL:backdrop-blur-xl allIL:z-10 allIL:absolute allIL:top-0"
+          className="overflow-scroll basis-1/2 allIL:w-full allIL:h-full allIL:backdrop-blur-xl allIL:absolute allIL:top-0"
           onSubmit={handleSignIn}
         >
           <div className="flex items-center justify-center w-full min-h-[100dvh]">
