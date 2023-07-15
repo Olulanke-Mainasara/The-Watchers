@@ -2,9 +2,9 @@ import React from "react";
 
 function H1({ children }) {
   return (
-    <h1 className="text-5xl 2xl:text-6xl md:text-3xl allEM:text-[2.5rem] allT:text-3xl">
+    <h3 className="xl:text-5xl 2xl:text-6xl md:text-3xl text-[2.5rem] xs:text-3xl">
       {children}
-    </h1>
+    </h3>
   );
 }
 

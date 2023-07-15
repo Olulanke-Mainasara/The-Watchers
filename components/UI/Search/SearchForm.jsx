@@ -1,5 +1,5 @@
 import React from "react";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaTimes } from "react-icons/fa";
 
 function SearchForm({ handleSearch }) {
   const toggleSearch = (e) => {
@@ -9,15 +9,15 @@ function SearchForm({ handleSearch }) {
 
   return (
     <div className="flex flex-col w-[90%] max-w-3xl bg-white text-black shadow-2xl rounded-lg overflow-hidden">
-      <form className="flex items-center w-full gap-6 px-3 border-none allT:gap-3 border-b-black">
+      <form className="flex items-center w-full px-3 border-none gap-6 xs:gap-3 border-b-black">
         <FaSearch className="text-lg" />
         <input
           type="search"
           className="w-full py-3 bg-white outline-none placeholder:text-black"
           placeholder="Search encyclopedia"
         />
-        <button className="text-4xl rotate-45" onClick={(e) => toggleSearch(e)}>
-          +
+        <button className="text-xl" onClick={(e) => toggleSearch(e)}>
+          <FaTimes />
         </button>
       </form>
       <hr />

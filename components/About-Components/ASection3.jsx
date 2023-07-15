@@ -1,7 +1,7 @@
 import React from "react";
 import { FaClock } from "react-icons/fa";
 
-import H1 from "../Home-Components/UI/Section/H1";
+import TextHeader from "../UI/Section/TextHeader";
 
 const offers = [
   {
@@ -23,24 +23,22 @@ const offers = [
 
 function ASection3() {
   return (
-    <section className="w-full dark:text-white max-w-[1920px] mx-auto pt-40 allLM:pt-56 flex flex-col gap-10 items-center justify-center allIL:h-auto">
-      <div className="flex flex-col gap-6 text-center">
-        <H1>Our &quot;Watcher&quot; Way</H1>
-        <p className="mx-auto dark:opacity-70 text-2xl 2xl:text-3xl md:text-xl allEMT:text-base 2xl:max-w-[900px] laptop:max-w-[700px] lg:max-w-[700px] md:max-w-[600px] allEMT:w-[75%] allEMT:max-w-[500px]">
+    <section className="w-full dark:text-white max-w-[1920px] mx-auto pt-40 xl:pt-32 md:pt-56 flex flex-col gap-10 items-center justify-center">
+      <div className="flex flex-col text-center gap-6">
+        <TextHeader>Our &quot;Watcher&quot; Way</TextHeader>
+        <p className="mx-auto dark:opacity-70 xl:text-2xl 2xl:text-3xl md:text-xl 2xl:max-w-[900px] xl:max-w-[700px] lg:max-w-[700px] md:max-w-[600px] w-[75%] md:w-full max-w-[500px]">
           The Watchers offers a seamless experience for exploring the world
           around us. Discover new knowledge and share your own ideas.
         </p>
       </div>
 
-      <div className="grid w-full grid-cols-3 gap-20 px-10 md:grid-cols-2 allEMT:grid-cols-1 allIL:gap-14">
+      <div className="w-full px-10 grid grid-cols-1 xl:gap-20 xl:grid-cols-3 md:grid-cols-2 gap-14">
         {offers.map((offer) => {
           return (
             <div key={offer.id} className="w-full mx-auto space-y-6">
               <FaClock className="text-2xl" />
               <h1 className="text-2xl">{offer.title}</h1>
-              <p className="text-base dark:opacity-70 2xl:text-2xl md:text-base allEM:text-base allT:text-base">
-                {offer.desc}
-              </p>
+              <p className="dark:opacity-70 2xl:text-2xl">{offer.desc}</p>
             </div>
           );
         })}

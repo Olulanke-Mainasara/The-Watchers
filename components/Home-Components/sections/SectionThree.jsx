@@ -3,27 +3,28 @@ import Image from "next/image";
 import React from "react";
 
 import Section3Img from "../../../public/Home/Section3.jpeg";
-import Button from "../UI/Section/Button";
-import H1 from "../UI/Section/H1";
-import P from "../UI/Section/P";
-import SImage from "../UI/Section/SImage";
-import Text from "../UI/Section/Text";
+import Button from "../../UI/Section/Button";
+import SImage from "../../UI/Section/SectionImage";
+import Text from "../../UI/Section/TextBlock";
+import TextHeader from "../../UI/Section/TextHeader";
+import P from "../../UI/Section/TextParagraph";
 
 function SectionThree() {
   return (
-    <section className="w-full max-w-[1920px] mx-auto h-screen laptop:max-h-[900px] flex allEMT:flex-col allEMT:gap-14 allIL:h-auto">
+    <section className="w-full max-w-[1920px] mx-auto xl:h-screen xl:max-h-[900px] md:flex-row flex flex-col md:gap-0 gap-14 h-auto">
       <SImage>
         <Image
           src={Section3Img}
           fill
+          sizes="(max-width: 767px) 100vw, (max-width: 1200px) 50vw, 33vw"
           placeholder="blur"
           className="absolute top-0 left-0 border border-black dark:border-white rounded-2xl"
           alt="Section 3"
         />
       </SImage>
 
-      <Text position={"start"}>
-        <H1>Welcome to the chronicles of the universe</H1>
+      <Text position={"xl:justify-start"}>
+        <TextHeader>Welcome to the chronicles of the universe</TextHeader>
 
         <P>
           Here, you will be transported to a world of endless discovery as we

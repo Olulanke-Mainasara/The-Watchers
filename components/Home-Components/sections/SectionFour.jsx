@@ -4,16 +4,16 @@ import React from "react";
 
 import Section4aImg from "../../../public/Home/Section4a.jpeg";
 import Section4bImg from "../../../public/Home/Section4b.jpeg";
-import Button from "../UI/Section/Button";
-import H1 from "../UI/Section/H1";
-import P from "../UI/Section/P";
-import Text from "../UI/Section/Text";
+import Button from "../../UI/Section/Button";
+import Text from "../../UI/Section/TextBlock";
+import TextHeader from "../../UI/Section/TextHeader";
+import P from "../../UI/Section/TextParagraph";
 
 function SectionFour() {
   return (
-    <section className="w-full max-w-[1920px] mx-auto h-screen laptop:max-h-[900px] flex allEMT:flex-col allEMT:gap-14 allIL:h-auto allIL:pt-56">
-      <Text position={"justify-end"} height={"allLM:h-[705px]"}>
-        <H1>We inspire, no matter the reader</H1>
+    <section className="w-full max-w-[1920px] mx-auto xl:h-screen xl:max-h-[900px] flex md:flex-row flex-col md:gap-0 gap-14 h-auto xl:pt-0 pt-56">
+      <Text position={"xl:justify-end"} height={"md:h-[705px]"}>
+        <TextHeader>We inspire, no matter the reader</TextHeader>
 
         <P>
           Here, we believe that knowledge and inspiration should be accessible
@@ -36,22 +36,22 @@ function SectionFour() {
         <Button />
       </Text>
 
-      <section className="w-1/2 h-full flex items-center justify-center allLM:justify-start allEMT:w-screen allEMT:h-[450px]">
-        <div className="relative w-3/5 max-w-[515px] h-3/4 allEMT:h-full allLM:w-[90%] allLM:h-[705px] allEM:w-[310px] allT:w-[252px]">
+      <section className="md:w-1/2 md:h-full flex items-center justify-center xl:justify-center md:justify-start w-screen h-[450px]">
+        <div className="relative xl:w-3/5 max-w-[515px] xl:h-3/4 h-full md:w-[90%] md:h-[705px] w-[310px] xs:w-[252px]">
           <Image
             src={Section4aImg}
-            width={500}
-            height={800}
+            width={257}
+            height={403}
             placeholder="blur"
-            className="absolute w-3/5 md:w-4/5 h-3/5 border border-black dark:border-white rounded-2xl top-0 left-0 allEMT:min-h-[250px]"
+            className="absolute w-3/5 xl:w-3/5 md:w-4/5 h-3/5 border border-black dark:border-white rounded-2xl top-0 left-0 min-h-[250px]"
             alt="Section 4a"
           />
           <Image
             src={Section4bImg}
-            width={500}
-            height={800}
+            width={257}
+            height={403}
             placeholder="blur"
-            className="absolute w-3/5 md:w-4/5 h-3/5 border rounded-2xl bottom-0 right-0 allEMT:min-h-[250px]"
+            className="absolute w-3/5 xl:w-3/5 md:w-4/5 h-3/5 border rounded-2xl bottom-0 right-0 min-h-[250px]"
             alt="Section 4b"
           />
         </div>

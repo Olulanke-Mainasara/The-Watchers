@@ -1,10 +1,9 @@
 import Head from "next/head";
-import Image from "next/image";
 
-import Footer from "@/components/Footer";
-import CardButton from "@/components/Home-Components/UI/Carousel/CardButton";
-import Nav from "@/components/Nav/Nav";
-import { categories } from "@/data/Arrays";
+import CategoryCard from "@/components/UI/Cards/CategoryCard";
+import Footer from "@/components/UI/Footer";
+import Nav from "@/components/UI/Nav/Nav";
+import { categories } from "@/static-data/Arrays";
 
 function Categories() {
   return (
@@ -15,47 +14,23 @@ function Categories() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex flex-col w-screen">
+      <main className="flex flex-col w-screen">
         <Nav />
-        <header className="w-full pt-32 pb-16 text-center dark:text-white">
-          <h1 className="text-9xl allLM:text-8xl allEM:text-6xl allT:text-5xl">
+        <section className="w-full pt-32 pb-16 text-center dark:text-white">
+          <h1 className="text-6xl xl:text-9xl md:text-8xl xs:text-5xl">
             Categories
           </h1>
-        </header>
+        </section>
 
-        <section className="h-full pt-10 pb-14 px-14 allM:px-5">
-          <div className="grid h-full grid-cols-3 allLM:grid-cols-2 allEMT:grid-cols-1 md:gap-8 gap-14">
-            {categories.map((category) => {
-              return (
-                <div
-                  key={category.id}
-                  className="w-full allEMT:max-w-[420px] h-[550px] allT:h-[420px] mx-auto rounded-2xl bg-black dark:bg-slate-800 flex flex-col items-center justify-center overflow-hidden duration-500"
-                >
-                  <div className="relative basis-[40%] lg:basis-[45%] w-full h-full">
-                    <Image
-                      src={category.imgsrc}
-                      fill
-                      placeholder="blur"
-                      alt={category.title}
-                    />
-                  </div>
-
-                  <div className="dark:text-white text-white flex flex-col justify-evenly basis-[60%] lg:basis-[55%] px-[5%] duration-500">
-                    <h5 className="text-3xl text-center allT:text-2xl">
-                      {category.title}
-                    </h5>
-                    <p className="text-base opacity-70 allT:text-xs">
-                      {category.text}
-                    </p>
-                    <CardButton text={"View"} />
-                  </div>
-                </div>
-              );
-            })}
+        <section className="h-full px-5 pt-10 pb-14 lg:px-14">
+          <div className="h-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:gap-8 gap-14">
+            {categories.map((category) => (
+              <CategoryCard key={category.id} category={category} />
+            ))}
           </div>
         </section>
         <Footer />
-      </div>
+      </main>
     </>
   );
 }

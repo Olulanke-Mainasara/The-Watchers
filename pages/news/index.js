@@ -1,9 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 
-import Nav from "@/components/Nav/Nav";
-import { categories } from "@/data/Arrays";
+import NewsCard from "@/components/UI/Cards/NewsCard";
+import Nav from "@/components/UI/Nav/Nav";
+import { categories } from "@/static-data/Arrays";
 
 function News() {
   return (
@@ -14,50 +13,26 @@ function News() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex flex-col w-screen">
+      <main className="flex flex-col w-screen">
         <Nav />
-        <header className="w-full pt-32 pb-16 text-center dark:text-white">
-          <h1 className="text-9xl allLM:text-8xl allEM:text-6xl allT:text-5xl">
-            News
-          </h1>
-        </header>
+        <section className="w-full pt-32 pb-16 text-center dark:text-white">
+          <h1 className="text-6xl xl:text-9xl md:text-8xl xs:text-5xl">News</h1>
+        </section>
 
-        <section className="h-full py-10 px-14 allIL:px-5">
-          <div className="max-w-[1280px] grid grid-cols-4 allLM:grid-cols-2 allEMT:grid-cols-1 allLM:gap-8 gap-14 h-full mx-auto">
-            <div className="w-full allIL:h-[300px] border border-black dark:border-white col-span-2 row-span-2 allEMT:col-span-1 rounded-2xl"></div>
-            <div className="w-full h-[300px] border border-black dark:border-white col-span-2 allEMT:col-span-1 rounded-2xl"></div>
-            <div className="w-full h-[300px] border border-black dark:border-white col-span-2 allEMT:col-span-1 rounded-2xl"></div>
+        <section className="h-full px-5 py-10 xl:px-14">
+          <div className="max-w-[1328px] grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 md:gap-8 gap-14 xl:gap-14 h-full mx-auto">
+            <div className="w-full h-[300px] xl:h-auto border border-black dark:border-white md:col-span-2 row-span-2 col-span-1 rounded-2xl"></div>
+            <div className="w-full h-[300px] border border-black dark:border-white lg:col-span-2 col-span-1 rounded-2xl"></div>
+            <div className="w-full h-[300px] border border-black dark:border-white lg:col-span-2 col-span-1 rounded-2xl"></div>
           </div>
 
-          <div className="grid h-full grid-cols-3 mt-20 allLM:grid-cols-2 allEMT:grid-cols-1 allLM:gap-8 gap-14">
-            {categories.map((category) => {
-              return (
-                <div
-                  key={category.id}
-                  className="w-full allEMT:max-w-[420px] flex flex-col items-center justify-center duration-500 mx-auto"
-                >
-                  <div className="relative w-full overflow-hidden aspect-video rounded-xl">
-                    <Image
-                      src={category.imgsrc}
-                      fill
-                      placeholder="blur"
-                      alt={category.title}
-                    />
-                  </div>
-
-                  <div className="flex items-center w-full py-10 duration-500 dark:text-white">
-                    <Link href="#" className="duration-300 hover:opacity-50">
-                      <h5 className="text-3xl allT:text-2xl">
-                        {category.title}
-                      </h5>
-                    </Link>
-                  </div>
-                </div>
-              );
-            })}
+          <div className="h-full mt-20 grid grid-cols-1 md:gap-8 xl:grid-cols-3 md:grid-cols-2 xl:gap-14 gap-14">
+            {categories.map((category) => (
+              <NewsCard key={category.id} category={category} />
+            ))}
           </div>
         </section>
-      </div>
+      </main>
     </>
   );
 }

@@ -15,10 +15,11 @@ function SplashText() {
       }}
       className="flex items-center justify-center"
     >
-      <div className="relative overflow-hidden rounded-full w-60 2xl:w-64 allEMT:w-28 aspect-square">
+      <div className="relative overflow-hidden rounded-full md:w-60 2xl:w-64 w-28 aspect-square">
         <Image
           src={TheUniverse}
-          fill
+          width={240}
+          className="h-full"
           priority
           placeholder="blur"
           alt="The Watchers logo"

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 
-import Nav from "@/components/Nav/Nav";
+import Nav from "@/components/UI/Nav/Nav";
 import { FaArrowRight } from "react-icons/fa";
 
 function Custom404() {
@@ -13,33 +13,33 @@ function Custom404() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="text-white bg-[url('/error.webp')] allIL:bg-[url('/errorM.jpg')] bg-cover h-screen">
-         <Nav />
+      <main className="text-white xl:bg-[url('/Error/error.webp')] bg-[url('/Error/errorM.jpg')] bg-cover h-screen">
+        <Nav />
         <div className="h-full flex gap-10 flex-col items-center justify-center backdrop-brightness-[.1]">
-          <h1 className="text-9xl allEMT:text-8xl">404</h1>
-          <p className="text-4xl allEM:text-2xl allT:text-xl">
+          <h1 className="md:text-9xl text-8xl">404</h1>
+          <p className="text-2xl md:text-4xl xs:text-xl">
             Oops! Wrong coordinates
           </p>
-          <p className="text-xl allEM:text-base allT:text-sm text-center max-w-[650px] allEM:max-w-[350px] allT:max-w-[310px]">
+          <p className="md:text-xl xs:text-sm text-center md:max-w-[650px] max-w-[350px] xs:max-w-[310px]">
             The page you&apos;re looking for couldn&apos;t be found. You may
             have typed in the wrong address or the page has moved.
           </p>
-          <div className="flex items-center gap-10 allEMT:gap-6 allT:gap-4">
+          <div className="flex items-center gap-6 md:gap-10 xs:gap-4">
             <Link
               href="/"
-              className="px-12 py-3 text-xl text-black duration-500 bg-white border border-black rounded-full allT:px-10 allEMT:text-base hover:text-white hover:bg-black hover:border-white"
+              className="px-12 py-3 text-black bg-white border border-black rounded-full duration-500 md:text-xl xs:px-10 hover:text-white hover:bg-black hover:border-white"
             >
               Home
             </Link>
             <Link
               href="/contactus"
-              className="flex items-center justify-center gap-2 text-xl allEMT:text-base"
+              className="flex items-center justify-center gap-2 md:text-xl"
             >
               Contact us <FaArrowRight />
             </Link>
           </div>
         </div>
-      </div>
+      </main>
     </>
   );
 }

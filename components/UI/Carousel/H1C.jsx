@@ -2,12 +2,12 @@ import React from "react";
 
 function H1C({ children, id }) {
   return (
-    <h1
-      className="dark:text-white text-8xl md:text-7xl allEM:text-5xl allT:text-3xl scroll-mt-[10vh]"
+    <h3
+      className="dark:text-white xl:text-8xl md:text-7xl text-5xl xs:text-3xl scroll-mt-[10vh]"
       id={id}
     >
       {children}
-    </h1>
+    </h3>
   );
 }
 

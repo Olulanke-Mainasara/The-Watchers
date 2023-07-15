@@ -1,7 +1,7 @@
 import Head from "next/head";
 
-import Footer from "@/components/Footer";
-import Nav from "@/components/Nav/Nav";
+import Footer from "@/components/UI/Footer";
+import Nav from "@/components/UI/Nav/Nav";
 import { FaBuilding, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 function Contact() {
@@ -17,90 +17,91 @@ function Contact() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="grid h-screen grid-cols-2 bg-black dark:bg-slate-800 allEMT:h-auto allEMT:grid-cols-1">
+      <main className="h-auto bg-black grid grid-cols-1 md:grid-cols-2 md:h-screen dark:bg-slate-800">
         <Nav />
-        <div className="grid h-full bg-white dark:text-white dark:bg-[#010409] rounded-br-3xl place-items-center allEMT:pt-32 allEMT:pb-8">
+        <section className="grid h-full bg-white dark:text-white dark:bg-[#010409] rounded-br-3xl place-items-center pt-32 md:py-0 pb-8">
           <div className="w-[90%] max-w-lg space-y-8">
-            <h1 className="text-8xl allLM:text-6xl allEM:text-6xl allT:text-5xl allEMT:text-center allEMT:mb-14">
+            <h1 className="text-6xl text-center xl:text-8xl md:text-6xl xs:text-5xl md:text-left md:mb-0 mb-14">
               Contact us
             </h1>
-            <p className="text-xl allEMT:text-base">
+            <p className=" md:text-xl">
               Here, we believe that knowledge and inspiration should be
               accessible to all regardless of age, background, or interests.
             </p>
             <div className="space-y-6">
               <div className="flex items-center gap-5">
                 <FaBuilding className="text-xl" />
-                <p className="text-lg allEMT:text-base">
+                <p className=" md:text-lg">
                   No.2, Jupiter Crescent, Solar Est., Milky way, Universe
                 </p>
               </div>
 
               <div className="flex items-center gap-4">
                 <FaPhoneAlt className="text-xl" />
-                <p className="text-lg allEMT:text-base">+234 818 112 0601</p>
+                <p className=" md:text-lg">+234 818 112 0601</p>
               </div>
 
-              <div className="flex items-center gap-4 allT:flex-col allT:items-start">
+              <div className="flex items-center gap-4 xs:flex-col xs:items-start">
                 <FaEnvelope className="text-xl" />
-                <p className="text-lg allEMT:text-base">
-                  mainasara.o.olulanke@gmail.com
-                </p>
+                <p className=" md:text-lg">spaceboy.grim.redd@gmail.com</p>
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="grid h-full text-white place-items-center allEMT:pt-8">
+        <div className="h-full pt-8 text-white grid place-items-center">
           <form
             onSubmit={handleMessage}
-            className="w-[75%] lg:w-[90%] flex flex-col gap-8 allEMT:w-[90%] allEMT:pb-10 allEMT:border-b"
+            className="xl:w-[75%] md:w-[75%] lg:w-[90%] flex flex-col gap-8 w-[90%] md:pb-0 pb-10 md:border-b-0 border-b"
           >
             <div className="flex gap-8">
-              <label className="w-full text-lg allEMT:text-base">
+              <label className="w-full md:text-lg">
                 First name
                 <input
                   type="text"
                   name="firstName"
                   required
                   minLength={3}
-                  className="w-full h-12 pl-2 mt-4 bg-transparent border border-white rounded-lg outline-none dark:text-white allEMT:text-base"
+                  className="w-full h-12 pl-2 mt-4 bg-transparent border border-white rounded-lg outline-none dark:text-white"
                   placeholder="e.g Bruce"
                 />
               </label>
-              <label className="w-full text-lg allEMT:text-base">
+
+              <label className="w-full md:text-lg">
                 Last name
                 <input
                   type="text"
                   name="lastName"
                   required
                   minLength={3}
-                  className="w-full h-12 pl-2 mt-4 bg-transparent border border-white rounded-lg outline-none dark:text-white allEMT:text-base"
+                  className="w-full h-12 pl-2 mt-4 bg-transparent border border-white rounded-lg outline-none dark:text-white"
                   placeholder="e.g Wayne"
                 />
               </label>
             </div>
 
-            <label className="text-lg allEMT:text-base">
+            <label className="md:text-lg">
               Email
               <input
                 type="email"
                 name="email"
                 required
-                className="w-full h-12 pl-2 mt-4 bg-transparent border border-white rounded-lg outline-none dark:text-white allEMT:text-base"
+                className="w-full h-12 pl-2 mt-4 bg-transparent border border-white rounded-lg outline-none dark:text-white"
                 placeholder="e.g bat.the.goat@gmail.com"
               />
             </label>
-            <label className="text-lg allEMT:text-base">
+
+            <label className="md:text-lg">
               Phone number (optional)
               <input
                 type="tel"
                 name="phoneNo"
-                className="w-full h-12 pl-2 mt-4 bg-transparent border border-white rounded-lg outline-none dark:text-white allEMT:text-base"
+                className="w-full h-12 pl-2 mt-4 bg-transparent border border-white rounded-lg outline-none dark:text-white"
                 placeholder="e.g +234 802 682 4536"
               />
             </label>
-            <label className="text-lg allEMT:text-base">
+
+            <label className="md:text-lg">
               Message
               <textarea
                 type="text"
@@ -109,22 +110,23 @@ function Contact() {
                 minLength={10}
                 rows={4}
                 cols={40}
-                className="w-full pt-2 pl-2 mt-4 bg-transparent border border-white rounded-lg outline-none dark:text-white allEMT:text-base"
+                className="w-full pt-2 pl-2 mt-4 bg-transparent border border-white rounded-lg outline-none dark:text-white"
               />
             </label>
+
             <button
               type="submit"
-              className="px-5 py-3 text-base text-black duration-500 bg-white border rounded-lg dark:hover:bg-black dark:hover:text-white w-fit allEMT:w-full allEMT:rounded-full"
+              className="w-full px-5 py-3 text-black bg-white border rounded-full duration-500 md:rounded-lg dark:hover:bg-black dark:hover:text-white md:w-fit"
             >
               Send message
             </button>
           </form>
         </div>
 
-        <div className="allLM:hidden laptop:hidden">
+        <div className="md:hidden">
           <Footer />
         </div>
-      </div>
+      </main>
     </>
   );
 }

@@ -3,19 +3,20 @@ import Image from "next/image";
 import React from "react";
 
 import ASection2Img from "../../public/About/ASection2.jpeg";
-import H1 from "../Home-Components/UI/Section/H1";
-import P from "../Home-Components/UI/Section/P";
-import SImage from "../Home-Components/UI/Section/SImage";
-import Text from "../Home-Components/UI/Section/Text";
+import Section from "../UI/Section/Section";
+import SImage from "../UI/Section/SectionImage";
+import Text from "../UI/Section/TextBlock";
+import TextHeader from "../UI/Section/TextHeader";
+import P from "../UI/Section/TextParagraph";
 
 function ASection2() {
   return (
-    <section className="w-full max-w-[1920px] mx-auto h-screen laptop:max-h-[900px] flex allEMT:flex-col allEMT:gap-14 allIL:h-auto">
+    <Section>
       <SImage>
         <Image
           src={ASection2Img}
           fill
-          priority
+          sizes="(max-width: 767px) 100vw, (max-width: 1200px) 50vw, 33vw"
           placeholder="blur"
           className="absolute top-0 left-0 border border-black dark:border-white rounded-2xl"
           alt="Our Mission"
@@ -23,7 +24,7 @@ function ASection2() {
       </SImage>
 
       <Text position={"start"}>
-        <H1>Our mission</H1>
+        <TextHeader>Our mission</TextHeader>
 
         <P>
           Here, you will be transported to a world of endless discovery as we
@@ -36,7 +37,7 @@ function ASection2() {
           of human history, we&apos;ve got you covered.
         </P>
       </Text>
-    </section>
+    </Section>
   );
 }
 

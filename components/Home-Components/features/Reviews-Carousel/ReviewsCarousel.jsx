@@ -1,10 +1,10 @@
 import React, { useEffect, useMemo } from "react";
 
-import { reviews } from "../../../../data/Arrays";
-import ContainerC from "../../UI/Carousel/ContainerC";
-import H1C from "../../UI/Carousel/H1C";
-import LeftArrow from "../../UI/Carousel/LeftArrow";
-import RightArrow from "../../UI/Carousel/RightArrow";
+import { reviews } from "../../../../static-data/Arrays";
+import ContainerC from "../../../UI/Carousel/ContainerC";
+import H1C from "../../../UI/Carousel/H1C";
+import LeftArrow from "../../../UI/Carousel/LeftArrow";
+import RightArrow from "../../../UI/Carousel/RightArrow";
 import useCustomWidthCarousel from "../../hooks/useCustomWidthCarousel";
 import Reviews from "./Reviews";
 

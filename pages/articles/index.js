@@ -1,9 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 
-import Nav from "@/components/Nav/Nav";
-import { categories } from "@/data/Arrays";
+import ArticleCard from "@/components/UI/Cards/ArticleCard";
+import Nav from "@/components/UI/Nav/Nav";
+import { categories } from "@/static-data/Arrays";
 
 function Articles() {
   return (
@@ -14,52 +13,22 @@ function Articles() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex flex-col w-screen">
+      <main className="flex flex-col w-screen">
         <Nav />
-        <header className="w-full pt-32 pb-16 text-center dark:text-white">
-          <h1 className="text-9xl allLM:text-8xl allEM:text-6xl allT:text-5xl">
+        <section className="w-full pt-32 pb-16 text-center dark:text-white">
+          <h1 className="text-6xl xl:text-9xl md:text-8xl xs:text-5xl">
             Articles
           </h1>
-        </header>
+        </section>
 
-        <section className="h-full py-10 px-14 allIL:px-5">
-          <div className="grid h-full grid-cols-3 allLM:grid-cols-2 allEMT:grid-cols-1 allLM:gap-8 gap-14">
-            {categories.map((category) => {
-              return (
-                <div
-                  key={category.id}
-                  className="w-full allEMT:max-w-[420px] flex flex-col items-center justify-center mx-auto"
-                >
-                  <div className="relative w-full overflow-hidden aspect-video rounded-xl">
-                    <Image
-                      src={category.imgsrc}
-                      fill
-                      placeholder="blur"
-                      alt={category.title}
-                    />
-                  </div>
-
-                  <div className="flex items-center w-full gap-4 py-10 dark:text-white">
-                    <div className="relative w-10 h-10 overflow-hidden rounded-full">
-                      <Image
-                        src={category.imgsrc}
-                        fill
-                        placeholder="blur"
-                        alt={category.title}
-                      />
-                    </div>
-                    <Link href="#" className="duration-300 hover:opacity-50">
-                      <h5 className="text-3xl allT:text-2xl">
-                        {category.title}
-                      </h5>
-                    </Link>
-                  </div>
-                </div>
-              );
-            })}
+        <section className="h-full px-5 py-10 xl:px-14">
+          <div className="h-full grid grid-cols-1 md:gap-8 xl:grid-cols-3 md:grid-cols-2 gap-14 xl:gap-14">
+            {categories.map((category) => (
+              <ArticleCard key={category.id} category={category} />
+            ))}
           </div>
         </section>
-      </div>
+      </main>
     </>
   );
 }

@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 
 import ExplorationImg from "../../public/Categories/Exploration.webp";
-import H1 from "../Home-Components/UI/Section/H1";
+import TextHeader from "../UI/Section/TextHeader";
 
 const team = [
   {
@@ -34,32 +34,34 @@ const team = [
 
 function ASection4() {
   return (
-    <section className="w-full dark:text-white max-w-[1920px] mx-auto pt-40 flex flex-col gap-14 items-center justify-center allIL:h-auto pb-28">
-      <div className="flex flex-col gap-6 text-center">
-        <H1>Meet the Pilots</H1>
-        <p className="mx-auto dark:opacity-70 text-2xl 2xl:text-3xl md:text-xl allEMT:text-base 2xl:max-w-[900px] laptop:max-w-[700px] lg:max-w-[700px] md:max-w-[600px] allEMT:w-[75%] allEMT:max-w-[500px]">
+    <section className="w-full dark:text-white max-w-[1920px] mx-auto pt-40 flex flex-col gap-14 items-center justify-center h-auto pb-28">
+      <div className="flex flex-col text-center gap-6">
+        <TextHeader>Meet the Pilots</TextHeader>
+        <p className="mx-auto dark:opacity-70 xl:text-2xl 2xl:text-3xl md:text-xl 2xl:max-w-[900px] xl:max-w-[700px] lg:max-w-[700px] md:max-w-[600px] w-[75%] md:w-full max-w-[500px]">
           The Watchers offers a seamless experience for exploring the world
           around us. Discover new knowledge and share your own ideas.
         </p>
       </div>
 
-      <div className="grid w-full grid-cols-4 gap-10 px-10 md:grid-cols-2 allEMT:grid-cols-1 allEMT:gap-14">
+      <div className="w-full px-10 grid grid-cols-1 md:gap-10 xl:grid-cols-4 md:grid-cols-2 gap-14">
         {team.map((member) => {
           return (
             <div
               key={member.id}
-              className="w-full allEMT:max-w-[420px] flex flex-col items-center justify-center duration-500"
+              className="w-full max-w-[420px] flex flex-col items-center justify-center"
             >
               <div className="relative w-full overflow-hidden aspect-square rounded-xl">
                 <Image
                   src={member.imgsrc}
                   fill
+                  sizes="(max-width: 767px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover"
                   placeholder="blur"
                   alt="Our Executives"
                 />
               </div>
 
-              <div className="flex flex-col w-full gap-1 pt-4 duration-500 dark:text-white">
+              <div className="flex flex-col w-full pt-4 gap-1 dark:text-white">
                 <h5 className="text-xl">{member.name}</h5>
                 <p className="text-lg opacity-80 dark:opacity-70">
                   {member.position}

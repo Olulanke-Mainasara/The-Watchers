@@ -5,8 +5,8 @@ import ASection1 from "@/components/About-Components/ASection1";
 import ASection2 from "@/components/About-Components/ASection2";
 import ASection3 from "@/components/About-Components/ASection3";
 import ASection4 from "@/components/About-Components/ASection4";
-import Footer from "@/components/Footer";
-import Nav from "@/components/Nav/Nav";
+import Footer from "@/components/UI/Footer";
+import Nav from "@/components/UI/Nav/Nav";
 
 function About() {
   return (
@@ -17,20 +17,20 @@ function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex flex-col w-screen">
+      <main className="flex flex-col w-screen">
         <Nav />
-        <header className="w-full pt-32 text-center dark:text-white allEMT:pb-16 allLM:pb-28">
-          <h1 className="text-9xl allLM:text-8xl allEM:text-6xl allT:text-5xl">
+        <section className="w-full pt-32 pb-16 text-center dark:text-white xl:pb-0 md:pb-28">
+          <h1 className="text-6xl xl:text-9xl md:text-8xl xs:text-5xl">
             About us
           </h1>
-        </header>
+        </section>
         <ASection1 />
         <ASection2 />
         <ASection3 />
         <ALastSection />
         <ASection4 />
         <Footer />
-      </div>
+      </main>
     </>
   );
 }
