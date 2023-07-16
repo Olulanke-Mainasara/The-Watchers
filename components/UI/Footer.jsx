@@ -12,7 +12,7 @@ function Footer() {
 
   return (
     <footer className="flex flex-col w-full px-5 text-white bg-black md:px-10 dark:bg-slate-800 dark:text-white">
-      <section className="flex flex-col justify-between py-8 border-b gap-8 md:flex-row md:h-72 h-fit">
+      <section className="flex flex-col justify-between gap-8 py-8 border-b md:flex-row md:h-72 h-fit">
         <div className="flex flex-col justify-center h-full gap-6 basis-1/2">
           <a
             href="#hero"
@@ -56,7 +56,7 @@ function Footer() {
             />
             <button
               type="submit"
-              className="px-6 py-2 mx-auto text-black bg-white border duration-300 rounded-xl hover:bg-black hover:text-white w-fit"
+              className="px-6 py-2 mx-auto text-black duration-300 bg-white border rounded-xl hover:bg-black hover:text-white w-fit"
             >
               Subscribe
             </button>
@@ -64,14 +64,18 @@ function Footer() {
         </div>
       </section>
 
-      <section className="flex flex-col-reverse items-center justify-between py-8 text-sm text-center border-t gap-6 md:flex-row border-slate-100 md:gap-0">
+      <section className="flex flex-col-reverse items-center justify-between gap-6 py-8 text-sm text-center border-t md:flex-row border-slate-100 md:gap-0">
         <p>© 2023 The Watchers Inc. All rights reserved.</p>
 
         <div className="flex text-2xl gap-7 dark:text-white xs:text-xl">
-          <Link href={"#"}>
+          <Link href={"#"} aria-label="Instagram">
             <FaInstagram />
           </Link>
-          <Link href={"https://twitter.com/Grim_redd"} target="_blank">
+          <Link
+            href={"https://twitter.com/Grim_redd"}
+            target="_blank"
+            aria-label="Instagram"
+          >
             <FaTwitter />
           </Link>
           <Link
@@ -79,10 +83,11 @@ function Footer() {
               "https://github.com/Olulanke-Mainasara/The-Watchers-using-Next.js"
             }
             target="_blank"
+            aria-label="Instagram"
           >
             <FaGithub />
           </Link>
-          <Link href={"#"}>
+          <Link href={"#"} aria-label="Instagram">
             <FaYoutube />
           </Link>
         </div>

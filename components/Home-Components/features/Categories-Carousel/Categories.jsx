@@ -28,9 +28,9 @@ function Categories({ controls }) {
               </div>
 
               <div className="text-white flex flex-col justify-evenly basis-[60%] px-[5%]">
-                <h5 className="text-3xl text-center xs:text-2xl">
+                <h4 className="text-3xl text-center xs:text-2xl">
                   {categoriesItem.title}
-                </h5>
+                </h4>
                 <p className="opacity-70 xs:text-xs">{categoriesItem.text}</p>
                 <CardButton text={"View"} />
               </div>

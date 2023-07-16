@@ -80,6 +80,7 @@ function Nav() {
               <Image
                 src={TheUniverseImg}
                 width={40}
+                height={40}
                 className="h-full"
                 placeholder="blur"
                 alt="The Watchers Logo"
@@ -88,20 +89,23 @@ function Nav() {
             <span>The Watchers.</span>
           </Link>
 
-          <ul
+          <div
             className={`flex xl:static xl:h-full xl:bg-transparent xl:w-fit xl:justify-between text-black dark:text-white absolute top-0 h-screen w-full justify-end bg-gray-800/0 backdrop-blur-lg duration-500 xl:duration-300 ${navMenu}`}
           >
             <div className="relative bg-white dark:bg-[#010409] xl:bg-transparent px-6 xl:px-0 xl:w-full xl:min-w-full xl:max-w-full w-4/5 min-w-[240px] max-w-[320px] flex justify-center xl:items-center items-start md:gap-14 xl:flex-row flex-col gap-10 xs:gap-8">
-              {links.map((link) => (
-                <li key={link.id}>
-                  <Link
-                    href={link.href}
-                    className="transition-opacity xl:text-base md:text-2xl hover:opacity-50"
-                  >
-                    {link.title}
-                  </Link>
-                </li>
-              ))}
+              <ul className="flex flex-col gap-10 md:gap-14 xl:flex-row xs:gap-8">
+                {links.map((link) => (
+                  <li key={link.id}>
+                    <Link
+                      href={link.href}
+                      aria-label={link.title}
+                      className="transition-opacity xl:text-base md:text-2xl hover:opacity-50"
+                    >
+                      {link.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
 
               <button
                 title="Close navigation menu"
@@ -116,20 +120,22 @@ function Nav() {
               <div className="flex items-center gap-4 xs:items-start xs:flex-col md:hidden">
                 <Link
                   href={"/signup"}
-                  className="flex items-center justify-center px-6 py-3 text-white bg-black rounded-full gap-1 duration-500 dark:text-black dark:bg-white hover:bg-purple-500 hover:text-white"
+                  aria-label="signup"
+                  className="flex items-center justify-center gap-1 px-6 py-3 text-white duration-500 bg-black rounded-full dark:text-black dark:bg-white hover:bg-purple-500 hover:text-white"
                 >
                   Start reading
                 </Link>
                 <span className="xs:hidden">|</span>
                 <Link
                   href={"/login"}
-                  className="flex items-center justify-center rounded-full gap-1 duration-500 hover:text-purple-500"
+                  aria-label="login"
+                  className="flex items-center justify-center gap-1 duration-500 rounded-full hover:text-purple-500"
                 >
                   Log in <FaChevronRight />
                 </Link>
               </div>
             </div>
-          </ul>
+          </div>
 
           <button
             title="Search"
@@ -152,7 +158,7 @@ function Nav() {
 
             <Link
               href={"/login"}
-              className="flex items-center justify-center px-6 py-2 text-white bg-black border border-black rounded-full gap-1 duration-500 dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black dark:hover:border-white"
+              className="flex items-center justify-center gap-1 px-6 py-2 text-white duration-500 bg-black border border-black rounded-full dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black dark:hover:border-white"
             >
               Log in <FaChevronRight />
             </Link>

@@ -37,7 +37,7 @@ function Reviews({ controls }) {
                   />
                 </div>
                 <div className="flex flex-col gap-1 dark:text-white">
-                  <h5 className="text-2xl xs:text-xl">{reviewsItem.name}</h5>
+                  <h6 className="text-2xl xs:text-xl">{reviewsItem.name}</h6>
                 </div>
               </div>
             </div>
