@@ -43,7 +43,8 @@ function Hero() {
       <div className="relative w-[85%] mx-auto border border-gray-500 rounded-xl overflow-hidden md:hidden">
         <Image
           src={MobileHeaderImg}
-          sizes="(min-width: 0px) 33vw"
+          sizes="(min-width: 0px) 50vw"
+          priority
           placeholder="blur"
           alt={"Hero Image"}
         />
@@ -53,8 +54,10 @@ function Hero() {
         <Image
           src={HeaderImg}
           fill
+          priority
           sizes="(min-width: 768px) 50vw"
           placeholder="blur"
+          className="object-cover"
           alt={"Hero Image"}
         />
       </div>

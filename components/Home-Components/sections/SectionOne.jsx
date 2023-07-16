@@ -16,7 +16,7 @@ function SectionOne() {
         <Image
           src={Section1Img}
           fill
-          sizes="(max-width: 767px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(min-width: 0px) 50vw"
           placeholder="blur"
           className="absolute top-0 left-0 border border-black dark:border-white rounded-2xl"
           alt="Section 1"
