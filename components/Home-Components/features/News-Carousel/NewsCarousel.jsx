@@ -10,10 +10,9 @@ import News from "./News";
 
 function NewsCarousel() {
   const { controls, prevNews, nextNews } = useFullWidthCarousel(news);
-
   const newsWithControls = useMemo(
     () => <News controls={controls} />,
-    [controls]
+    [controls],
   );
 
   return (

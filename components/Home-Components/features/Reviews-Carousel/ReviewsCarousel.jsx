@@ -19,7 +19,7 @@ function ReviewsCarousel() {
 
   const reviewsWithControls = useMemo(
     () => <Reviews controls={controls} />,
-    [controls]
+    [controls],
   );
 
   return (

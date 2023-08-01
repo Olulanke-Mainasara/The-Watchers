@@ -15,7 +15,7 @@ function News() {
       </Head>
       <main className="flex flex-col w-screen">
         <Nav />
-        <section className="w-full pt-32 pb-16 text-center dark:text-white">
+        <section className="w-full pt-20 pb-1 text-center dark:text-white">
           <h1 className="text-6xl xl:text-9xl md:text-8xl xs:text-5xl">News</h1>
         </section>
 
@@ -26,7 +26,7 @@ function News() {
             <div className="w-full h-[300px] border border-black dark:border-white lg:col-span-2 col-span-1 rounded-2xl"></div>
           </div>
 
-          <div className="h-full mt-20 grid grid-cols-1 md:gap-8 xl:grid-cols-3 md:grid-cols-2 xl:gap-14 gap-14">
+          <div className="grid h-full grid-cols-1 mt-20 md:gap-8 xl:grid-cols-3 md:grid-cols-2 xl:gap-14 gap-14">
             {categories.map((category) => (
               <NewsCard key={category.id} category={category} />
             ))}

@@ -12,10 +12,7 @@ const DesktopThemeToggler = () => {
 
   if (!mounted)
     return (
-      <button
-        title="Toggle theme"
-        className="w-10 h-10 border rounded-full"
-      >
+      <button title="Toggle theme" className="w-10 h-10 border rounded-full">
         <FaSun />
       </button>
     );

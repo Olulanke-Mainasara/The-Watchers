@@ -22,7 +22,7 @@ function useFullWidthCarousel(array) {
   useEffect(() => {
     controls.start({
       x: -currentSlide * width,
-      transition: { duration: 2 },
+      transition: { duration: 1.5 },
     });
   }, [controls, currentSlide, width]);
 
@@ -32,7 +32,7 @@ function useFullWidthCarousel(array) {
 
   function prevNews() {
     setCurrentSlide(
-      (prevSlide) => (array.length + prevSlide - 1) % array.length
+      (prevSlide) => (array.length + prevSlide - 1) % array.length,
     );
   }
 

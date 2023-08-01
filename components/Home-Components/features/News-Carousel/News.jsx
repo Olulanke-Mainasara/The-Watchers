@@ -28,9 +28,7 @@ function News({ controls }) {
               </div>
 
               <div className="flex flex-col px-6 text-white lg:justify-center xl:gap-6 dark:text-white xl:basis-2/5 md:basis-1/2 basis-3/5 justify-evenly md:gap-0">
-                <p className="text-xl text-center xs:text-lg">
-                  {newsItem.sn}
-                </p>
+                <p className="text-xl text-center xs:text-lg">{newsItem.sn}</p>
                 <h3 className="md:text-5xl text-center md:leading-[60px] xl:text-5xl xl:leading-[60px] lg:text-3xl text-3xl leading-[45px] xs:text-2xl">
                   {newsItem.text}
                 </h3>

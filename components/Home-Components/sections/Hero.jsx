@@ -22,17 +22,17 @@ function Hero() {
           around us. Discover new knowledge and share your own ideas.
         </p>
 
-        <div className="flex flex-col items-center justify-center gap-5 mt-0 md:mt-4 md:flex-row md:gap-0">
+        <div className="flex flex-col items-center justify-center mt-0 gap-5 md:mt-4 md:flex-row md:gap-0">
           <Link
             href="/categories"
             title="Categories"
-            className="px-10 py-3 text-xl text-white transition-colors duration-300 bg-black border border-black rounded-full md:py-4 w-fit dark:bg-white 2xl:text-2xl dark:text-black dark:hover:bg-black dark:hover:text-white dark:hover:border-white"
+            className="px-10 py-3 text-xl text-white bg-black border border-black rounded-full transition-colors duration-300 md:py-4 w-fit dark:bg-white 2xl:text-2xl dark:text-black dark:hover:bg-black dark:hover:text-white dark:hover:border-white"
           >
             Start reading
           </Link>
           <a
             href="#news"
-            className="flex items-center justify-center gap-2 py-3 text-xl w-fit px-7 dark:text-white"
+            className="flex items-center justify-center py-3 text-xl gap-2 w-fit px-7 dark:text-white"
             title="Today's Articles"
           >
             Today&apos;s articles <FaChevronRight />

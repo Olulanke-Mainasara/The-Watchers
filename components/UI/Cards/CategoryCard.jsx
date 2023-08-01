@@ -8,7 +8,7 @@ const CategoryCard = ({ category }) => {
   return (
     <article
       key={category.id}
-      className="w-full max-w-[420px] h-[550px] xs:h-[420px] mx-auto rounded-2xl bg-black dark:bg-slate-800 flex flex-col items-center justify-center overflow-hidden"
+      className="w-full max-w-[420px] md:max-w-full h-[550px] xs:h-[420px] mx-auto rounded-2xl bg-black dark:bg-slate-800 flex flex-col items-center justify-center overflow-hidden"
     >
       <div className="relative basis-[40%] lg:basis-[45%] w-full h-full">
         <Image

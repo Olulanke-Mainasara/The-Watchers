@@ -17,7 +17,7 @@ function useCustomWidthCarousel(array) {
         ? 2
         : (window.innerWidth >= 1310) & (window.innerWidth < 1536)
         ? 3
-        : 4
+        : 4,
     );
 
     window.addEventListener("resize", () => {
@@ -29,7 +29,7 @@ function useCustomWidthCarousel(array) {
           ? 2
           : (window.innerWidth >= 1310) & (window.innerWidth < 1536)
           ? 3
-          : 4
+          : 4,
       );
     });
 
@@ -43,7 +43,7 @@ function useCustomWidthCarousel(array) {
             ? 2
             : (window.innerWidth >= 1310) & (window.innerWidth < 1536)
             ? 3
-            : 4
+            : 4,
         );
       });
   }, []);
@@ -51,7 +51,7 @@ function useCustomWidthCarousel(array) {
   useEffect(() => {
     controls.start({
       x: -currentSlide * width,
-      transition: { duration: 0.7 },
+      transition: { duration: 0.3 },
     });
   }, [controls, currentSlide, width]);
 

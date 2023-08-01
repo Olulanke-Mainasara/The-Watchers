@@ -15,14 +15,14 @@ function Articles() {
       </Head>
       <main className="flex flex-col w-screen">
         <Nav />
-        <section className="w-full pt-32 pb-16 text-center dark:text-white">
+        <section className="w-full pt-20 pb-1 text-center dark:text-white">
           <h1 className="text-6xl xl:text-9xl md:text-8xl xs:text-5xl">
             Articles
           </h1>
         </section>
 
         <section className="h-full px-5 py-10 xl:px-14">
-          <div className="h-full grid grid-cols-1 md:gap-8 xl:grid-cols-3 md:grid-cols-2 gap-14 xl:gap-14">
+          <div className="grid h-full grid-cols-1 md:gap-8 xl:grid-cols-3 md:grid-cols-2 gap-14 xl:gap-14">
             {categories.map((category) => (
               <ArticleCard key={category.id} category={category} />
             ))}

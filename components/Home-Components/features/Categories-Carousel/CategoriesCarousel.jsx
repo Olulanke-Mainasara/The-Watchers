@@ -13,7 +13,7 @@ function CategoriesCarousel() {
 
   const categoriesWithControls = useMemo(
     () => <Categories controls={controls} />,
-    [controls]
+    [controls],
   );
 
   return (

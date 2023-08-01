@@ -11,7 +11,7 @@ function Footer() {
   };
 
   return (
-    <footer className="flex flex-col w-full px-5 text-white bg-black md:px-10 dark:bg-slate-800 dark:text-white">
+    <footer className="flex flex-col w-full px-5 text-white bg-black md:px-5 lg:px-10 dark:bg-slate-800 dark:text-white">
       <section className="flex flex-col justify-between gap-8 py-8 border-b md:flex-row md:h-72 h-fit">
         <div className="flex flex-col justify-center h-full gap-6 basis-1/2">
           <a

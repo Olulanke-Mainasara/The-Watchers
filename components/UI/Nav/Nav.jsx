@@ -129,7 +129,7 @@ function Nav() {
                 <Link
                   href={"/login"}
                   aria-label="login"
-                  className="flex items-center justify-center gap-1 duration-500 rounded-full hover:text-purple-500"
+                  className="flex items-center justify-center gap-1 rounded-full hover:text-purple-500"
                 >
                   Log in <FaChevronRight />
                 </Link>

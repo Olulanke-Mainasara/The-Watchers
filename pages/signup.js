@@ -26,7 +26,7 @@ const SignUp = () => {
       const userCredential = await signInWithEmailAndPassword(
         auth,
         email,
-        password
+        password,
       );
       const user = userCredential.user;
       const uid = user.uid;
