@@ -43,7 +43,7 @@ function SectionFour() {
             width={257}
             height={403}
             placeholder="blur"
-            className="absolute w-3/5 xl:w-3/5 md:w-4/5 h-3/5 border border-black dark:border-white rounded-2xl top-0 left-0 min-h-[250px]"
+            className="absolute w-3/5 lg:w-3/5 md:w-4/5 h-3/5 border border-black dark:border-white rounded-2xl top-0 left-0 min-h-[250px]"
             alt="Section 4a"
           />
           <Image
@@ -51,7 +51,7 @@ function SectionFour() {
             width={257}
             height={403}
             placeholder="blur"
-            className="absolute w-3/5 xl:w-3/5 md:w-4/5 h-3/5 border rounded-2xl bottom-0 right-0 min-h-[250px]"
+            className="absolute w-3/5 lg:w-3/5 md:w-4/5 h-3/5 border rounded-2xl bottom-0 right-0 min-h-[250px]"
             alt="Section 4b"
           />
         </div>

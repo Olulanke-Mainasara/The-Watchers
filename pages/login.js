@@ -72,7 +72,7 @@ const Login = () => {
                     e.preventDefault();
                     router.back();
                   }}
-                  className="flex items-center text-lg gap-2"
+                  className="flex items-center gap-2 text-lg"
                 >
                   <FaArrowLeft /> back
                 </button>
@@ -81,7 +81,7 @@ const Login = () => {
 
                 <Link
                   href={"/"}
-                  className="px-8 py-3 text-white bg-black border border-black rounded-full duration-500 hover:bg-transparent hover:text-black"
+                  className="px-8 py-3 text-white duration-500 bg-black border border-black rounded-full hover:bg-transparent hover:text-black"
                 >
                   Home
                 </Link>
@@ -103,8 +103,8 @@ const Login = () => {
                 />
               </label>
 
-              <label>
-                Password
+              <label className="relative">
+                Password <Link href={"/forgotpassword"} className="absolute right-0 underline">Forgot password</Link>
                 <input
                   type="password"
                   required
@@ -125,7 +125,7 @@ const Login = () => {
               </p>
 
               <button
-                className="py-3 text-white bg-black border rounded-full duration-500 hover:bg-transparent hover:text-black hover:border-black"
+                className="py-3 text-white duration-500 bg-black border rounded-full hover:bg-transparent hover:text-black hover:border-black"
                 type="submit"
               >
                 Continue
