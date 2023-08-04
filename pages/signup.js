@@ -98,7 +98,7 @@ const SignUp = () => {
                     e.preventDefault();
                     router.back();
                   }}
-                  className="flex items-center text-lg gap-2"
+                  className="flex items-center gap-2 text-lg"
                 >
                   <FaArrowLeft /> back
                 </button>
@@ -107,7 +107,7 @@ const SignUp = () => {
 
                 <Link
                   href={"/"}
-                  className="px-8 py-3 text-white bg-black border border-black rounded-full duration-500 hover:bg-transparent hover:text-black"
+                  className="px-8 py-3 text-white duration-500 bg-black border border-black rounded-full hover:bg-transparent hover:text-black"
                 >
                   Home
                 </Link>
@@ -202,7 +202,7 @@ const SignUp = () => {
 
               <button
                 disabled={isLoading}
-                className="flex items-center justify-center py-3 text-lg text-white bg-black border rounded-full duration-300 hover:bg-transparent hover:text-black hover:border-black"
+                className="flex items-center justify-center py-3 text-lg text-white duration-300 bg-black border rounded-full hover:bg-transparent hover:text-black hover:border-black"
                 type="submit"
               >
                 {isLoading && (
@@ -219,7 +219,8 @@ const SignUp = () => {
           <Image
             src={SignupImg}
             fill
-            sizes="(max-width: 767px) 100vw, (min-width: 768px) 50vw"
+            sizes="(min-width: 0px) 33vw"
+            quality={30}
             priority
             placeholder="blur"
             alt="Sign-up img"

@@ -19,14 +19,15 @@ const CategoryCard = ({ category }) => {
           <Image
             src={category.imgsrc}
             fill
-            sizes="(max-width: 767px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            sizes="(max-width: 1200px) 50vw, 33vw"
+            quality={50}
             placeholder="blur"
             alt={category.title}
           />
         </div>
 
         <div className="dark:text-white text-white flex flex-col justify-evenly basis-[60%] lg:basis-[55%] px-[5%]">
-          <h5 className="text-3xl text-center xs:text-2xl">{category.title}</h5>
+          <p className="text-3xl text-center xs:text-2xl">{category.title}</p>
           <p className="opacity-70 xs:text-xs">{category.text}</p>
           <CardButton text={"View"} />
         </div>

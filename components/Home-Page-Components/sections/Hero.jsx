@@ -69,7 +69,7 @@ function Hero() {
             src={theme === "dark" ? desktopD : desktopL}
             fill
             priority
-            sizes="(min-width: 768px) 90vw"
+            sizes="(min-width: 768px) 50vw"
             placeholder="blur"
             alt={"Hero Image"}
           />

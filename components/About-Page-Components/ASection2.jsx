@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import React from "react";
 
 import ASection2Img from "../../public/About/ASection2.jpeg";
@@ -12,16 +10,7 @@ import P from "../UI/Section/TextParagraph";
 function ASection2() {
   return (
     <Section>
-      <SImage>
-        <Image
-          src={ASection2Img}
-          fill
-          sizes="(max-width: 767px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          placeholder="blur"
-          className="absolute top-0 left-0 border border-black dark:border-white rounded-2xl"
-          alt="Our Mission"
-        />
-      </SImage>
+      <SImage image={ASection2Img} alt={"About us Section 2"} />
 
       <Text position={"start"}>
         <TextHeader>Our mission</TextHeader>

@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import React from "react";
 
 import Section1Img from "../../../public/Home/Section1.jpeg";
@@ -12,16 +10,7 @@ import P from "../../UI/Section/TextParagraph";
 function SectionOne() {
   return (
     <section className="w-full max-w-[1920px] mx-auto xl:h-screen xl:max-h-[900px] flex flex-col md:flex-row gap-14 md:gap-0 h-auto md:pt-0 pt-56">
-      <SImage>
-        <Image
-          src={Section1Img}
-          fill
-          sizes="(min-width: 0px) 50vw"
-          placeholder="blur"
-          className="absolute top-0 left-0"
-          alt="Section 1"
-        />
-      </SImage>
+      <SImage image={Section1Img} alt={"Section 1"} />
 
       <Text position={"xl:justify-start"}>
         <TextHeader>Welcome to the chronicles of the universe</TextHeader>

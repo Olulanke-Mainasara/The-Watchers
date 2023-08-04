@@ -12,13 +12,13 @@ function Footer() {
 
   return (
     <footer className="flex flex-col w-full px-5 text-white bg-black md:px-5 lg:px-10 dark:bg-slate-800 dark:text-white">
-      <section className="flex flex-col justify-between py-8 border-b gap-8 md:flex-row md:h-72 h-fit">
+      <section className="flex flex-col justify-between gap-8 py-8 border-b md:flex-row md:h-72 h-fit">
         <div className="flex flex-col justify-center h-full gap-6 basis-1/2">
           <a
             href="#hero"
             className="flex items-center mx-auto text-2xl duration-300 md:mx-0 w-fit dark:text-white hover:text-gray-600 dark:hover:text-gray-600 xs:text-lg"
           >
-            <div className="relative w-10 h-10 overflow-hidden rounded-full">
+            <div className="relative w-10 h-10 overflow-hidden border rounded-full">
               <Image
                 src={TheUniverseImg}
                 width={40}
@@ -56,7 +56,7 @@ function Footer() {
             />
             <button
               type="submit"
-              className="px-6 py-2 mx-auto text-black bg-white border duration-300 rounded-xl hover:bg-black hover:text-white w-fit"
+              className="px-6 py-2 mx-auto text-black duration-300 bg-white border rounded-xl hover:bg-black hover:text-white w-fit"
             >
               Subscribe
             </button>
@@ -64,7 +64,7 @@ function Footer() {
         </div>
       </section>
 
-      <section className="flex flex-col-reverse items-center justify-between py-8 text-sm text-center border-t gap-6 md:flex-row border-slate-100 md:gap-0">
+      <section className="flex flex-col-reverse items-center justify-between gap-6 py-8 text-sm text-center border-t md:flex-row border-slate-100 md:gap-0">
         <p>© 2023 The Watchers Inc. All rights reserved.</p>
 
         <div className="flex text-2xl gap-7 dark:text-white xs:text-xl">

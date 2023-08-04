@@ -13,7 +13,8 @@ const NewsCard = ({ news }) => {
         <Image
           src={news.imgsrc}
           fill
-          sizes="(max-width: 767px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 1200px) 50vw, 33vw"
+          quality={50}
           placeholder="blur"
           alt={news.title}
         />

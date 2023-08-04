@@ -35,7 +35,7 @@ const team = [
 function ASection4() {
   return (
     <section className="w-full dark:text-white max-w-[1920px] mx-auto pt-40 flex flex-col gap-14 items-center justify-center h-auto pb-28">
-      <div className="flex flex-col text-center gap-6">
+      <div className="flex flex-col gap-6 text-center">
         <TextHeader>Meet the Pilots</TextHeader>
         <p className="mx-auto dark:opacity-70 xl:text-2xl 2xl:text-3xl md:text-xl 2xl:max-w-[900px] xl:max-w-[700px] lg:max-w-[700px] md:max-w-[600px] w-[75%] md:w-full max-w-[500px]">
           The Watchers offers a seamless experience for exploring the world
@@ -43,7 +43,7 @@ function ASection4() {
         </p>
       </div>
 
-      <div className="w-full px-10 grid grid-cols-1 md:gap-10 xl:grid-cols-4 md:grid-cols-2 gap-14">
+      <div className="grid w-full grid-cols-1 px-10 md:gap-10 xl:grid-cols-4 md:grid-cols-2 gap-14">
         {team.map((member) => {
           return (
             <div
@@ -54,14 +54,15 @@ function ASection4() {
                 <Image
                   src={member.imgsrc}
                   fill
-                  sizes="(max-width: 767px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  sizes="(max-width: 1200px) 50vw, 33vw"
+                  quality={50}
                   className="object-cover"
                   placeholder="blur"
-                  alt="Our Executives"
+                  alt="An Executive"
                 />
               </div>
 
-              <div className="flex flex-col w-full pt-4 gap-1 dark:text-white">
+              <div className="flex flex-col w-full gap-1 pt-4 dark:text-white">
                 <h5 className="text-xl">{member.name}</h5>
                 <p className="text-lg opacity-80 dark:opacity-70">
                   {member.position}

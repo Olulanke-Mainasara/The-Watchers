@@ -13,13 +13,14 @@ const ArticleCard = ({ article }) => {
         <Image
           src={article.imgsrc}
           fill
-          sizes="(max-width: 767px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 1200px) 50vw, 33vw"
+          quality={50}
           placeholder="blur"
           alt={article.title}
         />
       </div>
 
-      <div className="flex items-center w-full py-10 gap-4 dark:text-white">
+      <div className="flex items-center w-full gap-4 py-10 dark:text-white">
         <div className="relative w-10 h-10 overflow-hidden rounded-full">
           <Image
             src={article.imgsrc}

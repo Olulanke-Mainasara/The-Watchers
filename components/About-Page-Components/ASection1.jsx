@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import React from "react";
 
 import ASection1Img from "../../public/About/ASection1.jpeg";
@@ -27,17 +25,7 @@ function ASection1() {
         </P>
       </Text>
 
-      <SImage>
-        <Image
-          src={ASection1Img}
-          fill
-          priority
-          sizes="(max-width: 767px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          placeholder="blur"
-          className="absolute top-0 left-0 object-cover border border-black dark:border-white rounded-2xl"
-          alt="Who are we?"
-        />
-      </SImage>
+      <SImage image={ASection1Img} alt={"About us Section 1"} />
     </Section>
   );
 }

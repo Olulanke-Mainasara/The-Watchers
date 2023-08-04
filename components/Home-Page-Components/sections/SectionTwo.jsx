@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import React from "react";
 
 import Section2Img from "../../../public/Home/Section2.jpeg";
@@ -27,16 +25,7 @@ function SectionTwo() {
         <Button />
       </Text>
 
-      <SImage>
-        <Image
-          src={Section2Img}
-          fill
-          sizes="(min-width: 0px) 50vw"
-          placeholder="blur"
-          className="absolute top-0 left-0"
-          alt="Section 2"
-        />
-      </SImage>
+      <SImage image={Section2Img} alt={"Section 2"} />
     </section>
   );
 }

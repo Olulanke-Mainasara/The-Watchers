@@ -23,8 +23,8 @@ const offers = [
 
 function ASection3() {
   return (
-    <section className="w-full dark:text-white max-w-[1920px] mx-auto pt-40 xl:pt-32 md:pt-56 flex flex-col gap-10 items-center justify-center">
-      <div className="flex flex-col text-center gap-6">
+    <section className="w-full dark:text-white max-w-[1920px] mx-auto xl:pt-32 flex flex-col gap-10 items-center justify-center">
+      <div className="flex flex-col gap-6 text-center">
         <TextHeader>Our &quot;Watcher&quot; Way</TextHeader>
         <p className="mx-auto dark:opacity-70 xl:text-2xl 2xl:text-3xl md:text-xl 2xl:max-w-[900px] xl:max-w-[700px] lg:max-w-[700px] md:max-w-[600px] w-[75%] md:w-full max-w-[500px]">
           The Watchers offers a seamless experience for exploring the world
@@ -32,7 +32,7 @@ function ASection3() {
         </p>
       </div>
 
-      <div className="w-full px-10 grid grid-cols-1 xl:gap-20 xl:grid-cols-3 md:grid-cols-2 gap-14">
+      <div className="grid w-full grid-cols-1 px-10 xl:gap-20 xl:grid-cols-3 md:grid-cols-2 gap-14">
         {offers.map((offer) => {
           return (
             <div key={offer.id} className="w-full mx-auto space-y-6">
