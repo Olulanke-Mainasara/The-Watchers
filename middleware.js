@@ -3,6 +3,10 @@ import { NextResponse } from "next/server";
 export async function middleware(request) {
   const isLoggedIn = request.cookies.get("isLoggedIn");
 
+  if (!isLoggedIn) {
+    return NextResponse.next();
+  }
+
   if (
     isLoggedIn.value === "false" &&
     request.nextUrl.pathname.startsWith("/profile")
