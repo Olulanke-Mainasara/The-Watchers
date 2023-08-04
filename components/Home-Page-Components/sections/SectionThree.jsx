@@ -2,24 +2,24 @@ import Image from "next/image";
 
 import React from "react";
 
-import Section1Img from "../../../public/Home/Section1.jpeg";
+import Section3Img from "../../../public/Home/Section3.jpeg";
 import Button from "../../UI/Section/Button";
 import SImage from "../../UI/Section/SectionImage";
 import Text from "../../UI/Section/TextBlock";
 import TextHeader from "../../UI/Section/TextHeader";
 import P from "../../UI/Section/TextParagraph";
 
-function SectionOne() {
+function SectionThree() {
   return (
-    <section className="w-full max-w-[1920px] mx-auto xl:h-screen xl:max-h-[900px] flex flex-col md:flex-row gap-14 md:gap-0 h-auto md:pt-0 pt-56">
+    <section className="w-full max-w-[1920px] mx-auto xl:h-screen xl:max-h-[900px] md:flex-row flex flex-col md:gap-0 gap-14 h-auto">
       <SImage>
         <Image
-          src={Section1Img}
+          src={Section3Img}
           fill
           sizes="(min-width: 0px) 50vw"
           placeholder="blur"
-          className="absolute top-0 left-0 border border-black dark:border-white rounded-2xl"
-          alt="Section 1"
+          className="absolute top-0 left-0"
+          alt="Section 3"
         />
       </SImage>
 
@@ -43,4 +43,4 @@ function SectionOne() {
   );
 }
 
-export default SectionOne;
+export default SectionThree;

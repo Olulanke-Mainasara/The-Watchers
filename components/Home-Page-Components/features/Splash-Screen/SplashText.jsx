@@ -15,7 +15,7 @@ function SplashText() {
       }}
       className="flex items-center justify-center"
     >
-      <div className="relative overflow-hidden rounded-full md:w-60 2xl:w-64 w-28 aspect-square">
+      <div className="relative overflow-hidden border border-black rounded-full dark:border-white md:w-60 2xl:w-64 w-28 aspect-square">
         <Image
           src={TheUniverse}
           width={240}

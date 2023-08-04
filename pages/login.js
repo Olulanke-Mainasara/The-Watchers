@@ -4,9 +4,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 import FormThemeToggler from "@/components/UI/Buttons/FormThemeToggler";
-// import { auth, db } from "@/firebase/client";
-// import { signInWithEmailAndPassword } from "firebase/auth";
-// import { doc, getDoc } from "firebase/firestore";
+import { auth } from "@/firebase/client.config";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { Icons } from "@/components/UI/Icons";
 import { useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
 
@@ -15,28 +15,44 @@ import LoginImg from "../public/Auth/login.jpg";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
   const router = useRouter();
+  const { previous } = router.query;
 
   const handleSignIn = async (event) => {
     event.preventDefault();
-    try {
-      const userCredential = await signInWithEmailAndPassword(
-        auth,
-        email,
-        password,
-      );
-      const user = userCredential.user;
-      const uid = user.uid;
+    setError(false);
+    setIsLoading(true);
 
-      const userDoc = await getDoc(doc(db, "users", uid));
-      if (userDoc.exists()) {
-        router.push("/home");
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      if (router.asPath === "/profile") {
+        router.reload();
       } else {
-        router.push("/sign-up");
+        router.push(previous);
       }
     } catch (error) {
-      setErrorMessage(error.message);
+      setIsLoading(false);
+      setError(true);
+      switch (error.message) {
+        case "Firebase: Error (auth/wrong-password).":
+          setErrorMessage("Invalid username or Password");
+          break;
+        case "Firebase: Error (auth/user-not-found).":
+          setErrorMessage("No user exists with this email address");
+          break;
+        case "Firebase: Error (auth/network-request-failed).":
+          setErrorMessage(
+            "Network Disconnected, please check your internet connection",
+          );
+          break;
+
+        default:
+          setErrorMessage("Sign in error occurred, please retry");
+          break;
+      }
     }
   };
 
@@ -48,7 +64,7 @@ const Login = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-[100dvh] w-screen relative">
+      <main className="flex min-h-[100dvh] max-w-[1920px] mx-auto w-screen relative">
         <section className="relative xl:basis-1/2 basis-full">
           <Image
             src={LoginImg}
@@ -72,7 +88,7 @@ const Login = () => {
                     e.preventDefault();
                     router.back();
                   }}
-                  className="flex items-center gap-2 text-lg"
+                  className="flex items-center text-lg gap-2"
                 >
                   <FaArrowLeft /> back
                 </button>
@@ -81,7 +97,7 @@ const Login = () => {
 
                 <Link
                   href={"/"}
-                  className="px-8 py-3 text-white duration-500 bg-black border border-black rounded-full hover:bg-transparent hover:text-black"
+                  className="px-8 py-3 text-white bg-black border border-black rounded-full duration-500 hover:bg-transparent hover:text-black"
                 >
                   Home
                 </Link>
@@ -91,44 +107,74 @@ const Login = () => {
                 Welcome back!
               </h2>
 
-              <label>
+              <label htmlFor="email">
                 Email
                 <input
-                  type="email"
-                  required
+                  id="email"
                   placeholder="john.doe@example.com"
-                  value={email}
-                  className="w-full h-12 pl-3 mt-2 text-black bg-transparent border border-black rounded"
+                  type="email"
+                  autoCapitalize="none"
+                  autoComplete="email"
+                  autoCorrect="off"
+                  disabled={isLoading}
+                  required
+                  className="w-full h-12 pl-3 mt-2 text-black bg-transparent border border-black rounded disabled:opacity-50"
                   onChange={(event) => setEmail(event.target.value)}
                 />
               </label>
 
-              <label className="relative">
-                Password <Link href={"/forgotpassword"} className="absolute right-0 underline">Forgot password</Link>
+              <label htmlFor="password" className="relative">
+                Password{" "}
+                <Link
+                  href={"/forgotpassword"}
+                  className="absolute right-0 underline"
+                >
+                  Forgot password
+                </Link>
                 <input
+                  id="password"
+                  placeholder="Your password"
                   type="password"
+                  autoCapitalize="none"
+                  autoComplete="current-password"
+                  autoCorrect="off"
+                  disabled={isLoading}
                   required
-                  placeholder="**********"
-                  value={password}
-                  className="w-full h-12 pl-3 mt-2 text-black bg-transparent border border-black rounded"
+                  className="w-full h-12 pl-3 mt-2 text-black bg-transparent border border-black rounded disabled:opacity-50"
                   onChange={(event) => setPassword(event.target.value)}
                 />
               </label>
 
-              {errorMessage && <p className="text-red-600">{errorMessage}</p>}
+              {error && (
+                <div className="text-center text-red-500">{errorMessage}</div>
+              )}
 
               <p className="text-center xs:text-xs">
                 Don&apos;t have an account?&nbsp;
-                <Link className="font-bold" href={"/signup"}>
+                <Link
+                  className="font-bold"
+                  href={`/signup?previous=${
+                    router.asPath === "/profile"
+                      ? "/profile"
+                      : !previous
+                      ? "/profile"
+                      : previous
+                  }`}
+                >
                   Sign up
                 </Link>
               </p>
 
               <button
-                className="py-3 text-white duration-500 bg-black border rounded-full hover:bg-transparent hover:text-black hover:border-black"
+                disabled={isLoading}
+                className="flex items-center justify-center py-3 text-lg text-white bg-black border rounded-full duration-300 hover:bg-transparent hover:text-black hover:border-black"
                 type="submit"
               >
-                Continue
+                {isLoading && (
+                  <Icons.spinner className="w-6 h-6 mr-2 animate-spin" />
+                )}
+
+                {error ? "Retry" : "Login"}
               </button>
             </section>
           </div>

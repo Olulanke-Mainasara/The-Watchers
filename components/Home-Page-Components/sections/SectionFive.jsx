@@ -18,7 +18,7 @@ function SectionFive() {
           fill
           sizes="(min-width: 0px) 50vw"
           placeholder="blur"
-          className="absolute top-0 left-0 border border-black dark:border-white rounded-2xl"
+          className="absolute top-0 left-0"
           alt="Section 5"
         />
       </SImage>

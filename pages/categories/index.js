@@ -22,8 +22,8 @@ function Categories() {
           </h1>
         </section>
 
-        <section className="h-full px-5 pt-10 pb-14 lg:px-14">
-          <div className="grid h-full grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-14">
+        <section className="h-full pt-10 pb-14 md:px-5 lg:px-14">
+          <div className="h-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 md:gap-10 lg:gap-14 gap-14">
             {categories.map((category) => (
               <CategoryCard key={category.id} category={category} />
             ))}

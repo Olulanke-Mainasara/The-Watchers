@@ -4,41 +4,76 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 import FormThemeToggler from "@/components/UI/Buttons/FormThemeToggler";
-// import { auth, db } from "@/firebase/client";
-// import { signInWithEmailAndPassword } from "firebase/auth";
-// import { doc, getDoc } from "firebase/firestore";
+import { auth, db } from "@/firebase/client.config";
+import {
+  createUserWithEmailAndPassword,
+  sendEmailVerification,
+  updateProfile,
+} from "firebase/auth";
 import { useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
 
 import SignupImg from "../public/Auth/signup.webp";
+import { Icons } from "@/components/UI/Icons";
 
 const SignUp = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
   const router = useRouter();
+  const { previous } = router.query;
 
-  const handleSignIn = async (event) => {
+  const handleSignUp = async (event) => {
     event.preventDefault();
+    setError(false);
+    setIsLoading(true);
+
     try {
-      const userCredential = await signInWithEmailAndPassword(
+      const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
         password,
       );
       const user = userCredential.user;
-      const uid = user.uid;
 
-      const userDoc = await getDoc(doc(db, "users", uid));
-      if (userDoc.exists()) {
-        router.push("/home");
+      await updateProfile(user, {
+        displayName: firstName + " " + lastName,
+      });
+
+      await sendEmailVerification(user);
+
+      if (router.asPath === "/profile") {
+        router.reload();
       } else {
-        router.push("/sign-up");
+        router.push(previous);
       }
     } catch (error) {
-      setErrorMessage(error.message);
+      setIsLoading(false);
+      setError(true);
+      switch (error.message) {
+        case "Firebase: Error (auth/email-already-in-use).":
+          setErrorMessage("An account already exists with this email address");
+          break;
+        case "Firebase: Error (auth/invalid-email).":
+          setErrorMessage("Invalid email address provided");
+          break;
+        case "Firebase: Error (auth/invalid-password	).":
+          setErrorMessage("Invalid password provided");
+          break;
+        case "Firebase: Error (auth/network-request-failed).":
+          setErrorMessage(
+            "Network Disconnected, please check your internet connection",
+          );
+          break;
+
+        default:
+          setErrorMessage("Sign up error occurred, please retry");
+          break;
+      }
     }
   };
 
@@ -50,10 +85,10 @@ const SignUp = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="w-screen min-h-[100dvh] flex relative">
+      <main className="w-screen min-h-[100dvh] max-w-[1920px] mx-auto flex relative">
         <form
           className="absolute top-0 z-10 w-full h-full overflow-scroll xl:basis-1/2 backdrop-blur-xl xl:static"
-          onSubmit={handleSignIn}
+          onSubmit={handleSignUp}
         >
           <div className="flex items-center justify-center w-full min-h-[100dvh]">
             <section className="border border-black bg-white w-[90%] max-w-[450px] flex flex-col gap-5 p-5 pb-6 rounded-xl text-black my-10">
@@ -83,53 +118,67 @@ const SignUp = () => {
               </h2>
 
               <div className="flex gap-5">
-                <label>
+                <label htmlFor="fname">
                   First name
                   <input
+                    id="fname"
+                    placeholder="John"
                     type="text"
-                    name="firstName"
+                    autoCapitalize="none"
+                    autoComplete="given-name"
+                    autoCorrect="off"
+                    disabled={isLoading}
                     required
-                    value={firstName}
                     minLength={3}
                     className="w-full h-12 pl-3 mt-2 text-black bg-transparent border border-black rounded"
-                    placeholder="John"
                     onChange={(event) => setFirstName(event.target.value)}
                   />
                 </label>
 
-                <label>
+                <label htmlFor="lname">
                   Last name
                   <input
+                    id="lname"
+                    placeholder="Doe"
                     type="text"
-                    name="lastName"
+                    autoCapitalize="none"
+                    autoComplete="family-name"
+                    autoCorrect="off"
+                    disabled={isLoading}
                     required
-                    value={lastName}
                     minLength={3}
                     className="w-full h-12 pl-3 mt-2 text-black bg-transparent border border-black rounded"
-                    placeholder="Doe"
                     onChange={(event) => setLastName(event.target.value)}
                   />
                 </label>
               </div>
 
-              <label>
+              <label htmlFor="email">
                 Email
                 <input
-                  type="email"
+                  id="email"
                   placeholder="john.doe@example.com"
-                  value={email}
+                  type="email"
+                  autoCapitalize="none"
+                  autoComplete="email"
+                  autoCorrect="off"
+                  disabled={isLoading}
                   required
                   className="w-full h-12 pl-3 mt-2 text-black bg-transparent border border-black rounded"
                   onChange={(event) => setEmail(event.target.value)}
                 />
               </label>
 
-              <label>
+              <label htmlFor="password">
                 Password
                 <input
+                  id="password"
+                  placeholder="Your password"
                   type="password"
-                  placeholder="**********"
-                  value={password}
+                  autoCapitalize="none"
+                  autoComplete="new-password"
+                  autoCorrect="off"
+                  disabled={isLoading}
                   required
                   minLength={8}
                   className="w-full h-12 pl-3 mt-2 text-black bg-transparent border border-black rounded"
@@ -137,20 +186,30 @@ const SignUp = () => {
                 />
               </label>
 
-              {errorMessage && <p className="text-red-600">{errorMessage}</p>}
+              {error && (
+                <div className="text-center text-red-500">{errorMessage}</div>
+              )}
 
               <p className="text-center xs:text-xs">
                 Already have an account?&nbsp;
-                <Link className="font-bold" href={"/login"}>
+                <Link
+                  className="font-bold"
+                  href={`/login?previous=${previous}`}
+                >
                   Login
                 </Link>
               </p>
 
               <button
-                className="py-3 text-white bg-black border rounded-full duration-500 hover:bg-transparent hover:text-black hover:border-black"
+                disabled={isLoading}
+                className="flex items-center justify-center py-3 text-lg text-white bg-black border rounded-full duration-300 hover:bg-transparent hover:text-black hover:border-black"
                 type="submit"
               >
-                Continue
+                {isLoading && (
+                  <Icons.spinner className="w-6 h-6 mr-2 animate-spin" />
+                )}
+
+                {error ? "Retry" : "Sign up"}
               </button>
             </section>
           </div>

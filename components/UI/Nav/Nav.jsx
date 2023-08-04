@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 import TheUniverseImg from "@/public/Hero/The Universe 2.jpg";
-import React from "react";
+import React, { useContext } from "react";
 import { FaBars, FaChevronRight, FaSearch, FaTimes } from "react-icons/fa";
 import { useSessionStorage } from "react-use";
 
@@ -11,6 +11,9 @@ import DesktopThemeToggler from "../Buttons/DesktopThemeToggler";
 import MobileThemeToggler from "../Buttons/MobileThemeToggler";
 import Search from "../Search/Search";
 import useNavigationBar from "./useNavigationBar";
+import { auth } from "@/firebase/client.config";
+import { signOut } from "firebase/auth";
+import { authContext } from "@/components/Providers";
 
 const links = [
   {
@@ -48,6 +51,7 @@ const links = [
 function Nav() {
   const [navMenu, visible, openMenu, closeMenu] = useNavigationBar();
   const [search, setSearch] = useSessionStorage("search", false);
+  const user = useContext(authContext);
   const router = useRouter();
 
   const handleSearch = () => {
@@ -55,6 +59,17 @@ function Nav() {
       setSearch(true);
     } else {
       setSearch(false);
+    }
+  };
+
+  const handleLogout = () => {
+    try {
+      signOut(auth);
+      if (router.pathname === "/profile") {
+        router.reload();
+      }
+    } catch (error) {
+      alert("Couldn't log out, please try again");
     }
   };
 
@@ -76,7 +91,7 @@ function Nav() {
               visible ? "" : "pointer-events-none"
             }`}
           >
-            <div className="relative w-10 h-10 overflow-hidden rounded-full">
+            <div className="relative w-10 h-10 overflow-hidden border border-black rounded-full dark:border-white">
               <Image
                 src={TheUniverseImg}
                 width={40}
@@ -86,14 +101,14 @@ function Nav() {
                 alt="The Watchers Logo"
               />
             </div>
-            <span>The Watchers.</span>
+            <span className="hidden md:block">The Watchers.</span>
           </Link>
 
           <div
-            className={`flex xl:static xl:h-full xl:bg-transparent xl:w-fit xl:justify-between text-black dark:text-white absolute top-0 h-screen w-full justify-end bg-gray-800/0 backdrop-blur-lg duration-500 xl:duration-300 ${navMenu}`}
+            className={`flex xl:static xl:h-full xl:bg-transparent xl:w-fit xl:justify-between text-black dark:text-white absolute top-0 h-screen w-full justify-end bg-gray-800/0 backdrop-blur-lg xl:backdrop-blur-none duration-500 xl:duration-300 ${navMenu}`}
           >
             <div className="relative bg-white dark:bg-[#010409] xl:bg-transparent px-6 xl:px-0 xl:w-full xl:min-w-full xl:max-w-full w-4/5 min-w-[240px] max-w-[320px] flex justify-center xl:items-center items-start md:gap-14 xl:flex-row flex-col gap-10 xs:gap-8">
-              <ul className="flex flex-col gap-10 md:gap-14 xl:flex-row xs:gap-8">
+              <ul className="flex flex-col items-center w-full gap-10 md:gap-14 xl:flex-row xs:gap-8">
                 {links.map((link) => (
                   <li key={link.id}>
                     <Link
@@ -110,29 +125,41 @@ function Nav() {
               <button
                 title="Close navigation menu"
                 onClick={closeMenu}
-                className="absolute text-4xl text-black dark:text-white top-7 right-5 xl:hidden"
+                className="absolute text-3xl text-black dark:text-white top-7 right-5 xl:hidden"
               >
                 <FaTimes />
               </button>
 
               <MobileThemeToggler />
 
-              <div className="flex items-center gap-4 xs:items-start xs:flex-col md:hidden">
-                <Link
-                  href={"/signup"}
-                  aria-label="signup"
-                  className="flex items-center justify-center gap-1 px-6 py-3 text-white duration-500 bg-black rounded-full dark:text-black dark:bg-white hover:bg-purple-500 hover:text-white"
-                >
-                  Start reading
-                </Link>
-                <span className="xs:hidden">|</span>
-                <Link
-                  href={"/login"}
-                  aria-label="login"
-                  className="flex items-center justify-center gap-1 rounded-full hover:text-purple-500"
-                >
-                  Log in <FaChevronRight />
-                </Link>
+              <div className="flex items-center justify-center w-full gap-4 xs:flex-col md:hidden">
+                {user ? (
+                  <>
+                    <Link
+                      href={"/profile"}
+                      className="w-12 h-12 text-2xl text-white bg-black rounded-full grid dark:text-black place-items-center dark:bg-white"
+                    >
+                      {user.displayName.split("")[0]}
+                    </Link>
+
+                    <span className="xs:hidden">|</span>
+
+                    <button
+                      onClick={handleLogout}
+                      className="flex items-center justify-center py-3 text-lg text-white bg-black border border-black rounded-full gap-1 duration-500 px-7 dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black dark:hover:border-white"
+                    >
+                      Log out
+                    </button>
+                  </>
+                ) : (
+                  <Link
+                    href={`/login?previous=${router.pathname}`}
+                    aria-label="login"
+                    className="flex items-center justify-center py-3 text-lg text-white bg-black border border-black rounded-full gap-1 duration-500 px-7 dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black dark:hover:border-white"
+                  >
+                    Log in <FaChevronRight />
+                  </Link>
+                )}
               </div>
             </div>
           </div>
@@ -156,12 +183,30 @@ function Nav() {
               <FaSearch />
             </button>
 
-            <Link
-              href={"/login"}
-              className="flex items-center justify-center gap-1 px-6 py-2 text-white duration-500 bg-black border border-black rounded-full dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black dark:hover:border-white"
-            >
-              Log in <FaChevronRight />
-            </Link>
+            {user ? (
+              <>
+                <Link
+                  href={"/profile"}
+                  className="w-10 h-10 text-xl text-white bg-black rounded-full grid dark:text-black place-items-center dark:bg-white"
+                >
+                  {user.displayName.split("")[0]}
+                </Link>
+
+                <button
+                  onClick={handleLogout}
+                  className="flex items-center justify-center px-6 py-2 text-white bg-black border border-black rounded-full gap-1 duration-500 dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black dark:hover:border-white"
+                >
+                  Log out
+                </button>
+              </>
+            ) : (
+              <Link
+                href={`/login?previous=${router.pathname}`}
+                className="flex items-center justify-center px-6 py-2 text-white bg-black border border-black rounded-full gap-1 duration-500 dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black dark:hover:border-white"
+              >
+                Log in <FaChevronRight />
+              </Link>
+            )}
           </div>
 
           <button

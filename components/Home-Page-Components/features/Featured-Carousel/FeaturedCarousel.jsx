@@ -6,9 +6,9 @@ import H1C from "../../../UI/Carousel/H1C";
 import LeftArrow from "../../../UI/Carousel/LeftArrow";
 import RightArrow from "../../../UI/Carousel/RightArrow";
 import useFullWidthCarousel from "../../hooks/useFullWidthCarousel";
-import News from "./News";
+import News from "./Features";
 
-function NewsCarousel() {
+function FeaturedCarousel() {
   const { controls, prevNews, nextNews } = useFullWidthCarousel(news);
   const newsWithControls = useMemo(
     () => <News controls={controls} />,
@@ -28,4 +28,4 @@ function NewsCarousel() {
   );
 }
 
-export default NewsCarousel;
+export default FeaturedCarousel;

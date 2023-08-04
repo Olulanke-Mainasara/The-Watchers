@@ -13,7 +13,7 @@ module.exports = {
     extend: {
       screens: {
         xs: { max: "320px" },
-        "2xl": { min: "1536px" },
+        "2xl": { min: "1920px" },
       },
     },
   },

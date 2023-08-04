@@ -1,7 +1,7 @@
 import React from "react";
 
 import CategoriesCarousel from "../features/Categories-Carousel/CategoriesCarousel";
-import NewsCarousel from "../features/News-Carousel/NewsCarousel";
+import FeaturedCarousel from "../features/Featured-Carousel/FeaturedCarousel";
 import ReviewsCarousel from "../features/Reviews-Carousel/ReviewsCarousel";
 import LastSection from "./LastSection";
 import SectionFive from "./SectionFive";
@@ -16,7 +16,7 @@ function MainBody() {
     <main>
       <SectionOne />
       <SectionTwo />
-      <NewsCarousel />
+      <FeaturedCarousel />
       <SectionThree />
       <SectionFour />
       <CategoriesCarousel />

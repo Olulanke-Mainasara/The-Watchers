@@ -1,10 +1,10 @@
+import Providers from "@/components/Providers";
 import "@/styles/globals.css";
-import { ThemeProvider } from "next-themes";
 
 export default function App({ Component, pageProps }) {
   return (
-    <ThemeProvider enableSystem attribute="class">
+    <Providers>
       <Component {...pageProps} />
-    </ThemeProvider>
+    </Providers>
   );
 }

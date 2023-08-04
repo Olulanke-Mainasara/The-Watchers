@@ -22,9 +22,9 @@ function Articles() {
         </section>
 
         <section className="h-full px-5 py-10 xl:px-14">
-          <div className="grid h-full grid-cols-1 md:gap-8 xl:grid-cols-3 md:grid-cols-2 gap-14 xl:gap-14">
+          <div className="h-full grid grid-cols-1 md:gap-8 xl:grid-cols-3 2xl:grid-cols-4 md:grid-cols-2 gap-14 xl:gap-14">
             {categories.map((category) => (
-              <ArticleCard key={category.id} category={category} />
+              <ArticleCard key={category.id} article={category} />
             ))}
           </div>
         </section>

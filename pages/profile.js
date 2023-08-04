@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 
-import Bookmarks from "@/components/Profile-Components/Bookmarks";
-import EditProfile from "@/components/Profile-Components/EditProfile";
+import Bookmarks from "@/components/Profile-Page-Components/Bookmarks";
+import EditProfile from "@/components/Profile-Page-Components/EditProfile";
 import Nav from "@/components/UI/Nav/Nav";
 import { useState } from "react";
 import { FaChevronCircleUp } from "react-icons/fa";
@@ -42,7 +42,7 @@ function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex w-screen h-[100dvh] flex-col md:flex-row relative">
+      <main className="flex w-screen h-[100dvh] max-w-[1920px] mx-auto flex-col md:flex-row relative">
         <Nav />
         <section className="relative flex flex-col items-start justify-center h-full px-5 pt-20 border-r gap-4 md:px-8 basis-1/4 md:pt-0">
           <div className="relative mx-auto overflow-hidden border rounded-full md:w-56 aspect-square w-36">

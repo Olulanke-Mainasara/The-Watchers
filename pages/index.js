@@ -3,9 +3,9 @@ import Head from "next/head";
 import { useEffect } from "react";
 import { useSessionStorage } from "react-use";
 
-import Splash from "../components/Home-Components/features/Splash-Screen/Splash";
-import Hero from "../components/Home-Components/sections/Hero";
-import MainBody from "../components/Home-Components/sections/MainBody";
+import Splash from "../components/Home-Page-Components/features/Splash-Screen/Splash";
+import Hero from "../components/Home-Page-Components/sections/Hero";
+import MainBody from "../components/Home-Page-Components/sections/MainBody";
 import Footer from "../components/UI/Footer";
 import Nav from "../components/UI/Nav/Nav";
 

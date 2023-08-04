@@ -26,9 +26,9 @@ function News() {
             <div className="w-full h-[300px] border border-black dark:border-white lg:col-span-2 col-span-1 rounded-2xl"></div>
           </div>
 
-          <div className="grid h-full grid-cols-1 mt-20 md:gap-8 xl:grid-cols-3 md:grid-cols-2 xl:gap-14 gap-14">
+          <div className="h-full mt-20 grid grid-cols-1 md:gap-8 xl:grid-cols-3 2xl:grid-cols-4 md:grid-cols-2 xl:gap-14 gap-14">
             {categories.map((category) => (
-              <NewsCard key={category.id} category={category} />
+              <NewsCard key={category.id} news={category} />
             ))}
           </div>
         </section>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaChevronRight } from "react-icons/fa";
 
 import desktopD from "../../../public/Hero/desktopD.png";
@@ -12,7 +12,12 @@ import { useTheme } from "next-themes";
 
 function Hero() {
   const { theme } = useTheme();
-  
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <section
       id="hero"
@@ -32,13 +37,13 @@ function Hero() {
           <Link
             href="/categories"
             title="Categories"
-            className="px-10 py-3 text-xl text-white transition-colors duration-300 bg-black border border-black rounded-full md:py-4 w-fit dark:bg-white 2xl:text-2xl dark:text-black dark:hover:bg-black dark:hover:text-white dark:hover:border-white"
+            className="px-10 py-3 text-xl text-white transition-colors duration-300 bg-black border border-black rounded-full dark:border-white md:py-4 w-fit hover:bg-transparent hover:text-black dark:bg-white 2xl:text-2xl dark:text-black dark:hover:bg-transparent dark:hover:text-white"
           >
             Start reading
           </Link>
           <a
             href="#news"
-            className="flex items-center justify-center gap-2 py-3 text-xl w-fit px-7 dark:text-white"
+            className="flex items-center justify-center gap-2 text-xl w-fit px-7 dark:text-white"
             title="Today's Articles"
           >
             Today&apos;s articles <FaChevronRight />
@@ -47,24 +52,28 @@ function Hero() {
       </section>
 
       <div className="relative w-[85%] mx-auto overflow-hidden md:hidden">
-        <Image
-          src={theme === "dark" ? mobileD : mobileL}
-          sizes="(min-width: 0px) 50vw"
-          priority
-          placeholder="blur"
-          alt={"Hero Image"}
-        />
+        {mounted && (
+          <Image
+            src={theme === "dark" ? mobileD : mobileL}
+            sizes="(min-width: 0px) 50vw"
+            priority
+            placeholder="blur"
+            alt={"Hero Image"}
+          />
+        )}
       </div>
 
-      <div className="relative w-[85%] md:block max-w-[1200px] xl:h-[90vh] min-h-[458px] md:max-h-[755px] md:h-[45vh] max-h-[720px] mx-auto overflow-hidden hidden border border-gray-500 rounded-xl">
-        <Image
-          src={theme === "dark" ? desktopD : desktopL}
-          fill
-          priority
-          sizes="(min-width: 768px) 90vw"
-          placeholder="blur"
-          alt={"Hero Image"}
-        />
+      <div className="relative w-[85%] md:block max-w-[1200px] 2xl:max-w-[1678px] xl:h-[90vh] xl:max-h-[700px] 2xl:max-h-[930px] aspect-video mx-auto overflow-hidden hidden border border-black dark:border-white rounded-xl shadow-black dark:shadow-slate-800 shadow-2xl">
+        {mounted && (
+          <Image
+            src={theme === "dark" ? desktopD : desktopL}
+            fill
+            priority
+            sizes="(min-width: 768px) 90vw"
+            placeholder="blur"
+            alt={"Hero Image"}
+          />
+        )}
       </div>
     </section>
   );

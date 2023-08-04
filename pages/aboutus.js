@@ -1,10 +1,10 @@
 import Head from "next/head";
 
-import ALastSection from "@/components/About-Components/ALastSection";
-import ASection1 from "@/components/About-Components/ASection1";
-import ASection2 from "@/components/About-Components/ASection2";
-import ASection3 from "@/components/About-Components/ASection3";
-import ASection4 from "@/components/About-Components/ASection4";
+import ALastSection from "@/components/About-Page-Components/ALastSection";
+import ASection1 from "@/components/About-Page-Components/ASection1";
+import ASection2 from "@/components/About-Page-Components/ASection2";
+import ASection3 from "@/components/About-Page-Components/ASection3";
+import ASection4 from "@/components/About-Page-Components/ASection4";
 import Footer from "@/components/UI/Footer";
 import Nav from "@/components/UI/Nav/Nav";
 
