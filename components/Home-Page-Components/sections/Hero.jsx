@@ -51,7 +51,7 @@ function Hero() {
         </div>
       </section>
 
-      <div className="relative w-[85%] mx-auto overflow-hidden md:hidden">
+      <div className="relative w-[85%] mx-auto overflow-hidden rounded-[55px] shadow-black dark:shadow-slate-800 shadow-2xl md:hidden">
         {mounted && (
           <Image
             src={theme === "dark" ? mobileD : mobileL}

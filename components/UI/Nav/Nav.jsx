@@ -101,7 +101,7 @@ function Nav() {
                 alt="The Watchers Logo"
               />
             </div>
-            <span className="hidden md:block">The Watchers.</span>
+            <span>The Watchers.</span>
           </Link>
 
           <div
@@ -137,7 +137,7 @@ function Nav() {
                   <>
                     <Link
                       href={"/profile"}
-                      className="w-12 h-12 text-2xl text-white bg-black rounded-full grid dark:text-black place-items-center dark:bg-white"
+                      className="grid w-12 h-12 text-2xl text-white bg-black rounded-full dark:text-black place-items-center dark:bg-white"
                     >
                       {user.displayName.split("")[0]}
                     </Link>
@@ -146,7 +146,7 @@ function Nav() {
 
                     <button
                       onClick={handleLogout}
-                      className="flex items-center justify-center py-3 text-lg text-white bg-black border border-black rounded-full gap-1 duration-500 px-7 dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black dark:hover:border-white"
+                      className="flex items-center justify-center gap-1 py-3 text-lg text-white duration-500 bg-black border border-black rounded-full px-7 dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black dark:hover:border-white"
                     >
                       Log out
                     </button>
@@ -155,7 +155,7 @@ function Nav() {
                   <Link
                     href={`/login?previous=${router.pathname}`}
                     aria-label="login"
-                    className="flex items-center justify-center py-3 text-lg text-white bg-black border border-black rounded-full gap-1 duration-500 px-7 dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black dark:hover:border-white"
+                    className="flex items-center justify-center gap-1 py-3 text-lg text-white duration-500 bg-black border border-black rounded-full px-7 dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black dark:hover:border-white"
                   >
                     Log in <FaChevronRight />
                   </Link>
@@ -187,14 +187,14 @@ function Nav() {
               <>
                 <Link
                   href={"/profile"}
-                  className="w-10 h-10 text-xl text-white bg-black rounded-full grid dark:text-black place-items-center dark:bg-white"
+                  className="grid w-10 h-10 text-xl text-white bg-black rounded-full dark:text-black place-items-center dark:bg-white"
                 >
                   {user.displayName.split("")[0]}
                 </Link>
 
                 <button
                   onClick={handleLogout}
-                  className="flex items-center justify-center px-6 py-2 text-white bg-black border border-black rounded-full gap-1 duration-500 dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black dark:hover:border-white"
+                  className="flex items-center justify-center gap-1 px-6 py-2 text-white duration-500 bg-black border border-black rounded-full dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black dark:hover:border-white"
                 >
                   Log out
                 </button>
@@ -202,7 +202,7 @@ function Nav() {
             ) : (
               <Link
                 href={`/login?previous=${router.pathname}`}
-                className="flex items-center justify-center px-6 py-2 text-white bg-black border border-black rounded-full gap-1 duration-500 dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black dark:hover:border-white"
+                className="flex items-center justify-center gap-1 px-6 py-2 text-white duration-500 bg-black border border-black rounded-full dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black dark:hover:border-white"
               >
                 Log in <FaChevronRight />
               </Link>
