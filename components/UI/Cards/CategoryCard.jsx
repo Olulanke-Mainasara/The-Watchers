@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import React from "react";
 
-import CardButton from "./CardButton";
+import CardButton from "../Buttons/CardButton";
 import { useRouter } from "next/router";
 
 const CategoryCard = ({ category }) => {

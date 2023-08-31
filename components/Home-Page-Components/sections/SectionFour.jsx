@@ -4,7 +4,7 @@ import React from "react";
 
 import Section4aImg from "../../../public/Home/Section4a.jpeg";
 import Section4bImg from "../../../public/Home/Section4b.jpeg";
-import Button from "../../UI/Section/Button";
+import SectionButton from "@/components/UI/Buttons/SectionButton";
 import Text from "../../UI/Section/TextBlock";
 import TextHeader from "../../UI/Section/TextHeader";
 import P from "../../UI/Section/TextParagraph";
@@ -33,7 +33,7 @@ function SectionFour() {
           come from.
         </P>
 
-        <Button />
+        <SectionButton />
       </Text>
 
       <section className="md:w-1/2 md:h-full flex items-center justify-center xl:justify-center md:justify-start w-screen h-[450px]">

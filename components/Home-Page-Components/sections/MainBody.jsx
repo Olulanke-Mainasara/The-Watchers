@@ -10,6 +10,7 @@ import SectionOne from "./SectionOne";
 import SectionSix from "./SectionSix";
 import SectionThree from "./SectionThree";
 import SectionTwo from "./SectionTwo";
+import SectionSeven from "./SectionSeven";
 
 function MainBody() {
   return (
@@ -24,6 +25,7 @@ function MainBody() {
       <SectionSix />
       <ReviewsCarousel />
       <LastSection />
+      <SectionSeven />
     </main>
   );
 }

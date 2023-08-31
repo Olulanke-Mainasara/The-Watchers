@@ -9,6 +9,7 @@ import desktopL from "../../../public/Hero/desktopL.png";
 import mobileD from "../../../public/Hero/mobileD.png";
 import mobileL from "../../../public/Hero/mobileL.png";
 import { useTheme } from "next-themes";
+import Button from "@/components/UI/Buttons/Button";
 
 function Hero() {
   const { theme } = useTheme();
@@ -34,20 +35,23 @@ function Hero() {
         </p>
 
         <div className="flex flex-col items-center justify-center gap-5 mt-0 md:mt-4 xl:mt-0 md:flex-row md:gap-0">
-          <Link
-            href="/categories"
-            title="Categories"
-            className="px-10 py-3 text-xl text-white transition-colors duration-300 bg-black border border-black rounded-full dark:border-white md:py-4 w-fit hover:bg-transparent hover:text-black dark:bg-white 2xl:text-2xl dark:text-black dark:hover:bg-transparent dark:hover:text-white"
+          <Button
+            isLink={true}
+            href={"/articles"}
+            title={"View articles"}
+            type={"Main"}
           >
             Start reading
-          </Link>
-          <a
-            href="#news"
-            className="flex items-center justify-center gap-2 text-xl w-fit px-7 dark:text-white"
-            title="Today's Articles"
+          </Button>
+          <Button
+            isLink={true}
+            href={"#featuredCarousel"}
+            title={"View featured articles"}
+            customStyles={"text-xl w-fit px-7 dark:text-white"}
+            linkStyles={"flex items-center justify-center gap-2 "}
           >
             Today&apos;s articles <FaChevronRight />
-          </a>
+          </Button>
         </div>
       </section>
 

@@ -17,7 +17,7 @@ function FeaturedCarousel() {
 
   return (
     <ContainerC>
-      <H1C id={"news"}>Today&apos;s Articles</H1C>
+      <H1C id={"featuredCarousel"}>Today&apos;s Articles</H1C>
 
       <div className="relative w-full h-[500px] xl:h-[500px] 2xl:h-[650px] lg:h-[350px] md:h-[800px] xs:h-[420px] flex items-center overflow-x-hidden">
         <LeftArrow onclick={prevNews} />

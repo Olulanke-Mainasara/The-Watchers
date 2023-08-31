@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import CardButton from "./CardButton";
+import CardButton from "../Buttons/CardButton";
 
 const FeatureCard = ({ feature }) => {
   return (

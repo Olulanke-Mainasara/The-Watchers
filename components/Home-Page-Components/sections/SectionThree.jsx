@@ -1,7 +1,7 @@
 import React from "react";
 
 import Section3Img from "../../../public/Home/Section3.jpeg";
-import Button from "../../UI/Section/Button";
+import SectionButton from "@/components/UI/Buttons/SectionButton";
 import SImage from "../../UI/Section/SectionImage";
 import Text from "../../UI/Section/TextBlock";
 import TextHeader from "../../UI/Section/TextHeader";
@@ -26,7 +26,7 @@ function SectionThree() {
           of human history, we&apos;ve got you covered.
         </P>
 
-        <Button />
+        <SectionButton />
       </Text>
     </section>
   );

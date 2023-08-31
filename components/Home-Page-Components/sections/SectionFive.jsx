@@ -1,7 +1,7 @@
 import React from "react";
 
 import Section5Img from "../../../public/Home/Section5.jpeg";
-import Button from "../../UI/Section/Button";
+import SectionButton from "@/components/UI/Buttons/SectionButton";
 import SImage from "../../UI/Section/SectionImage";
 import Text from "../../UI/Section/TextBlock";
 import TextHeader from "../../UI/Section/TextHeader";
@@ -26,7 +26,7 @@ function SectionFive() {
           miss a beat.
         </P>
 
-        <Button />
+        <SectionButton />
       </Text>
     </section>
   );

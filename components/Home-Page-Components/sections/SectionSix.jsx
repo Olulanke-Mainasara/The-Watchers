@@ -1,7 +1,6 @@
 import React from "react";
-
+import SectionButton from "@/components/UI/Buttons/SectionButton";
 import Section6Img from "../../../public/Home/Section6.jpeg";
-import Button from "../../UI/Section/Button";
 import SImage from "../../UI/Section/SectionImage";
 import Text from "../../UI/Section/TextBlock";
 import TextHeader from "../../UI/Section/TextHeader";
@@ -22,7 +21,7 @@ function SectionSix() {
           of what we can achieve.
         </P>
 
-        <Button />
+        <SectionButton />
       </Text>
 
       <SImage image={Section6Img} alt={"Section 6"} />
